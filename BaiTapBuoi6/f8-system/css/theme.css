@@ -1,0 +1,19 @@
+
+h1.title#main{
+    color:goldenrod
+}
+h2.title{
+    color:greenyellow
+}
+p.highlight{
+    color:orangered
+}    
+h2.title#special{
+    color:darksalmon
+}
+section#main{
+    color:rgb(227, 227, 82)
+}
+p.title{
+    color:rgb(27, 227, 231)
+}
