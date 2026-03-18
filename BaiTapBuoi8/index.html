@@ -5,29 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PERSONAL PROFILE CUSTOMIZER</title>
     <style>
+      /* Css Common */
       :root {
         font-size: 62.5%;
         box-sizing: border-box;
       }
+      body {
+        margin: 0px;
+      }
 
       .wrapper {
         background-color: #eee;
-        width: calc(100vw - 30vw);
+        width: 100vw;
+        min-height: 100vh;
+        font-size: 0;
       }
       .controlPanel {
         display: inline-block;
+        vertical-align: top;
         background-color: #f5f5f5;
-        width: 25%;
+        width: calc(100vw - 62vw);
+        font-size: 1.6rem;
       }
       .previewArea {
         display: inline-block;
-        padding: 1em;
-        height: cacl(100vh -8px);
+        text-align: center;
+        vertical-align: top;
+        width: calc(100vw - 40vw);
+        font-size: 1.6rem;
+        padding: 0.25em;
       }
       input {
         display: none;
       }
-      label {
+      input + label {
         padding: 0.3em;
         background-color: #ddd;
         cursor: pointer;
@@ -35,29 +46,106 @@
       input:checked + label {
         font-weight: bold;
       }
-      .controlPanel:has(#light:checked) + .previewArea > .userProfile {
+      .skills > span {
+        background-color: #f5f5f5;
+      }
+      .btn-contact {
+        display: inline-block;
+        background-color: #1a1a1a;
+        color: white;
+      }
+
+      /* 1 CSS Color BackGround */
+      .controlPanel:has(#lightBG:checked) + .previewArea > .userProfile {
         background-color: white;
       }
-      .controlPanel:has(#gray:checked) + .previewArea > .userProfile {
+      .controlPanel:has(#grayBG:checked) + .previewArea > .userProfile {
         background-color: lightgray;
       }
-      .controlPanel:has(#yellow:checked) + .previewArea > .userProfile {
+      .controlPanel:has(#yellowBG:checked) + .previewArea > .userProfile {
         background-color: lightyellow;
       }
-      .controlPanel:has(#blue:checked) + .previewArea > .userProfile {
+      .controlPanel:has(#blueBG:checked) + .previewArea > .userProfile {
         background-color: lightblue;
       }
-      .controlPanel:has(#pink:checked) + .previewArea > .userProfile {
+      .controlPanel:has(#pinkBG:checked) + .previewArea > .userProfile {
         background-color: pink;
       }
+
+      /*2 CSS Size name User */
       .controlPanel:has(#small:checked) + .previewArea .nameUser {
-        font-size: 1.5rem;
-      }
-      .controlPanel:has(#large:checked) + .previewArea .nameUser {
         font-size: 2.5rem;
       }
+      .controlPanel:has(#large:checked) + .previewArea .nameUser {
+        font-size: 3.5rem;
+      }
+
+      /* 3 Style name User */
       .controlPanel:has(#upperCase:checked) + .previewArea .nameUser {
         text-transform: uppercase;
+      }
+
+      /* 4 CSS color name of User */
+      .controlPanel:has(#darkName:checked) + .previewArea .nameUser {
+        color: #333;
+      }
+      .controlPanel:has(#blueName:checked) + .previewArea .nameUser {
+        color: blue;
+      }
+      .controlPanel:has(#greenName:checked) + .previewArea .nameUser {
+        color: green;
+      }
+      .controlPanel:has(#redName:checked) + .previewArea .nameUser {
+        color: red;
+      }
+
+      /* 5 CSS Align Content */
+      .controlPanel:has(#left:checked) + .previewArea {
+        text-align: left;
+      }
+      .controlPanel:has(#right:checked) + .previewArea {
+        text-align: right;
+      }
+
+      /* 6 CSS Size of title name Career */
+      .controlPanel:has(#smallTitle:checked) + .previewArea .nameCareer {
+        font-size: 1.7rem;
+      }
+      .controlPanel:has(#largeTitle:checked) + .previewArea .nameCareer {
+        font-size: 3.6rem;
+      }
+
+      /* 7 CSS Job letter spacing */
+      .controlPanel:has(#tightLetter:checked) + .previewArea .nameCareer {
+        letter-spacing: -0.2rem;
+      }
+      .controlPanel:has(#wideLetter:checked) + .previewArea .nameCareer {
+        letter-spacing: 1rem;
+      }
+
+      /* 8 Css Description size user */
+      .controlPanel:has(#smallDescSize:checked) + .previewArea .descUser {
+        font-size: 1.1rem;
+      }
+      .controlPanel:has(#largeDescSize:checked) + .previewArea .descUser {
+        font-size: 2.2rem;
+      }
+
+      /* 9 Css Description Line Heigh */
+      .controlPanel:has(#tightDescLineHeight:checked) + .previewArea .descUser {
+        line-height: 0.9;
+      }
+      .controlPanel:has(#looseDescLineHeight:checked) + .previewArea .descUser {
+        line-height: 1.8;
+      }
+
+      /* 10 Color button */
+      .controlPanel:has(#btnBlue:checked) + .previewArea .btn-contact {
+        background-color: blue;
+      }
+      .controlPanel:has(#btnLight:checked) + .previewArea .btn-contact {
+        background-color: #f5f5f5;
+        color: #1a1a1a;
       }
     </style>
   </head>
@@ -66,29 +154,37 @@
       <div class="controlPanel">
         <!-- BackgroundProfile -->
         <p>1.Màu nền hồ sơ</p>
-        <input type="radio" name="bgColor" id="light" />
-        <label for="light">Light</label>
-        <input type="radio" name="bgColor" id="gray" />
-        <label for="gray">Gray</label>
-        <input type="radio" name="bgColor" id="yellow" />
-        <label for="yellow">Yellow</label>
-        <input type="radio" name="bgColor" id="blue" />
-        <label for="blue">Blue</label>
-        <input type="radio" name="bgColor" id="pink" />
-        <label for="pink">Pink</label>
+        <input type="radio" name="bgColor" id="lightBG" />
+        <label for="lightBG">Light</label>
+
+        <input type="radio" name="bgColor" id="grayBG" />
+        <label for="grayBG">Gray</label>
+
+        <input type="radio" name="bgColor" id="yellowBG" />
+        <label for="yellowBG">Yellow</label>
+
+        <input type="radio" name="bgColor" id="blueBG" />
+        <label for="blueBG">Blue</label>
+
+        <input type="radio" name="bgColor" id="pinkBG" />
+        <label for="pinkBG">Pink</label>
         <!-- End BackGroundProfile  -->
 
         <!-- Name Size -->
         <p>2.Kích thước tên</p>
         <input type="radio" name="nameSize" id="small" />
         <label for="small">Small</label>
+
         <input type="radio" name="nameSize" id="medium" />
         <label for="medium">Medium</label>
+
         <input type="radio" name="nameSize" id="large" />
         <label for="large">Large</label>
 
         <!-- End Name Size -->
-        <p>3.Name Text Style</p>
+
+        <!-- Text Style -->
+        <p>3.Kiểu chữ tên</p>
         <input type="radio" name="textStyles" id="normal" /><label for="normal"
           >Normal</label
         >
@@ -96,24 +192,109 @@
           for="upperCase"
           >UpperCase</label
         >
-        <p>4.Name Color</p>
-        <p>5.Text Alignment</p>
+        <!-- End text Style -->
+
+        <!-- Name Color -->
+        <p>4.Màu chữ tên</p>
+        <input type="radio" name="nameColor" id="darkName" />
+        <label for="darkName">Dark</label>
+
+        <input type="radio" name="nameColor" id="blueName" />
+        <label for="blueName">Blue</label>
+
+        <input type="radio" name="nameColor" id="greenName" />
+        <label for="greenName">Green</label>
+
+        <input type="radio" name="nameColor" id="redName" />
+        <label for="redName">Red</label>
+        <!-- End name color -->
+
+        <!-- Text Alignment -->
+        <p>5.Căn lề hồ sơ</p>
+        <input type="radio" name="textAlign" id="left" />
+        <label for="left">Left</label>
+
+        <input type="radio" name="textAlign" id="center" />
+        <label for="center">Center</label>
+
+        <input type="radio" name="textAlign" id="right" />
+        <label for="right">Right</label>
+
+        <!-- End Text Alignment -->
+
+        <!-- Title size -->
         <p>6.Job Title Size</p>
+        <input type="radio" name="titleSize" id="smallTitle" />
+        <label for="smallTitle">Small</label>
+
+        <input type="radio" name="titleSize" id="mediumTitle" />
+        <label for="mediumTitle">Medium</label>
+
+        <input type="radio" name="titleSize" id="largeTitle" />
+        <label for="largeTitle">Large</label>
+
+        <!-- End title size -->
+
+        <!-- Letter Spacing -->
         <p>7.Job Letter Spacing</p>
+        <!-- End Letter spacing -->
+        <input type="radio" name="letterSpacing" id="tightLetter" />
+        <label for="tightLetter">Tight</label>
+
+        <input type="radio" name="letterSpacing" id="normalLetter" />
+        <label for="normalLetter">Normal</label>
+
+        <input type="radio" name="letterSpacing" id="wideLetter" />
+        <label for="wideLetter">Wide</label>
+
+        <!-- Description Size -->
         <p>8.Description Size</p>
+        <!-- End Description Size -->
+        <input type="radio" name="descSize" id="smallDescSize" />
+        <label for="smallDescSize">Small</label>
+
+        <input type="radio" name="descSize" id="mediumDescSize" />
+        <label for="mediumDescSize">Medium</label>
+
+        <input type="radio" name="descSize" id="largeDescSize" />
+        <label for="largeDescSize">Large</label>
+
+        <!-- Description Line Height -->
         <p>9.Description Line Height</p>
+        <!-- End Description Line Height -->
+        <input type="radio" name="descLineHeight" id="tightDescLineHeight" />
+        <label for="tightDescLineHeight">Tight</label>
+
+        <input type="radio" name="descLineHeight" id="normalDescLineHeight" />
+        <label for="normalDescLineHeight">Normal</label>
+
+        <input type="radio" name="descLineHeight" id="looseDescLineHeight" />
+        <label for="looseDescLineHeight">Loose</label>
+
+        <!-- Contact Button Color -->
         <p>10.Contact Button Color</p>
+        <input type="radio" name="btnColor" id="btnDark" />
+        <label for="btnDark">Dark</label>
+
+        <input type="radio" name="btnColor" id="btnBlue" />
+        <label for="btnBlue">Blue</label>
+
+        <input type="radio" name="btnColor" id="btnLight" />
+        <label for="btnLight">Light</label>
+
+        <!-- End Contact Button Color -->
       </div>
       <div class="previewArea">
         <p>Preview hồ sơ cá nhân</p>
         <div class="userProfile">
           <h1 class="nameUser">Nguyễn Minh Khoa</h1>
-          <h2>Frontend Developer Ho Chi Minh City</h2>
+          <h2 class="nameCareer">Frontend Developer Ho Chi Minh City</h2>
           <p class="descUser">
             Tôi là một lập trình viên Frontend với hơn 3 năm kinh nghiệm xây
-            dựng giao diện web hiện đại , tập trung vào hiệu suất và trải nghiệm
-            người dùng .Tôi yêu thích việc biến ý tượng sáng tạo thành sản phẩm
-            thực tế.
+            dựng giao diện<br />
+            web hiện đại , tập trung vào hiệu suất và trải nghiệm người dùng
+            .Tôi yêu <br />
+            thích việc biến ý tượng sáng tạo thành sản phẩm thực tế.
           </p>
           <p>Kỹ năng</p>
           <p class="skills">
