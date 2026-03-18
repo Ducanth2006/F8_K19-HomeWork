@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PERSONAL PROFILE CUSTOMIZER</title>
+    <style>
+      :root {
+        font-size: 62.5%;
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        background-color: #eee;
+        width: calc(100vw - 30vw);
+      }
+      .controlPanel {
+        display: inline-block;
+        background-color: #f5f5f5;
+        width: 25%;
+      }
+      .previewArea {
+        display: inline-block;
+        padding: 1em;
+        height: cacl(100vh -8px);
+      }
+      input {
+        display: none;
+      }
+      label {
+        padding: 0.3em;
+        background-color: #ddd;
+        cursor: pointer;
+      }
+      input:checked + label {
+        font-weight: bold;
+      }
+      .controlPanel:has(#light:checked) + .previewArea > .userProfile {
+        background-color: white;
+      }
+      .controlPanel:has(#gray:checked) + .previewArea > .userProfile {
+        background-color: lightgray;
+      }
+      .controlPanel:has(#yellow:checked) + .previewArea > .userProfile {
+        background-color: lightyellow;
+      }
+      .controlPanel:has(#blue:checked) + .previewArea > .userProfile {
+        background-color: lightblue;
+      }
+      .controlPanel:has(#pink:checked) + .previewArea > .userProfile {
+        background-color: pink;
+      }
+      .controlPanel:has(#small:checked) + .previewArea .nameUser {
+        font-size: 1.5rem;
+      }
+      .controlPanel:has(#large:checked) + .previewArea .nameUser {
+        font-size: 2.5rem;
+      }
+      .controlPanel:has(#upperCase:checked) + .previewArea .nameUser {
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="controlPanel">
+        <!-- BackgroundProfile -->
+        <p>1.Màu nền hồ sơ</p>
+        <input type="radio" name="bgColor" id="light" />
+        <label for="light">Light</label>
+        <input type="radio" name="bgColor" id="gray" />
+        <label for="gray">Gray</label>
+        <input type="radio" name="bgColor" id="yellow" />
+        <label for="yellow">Yellow</label>
+        <input type="radio" name="bgColor" id="blue" />
+        <label for="blue">Blue</label>
+        <input type="radio" name="bgColor" id="pink" />
+        <label for="pink">Pink</label>
+        <!-- End BackGroundProfile  -->
+
+        <!-- Name Size -->
+        <p>2.Kích thước tên</p>
+        <input type="radio" name="nameSize" id="small" />
+        <label for="small">Small</label>
+        <input type="radio" name="nameSize" id="medium" />
+        <label for="medium">Medium</label>
+        <input type="radio" name="nameSize" id="large" />
+        <label for="large">Large</label>
+
+        <!-- End Name Size -->
+        <p>3.Name Text Style</p>
+        <input type="radio" name="textStyles" id="normal" /><label for="normal"
+          >Normal</label
+        >
+        <input type="radio" name="textStyles" id="upperCase" /><label
+          for="upperCase"
+          >UpperCase</label
+        >
+        <p>4.Name Color</p>
+        <p>5.Text Alignment</p>
+        <p>6.Job Title Size</p>
+        <p>7.Job Letter Spacing</p>
+        <p>8.Description Size</p>
+        <p>9.Description Line Height</p>
+        <p>10.Contact Button Color</p>
+      </div>
+      <div class="previewArea">
+        <p>Preview hồ sơ cá nhân</p>
+        <div class="userProfile">
+          <h1 class="nameUser">Nguyễn Minh Khoa</h1>
+          <h2>Frontend Developer Ho Chi Minh City</h2>
+          <p class="descUser">
+            Tôi là một lập trình viên Frontend với hơn 3 năm kinh nghiệm xây
+            dựng giao diện web hiện đại , tập trung vào hiệu suất và trải nghiệm
+            người dùng .Tôi yêu thích việc biến ý tượng sáng tạo thành sản phẩm
+            thực tế.
+          </p>
+          <p>Kỹ năng</p>
+          <p class="skills">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Figma</span>
+            <span>Git</span>
+          </p>
+          <p class="hobbies">Sở thích</p>
+          <p>
+            <span>Nhiếp ảnh</span>
+            <span>Đọc sách</span>
+            <span>Du lịch</span>
+            <span>Cà phê</span>
+          </p>
+          <div class="btn-contact">Liên hệ với tôi</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
