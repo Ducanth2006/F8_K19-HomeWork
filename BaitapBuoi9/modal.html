@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai Tap 4</title>
+    <style>
+      /* Common */
+      .root {
+        box-sizing: border-box;
+      }
+      input {
+        display: none;
+      }
+      /* Open button */
+      .open-btn {
+        width: 70px;
+        padding: 10px;
+        background-color: #3b82f6;
+        color: #ffffff;
+      }
+      /* Css overlay */
+      .overlay {
+        display: block;
+        margin-top: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 99vw;
+        height: 500px;
+        display: none;
+      }
+      /* Css to modal */
+      .modal {
+        width: 250px;
+        height: 150px;
+        background-color: #ffffff;
+        color: #333333;
+        margin: -280px auto 10px;
+        text-align: center;
+        padding-top: 30px;
+      }
+      /* Css to close button */
+      .close-btn {
+        display: block;
+        width: 30px;
+        padding: 10px;
+        background-color: #ef4444;
+        color: #ffffff;
+        margin: 0 auto;
+      }
+      /* Css logic  */
+      #modal-toggle:checked ~ .overlay {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="modal-toggle" />
+    <label for="modal-toggle" class="open-btn">Mở modal</label>
+    <label for="modal-toggle" class="overlay"> </label>
+    <div class="modal">
+      <p>Đây là nội dung thông báo !</p>
+      <label for="modal-toggle" class="close-btn">Đóng</label>
+    </div>
+  </body>
+</html>
