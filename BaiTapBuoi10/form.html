@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="wraper">
+      <!-- initial screen -->
+      <input type="checkbox" name="btn-open" id="btn-open" />
+      <label for="btn-open" class="overlay"></label>
+      <label for="btn-open" class="btn-open">Tư vấn ngay</label>
+      <!-- Modal -->
+      <div class="modal">
+        <!-- Header modal -->
+        <div class="headerModal">
+          <h2 class="header">Đăng ký tư vấn</h2>
+          <p class="descHeader">
+            Điền thông tin để được tư vấn lộ trị học phù hợp
+          </p>
+          <label for="btn-open" class="out-btn">&times;</label>
+        </div>
+        <!-- Body modal -->
+        <div class="bodyModal">
+          <form
+            action="https://api-gateway.fullstack.edu.vn/action_page.php"
+            method="post"
+          >
+            <!-- Information User Base -->
+            <div class="informationUser">
+              <label data-title="Nhập họ và tên đầy đủ của bạn" for="name"
+                >Họ và tên: <span class="icon">*</span></label
+              >
+              <input
+                type="text"
+                name="nameUser"
+                id="name"
+                placeholder="Nguyễn Văn A"
+                required
+              />
+              <label
+                data-title="Số điện thoại để chúng tôi liên hệ tư vấn"
+                for="tel"
+                >Số điện thoại:<span class="icon">*</span></label
+              >
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder="097777887"
+                required
+              />
+              <label
+                data-title="Email nhận thông tin khóa học (không bắt buộc)"
+                for="email"
+                >Email:</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@gmail.com"
+              />
+            </div>
+            <!-- The course need to advise   -->
+            <div class="courses">
+              <p>Khóa học quan tâm <span class="icon">*</span></p>
+              <div>
+                <input
+                  type="checkbox"
+                  name="courses[]"
+                  id="htmlcss"
+                  value="htmlcss"
+                />
+                <label data-title="Khóa nền tảng giao diện web" for="htmlcss"
+                  >HTML&CSS</label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="courses[]"
+                  id="javascript"
+                  value="javascript"
+                />
+                <label
+                  data-title="Ngôn ngữ lập trình cho web động"
+                  for="javascript"
+                  >JavaScript</label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="courses[]"
+                  id="frontend"
+                  value="frontend"
+                />
+                <label
+                  data-title="Lộ trình hoàn chỉnh trở thành Front-end Developer"
+                  for="frontend"
+                  >Front-end lộ trình</label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="courses[]"
+                  id="ReactJS"
+                  value="reactJS"
+                />
+                <label
+                  data-title="Thư viện JavaScript phổ biến nhất hiện nay"
+                  for="ReactJS"
+                  >ReactJS</label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="courses[]"
+                  id="misunderstanding"
+                  value="misunderstanding"
+                />
+                <label
+                  data-title="Chúng tôi sẽ tư vấn lộ trình phù hợp với bạn"
+                  for="misunderstanding"
+                  >Chưa rõ-cần tư vấn</label
+                >
+              </div>
+            </div>
+            <!-- button submit  modal -->
+            <div class="footer">
+              <button type="submit" class="btn-submit">
+                ĐĂNG KÝ TƯ VÂN NGAY
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

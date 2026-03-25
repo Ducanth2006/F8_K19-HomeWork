@@ -1,0 +1,207 @@
+/* Common */
+:root{
+    box-sizing: border-box;
+    font-size:62.5%;
+     margin:0;
+    padding:0;
+}
+body{
+    font-size:1.6rem;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    margin:0;
+    padding:0;
+}
+#btn-open{
+    display:none;
+}
+.wraper{
+    background-color: #6d65c2;
+    height:100vh;
+    width:100vw;
+    position: fixed;
+}
+.btn-open{
+    display:block;
+    width:20rem;
+    padding:2rem;
+    text-align: center;
+    background-color: #f05123;
+    margin: 0 auto;
+    position: relative;
+    top:40rem;
+    color:white;
+    border-radius:99rem;
+}
+.overlay{
+    display:none;
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+/* modal */
+.modal{
+    position: absolute;
+    padding:2rem;
+    width:40rem;
+    min-height:60rem;
+    background-color: #fff;
+    top:50%;
+    left:50%;
+    margin-left:-17rem;
+    margin-top:-27rem;
+    border-radius:0.5rem;
+    display:none;
+}
+.headerModal{
+    position: relative;
+}
+.out-btn{
+    position:absolute;
+    padding:1.5rem;
+    font-size:2rem;
+    right:0;
+    top:-2rem;
+}
+/* Css to open modal */
+#btn-open:checked~.modal,#btn-open:checked~.overlay{
+    display:block;
+}
+/* css to modal Header */
+.header,.descHeader{
+    text-align: center;
+}
+.header{
+    color:#1e293b;
+    font-weight: bold;
+    
+}
+.descHeader{
+    color:#64748b;
+    margin-bottom:1rem;
+    
+}
+.icon{
+    color:#ef4444;
+}
+/* Css to informationUser */
+.informationUser{
+    display: block;
+    padding:1rem 2rem;
+    
+}
+.informationUser label{
+    display:inline-block;
+    position: relative;
+}
+.informationUser>input{
+    display:block;
+    width:30rem;
+    padding:1rem;
+    border:0.1rem solid #e2e8f0;
+    border-radius: 0.5rem ;
+    margin-bottom: 0.5rem;
+}
+#name,#tel,#email{
+    background-color: #f8fafc;
+}
+/* CSS tooltips for infomationUser */
+.informationUser label::before{
+    content:attr(data-title);
+    position:absolute;
+    background-color:#1e293b;
+    color: #ffffff;
+    bottom: 1rem;
+    left:0rem;
+    margin-bottom: 1rem;
+    padding:0.4rem 0.2rem;
+    width:20rem;
+    border-radius: 0.5rem;
+    display:none;
+    z-index: 200;
+    white-space: normal;
+    font-size: 1.3rem;
+}
+.informationUser label::after{
+    content:"";
+    position:absolute;
+    left:3rem;
+    bottom:1.4rem;
+    border-width: 0.6rem 0.6rem 0 0.6rem;
+    border-style: solid;
+    border-color: #1e293b transparent transparent transparent;
+    display:none;
+    z-index: 3;
+}
+/* show tooltip for .informationUser */
+.informationUser label:has(+input:hover)::after,
+.informationUser label:has(+input:hover)::before{
+    display: block;
+}
+/* Css to options  */
+.courses{
+    padding:2rem;
+}
+.courses>div{
+    margin-bottom:1.3rem;
+}
+/* Css tooltips to options */
+.courses>div{
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.courses label {
+    display: inline-block;
+}
+.courses label::before{
+    content:attr(data-title);
+    position:absolute;
+    background-color:#1e293b;
+    color: #ffffff;
+    bottom: 1.5rem;
+    left:1.5rem;
+    margin-bottom: 1rem;
+    padding:0.4rem 0.2rem;
+    width:20rem;
+    border-radius: 0.5rem;
+    display:none;
+    z-index: 10;
+    white-space:normal;
+    font-size:1.3rem;
+
+}
+.courses label::after{
+    content:"";
+    position:absolute;
+    left:3rem;
+    bottom:1.9rem;
+    border-width: 0.6rem 0.6rem 0 0.6rem;
+    border-style: solid;
+    border-color: #1e293b transparent transparent transparent;
+    display:none;
+}
+
+/* Css to show tooltips opp */
+.courses div:hover label::before,.courses div:hover label::after{
+    display:block;
+}
+/* footer css and submit button */
+.footer{
+    width:100%;
+}
+.btn-submit{
+    display:block;
+    margin:0 auto;
+    width:100%;
+    background-color: #a855f7;
+    border:2px solid transparent;
+    padding:2rem;
+    border-radius: 5rem;
+    color:#ffffff;
+}
+.btn-submit:hover{
+    background-color: #9333ea;
+}
