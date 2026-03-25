@@ -1,0 +1,121 @@
+/* Common */
+:root{
+    box-sizing:border-box;
+    font-size:62.5%;
+}
+body{
+    font-size:1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+    padding-left:0;
+}
+li{
+    list-style-type: none; 
+}
+/* Content of header */
+.header{
+    max-width:120rem;
+    background-color:#ffffff  ;
+    min-height:3.8rem;
+    margin:0 auto;
+    vertical-align: middle;
+    padding:0.8rem 0;
+    border-bottom:1px solid #dddddd;
+
+}
+.logo{
+    width:3.8rem;
+    vertical-align: middle
+}
+.menu{
+    display:inline-block;
+    font-weight: bold;
+    color:#333333;
+    padding:6px 0;
+    margin-left:25px;
+    position: relative;
+}
+.menu>li+li{
+    margin-left:25px;
+}
+.downArrow{
+    font-size:1rem;
+    color: #555555;
+    padding:15px;
+}
+.rightArrow{
+    display:inline-block;
+    font-size:1rem;
+    color:#777777;
+    padding:15px;
+}
+/* css menu level 1  */
+.news,.global,.business,.perspective{
+    display:inline-block;
+    /* width:25rem; */
+    text-align: center;
+    padding:0.6rem 0;
+    border-bottom: 2px solid transparent;
+
+}
+
+.news:hover,.global:hover,.business:hover,.perspective:hover{
+    color:#d62828;
+    cursor: pointer;
+    border-bottom: 2px solid #d62828;
+}
+/* css to show dropdown 1 */
+.news:hover>.dropDown1{display:block}
+.global:hover>.dropDown1{display:block}
+.business:hover>.dropDown1{display:block}
+.perspective:hover>.dropDown1{display:block;}
+/* css to drop-down menu level 1 */
+.dropDown1{
+    position:absolute;
+    background-color: #ffffff;
+    border:1px solid #dddddd;
+    min-width:20rem;
+    display: none;
+    top:3.9rem;
+}
+.dropDown1>li{
+    position: relative;
+    text-align: left;
+    padding:0.6rem 1rem;
+}
+.hasSubMenu2>.rightArrow{
+    position:absolute;
+    top:-0.5rem;
+    right:1.3rem;
+}
+.dropDown1>li:hover{
+    background-color: #f5f5f5;
+}
+.dropDown1>:not(li:hover){
+    color:#333333
+}
+/*  css to dropDown2 */
+.dropDown2{
+    position:absolute;
+    top:0;
+    left:100%;
+    background-color: #ffffff;
+    border:1px solid #dddddd;
+    min-width:20rem;
+    color:#333333;
+    display:none;
+}
+.dropDown2>li{
+    position: relative;
+    text-align: left;
+    padding:0.6rem 1rem;
+}
+.dropDown2>li:hover{
+    background-color: #f5f5f5;
+    color:#d62828
+}
+/* css to show drop down 2 */
+.hasSubMenu2:hover>.dropDown2{
+    display:block
+}
