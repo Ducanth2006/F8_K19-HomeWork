@@ -1,0 +1,115 @@
+/* Css Common */
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size:62.5%;
+}
+body{
+    font-size:1.6rem;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+}
+.wrapper{
+    display:flex;
+    flex-wrap:wrap;
+    width:70vw;
+    background-color: #ebf5fe;
+    padding:1rem 2.5rem;
+    border-radius: 10px;
+    border:2px solid transparent;
+    gap:2rem;
+}
+.headCard{
+    display: flex;
+    justify-content: flex-start;
+    gap:2rem;
+}
+.card{
+    width:calc((100% - 4rem )/3);
+    min-height:20rem;
+    background-color: #fff;
+    padding:3rem;
+    border-radius: 8px;
+    border:2px solid #e0e0e0;
+    flex-shrink:0;
+}
+.iconCard{
+    width:6rem;
+    height:6rem;
+    font-size: 32px;
+    border-radius:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:#ffffff;
+}
+/* Css to icon have background and card have animation when hovered */
+.uiuxCard .iconCard{
+    background-color: #ff6b6b;
+}
+.uiuxCard:hover{
+    border:3px solid #ff6b6b;
+}
+.themeDevelopmentCard .iconCard{
+    background-color: #4ecdc4;
+}
+.themeDevelopmentCard:hover{
+    border:3px solid #4ecdc4;
+}
+.digitalMarketingCard .iconCard{
+    background-color:#f9a825 ;
+}
+.digitalMarketingCard:hover{
+    border:3px solid #f9a825;
+}
+.webDesignCard .iconCard{
+    background-color: #5e9cff;
+}
+.webDesignCard:hover{
+    border:3px solid #5e9cff;
+}
+.responsiveCard .iconCard{
+    background-color: #9b59b6;
+}
+.responsiveCard:hover{
+    border:3px solid #9b59b6;
+
+}
+.quickSupportCard .iconCard{
+    background-color:#7cb342;
+}
+.quickSupportCard:hover{
+    border:3px solid #7cb342;
+}
+/* css to title */
+.titleCard{
+    font-size: 2rem;
+    font-weight: 600;
+    color:#333333;
+    line-height: 1.3;
+    /* margin-top:2rem;
+    margin-bottom: 1.5rem; */
+}
+/* css to subscription */
+.contentCard{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color:#666666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+/* css to link  */
+.footerCard a{
+    font-size:1.5rem;
+    font-weight:500;
+    color:#2196f3 ;
+    text-decoration: none;
+}
+.footerCard a:hover{
+    text-decoration: underline;
+}
