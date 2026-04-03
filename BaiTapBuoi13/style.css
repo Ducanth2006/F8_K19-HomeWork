@@ -1,0 +1,86 @@
+/* Css common */
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+}
+.containerStrips{
+    display: flex;
+    width:100vw;
+    height:100vh;
+    border-radius: 20px;
+    /* Để ảnh ko tràn viền hãy nhớ dùng */
+    overflow: hidden;
+}
+.strip{
+    position: relative;
+    display: flex;
+    flex:1;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.strip::after{
+    content: '';
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    opacity: 0;
+}
+span{
+    font-family: Helvetica, sans-serif;
+    font-weight: 900;
+    font-size:2rem;
+    color:white;
+    position: relative;
+    z-index: 3;
+}
+.strip img{
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    width:100%;
+    object-fit: cover;
+    height:100%;
+    z-index: 1;
+}
+/* Css when span opacity=1 */
+.relax {
+    background-color: forestgreen;
+
+}
+.explore {
+    background-color: khaki;
+    
+}
+.travel {
+    background-color: dodgerblue;
+    
+}
+.achieve{
+    background-color:  orange;
+    
+}
+.dare{
+    background-color: violet;
+  
+}
+/* strip to hover */
+.strip:hover{
+    flex:99;
+}
+.strip:hover img,.strip:hover::after {
+    opacity: 1;
+    
+}
+.strip:hover span{
+    opacity: 0;
+}
