@@ -135,7 +135,7 @@ getHighestRevenueProduct(products);
 const employeeMap=new Map();
 for(let i=0;i<orders.length;i++){
     currentOrder=orders[i];
-    currentQuanity=employeeMap.get(orders[i].id)||0;
+    currentQuanity=employeeMap.get(currentOrder.employeeId)||0;
     employeeMap.set(currentOrder.employeeId,currentQuanity+currentOrder.quantity);
 }
 const getTopSellingEmployee=(employees)=>{
@@ -167,4 +167,4 @@ const getTopSalesEmployee=(employees)=>{
     console.log(`${employees[index].name} is the highest revenue with ${highestRevenue}$`);
 
 }
-getTopSellingEmployee(employees);
+getTopSalesEmployee(employees);
