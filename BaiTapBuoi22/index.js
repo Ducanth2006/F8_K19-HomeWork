@@ -56,7 +56,7 @@ console.log(activeEmployees);
 // Bai 2:
 // Lay ra nhan vien lon tuoi nhat
 const getOldestEmployee = (employees) => {
-  let indexOfOldestEmployee;
+  let indexOfOldestEmployee=0;
   let oldestEmployee = employees[0].age;
   for (let i = 1; i < employees.length; i++) {
     if (employees[i].age > oldestEmployee) {
@@ -87,7 +87,7 @@ console.log(getCheapestProduct(products));
 const mapProduct = new Map();
 for (let i = 0; i < orders.length; i++) {
   let currentOrder = orders[i];
-  let currentQuanity = mapProduct.get(currentOrder.id) || 0;
+  let currentQuanity = mapProduct.get(currentOrder.productId) || 0;
   mapProduct.set(
     currentOrder.productId,
     currentQuanity + currentOrder.quantity,
