@@ -1,11 +1,99 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
+    <div class="mx-5 my-5 border-2 rounded-lg border-gray-400">
+      <!-- Header invoice -->
+      <header class="m-5 flex justify-between pb-12 border-b border-gray-400">
+        <!-- StoreInfo -->
+        <div>
+          <h1 id="storeName" class="font-bold text-2xl"></h1>
+          <p id="slogan"></p>
+        </div>
+        <!-- Invoice Info -->
+        <div>
+          <p class="text-green-400 bg-green-200 rounded-lg">Hóa đơn bán lẻ</p>
+          <p>
+            <span class="font-bold">Mã số:</span><span id="invoiceNo"></span>
+          </p>
+          <p>
+            <span class="text-gray-400">Ngày bán: </span
+            ><span id="saleDate"></span>
+          </p>
+        </div>
+      </header>
+      <!-- End header invoice -->
+      <!-- Body invoice -->
+      <main class="m-5 pb-10">
+        <!-- Invoice info -->
+        <div class="flex justify-between gap-4">
+          <!-- Seller info -->
+          <div>
+            <p class="pb-4 border-b border-gray-400">
+              Đơn vị bán hàng (Seller)
+            </p>
+            <h3 id="sellerName"></h3>
+            <p id="sellerAddress" class="text-gray-400"></p>
+            <p id="sellerPhone" class="text-gray-400"></p>
+          </div>
+          <!-- customer detail -->
+          <div>
+            <p class="pb-4 border-b border-gray-400">Khách hàng (BUYER)</p>
+            <p id="customerName" class="text-gray-400"></p>
+            <p>
+              <span>Tuổi: </span
+              ><span id="customerAge" class="text-gray-400"></span>
+            </p>
+
+            <p id="customerAddress" class="text-gray-400"></p>
+          </div>
+        </div>
+        <!-- items table -->
+        <table class="border w-full border-collapse mt-4">
+          <thead class="divide-x divide-gray-400">
+            <tr>
+              <th class="border border-gray-400 p-2">STT</th>
+              <th class="border border-gray-400 p-2">TÊN SẢN PHẨM</th>
+              <th class="border border-gray-400 p-2">SIZE</th>
+              <th class="border border-gray-400 p-2">SL</th>
+              <th class="border border-gray-400 p-2">ĐƠN GIÁ</th>
+              <th class="border border-gray-400 p-2">THÀNH TIỀN</th>
+            </tr>
+          </thead>
+          <tbody id="items"></tbody>
+        </table>
+      </main>
+      <!-- End body invoice -->
+      <!-- Footer -->
+      <footer class="m-5 flex justify-between gap-5">
+        <!-- Promotion -->
+        <div class="bg-green-300 rounded-xl">
+          <p class="font-bold uppercase text-green-600">Khuyến mãi/Trợ giá</p>
+          <p id="promotionDesc"></p>
+        </div>
+        <!-- total section -->
+        <div>
+          <p>
+            <span class="text-gray-300">Cộng tiền hàng:</span
+            ><span id="subTotal"></span>
+          </p>
+          <p class="text-green-500 pb-9">
+            <span>Khấu trừ giảm giá:-</span><span id="discountAmount"></span>
+          </p>
+          <h3 class="text-lg">
+            <span class="font-bold">Tổng tiền thanh toán : </span
+            ><span class="text-green-500" id="finalTotal"></span>
+          </h3>
+        </div>
+      </footer>
+      <!-- EndFooter -->
+    </div>
+
+    <!-- Js -->
     <script src="./index.js"></script>
   </body>
 </html>
