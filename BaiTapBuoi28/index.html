@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="h-screen">
+    <div class="flex justify-center items-center h-full">
+      <form class="w-[600px] h-[400px] bg-slate-400 p-6 rounded">
+        <input
+          name="name"
+          placeholder="Tên đăng nhập"
+          class="block mb-2 w-full p-2 border border-gray-300 rounded bg-white"
+        />
+        <input
+          type="password"
+          name="pass"
+          placeholder="Mật khẩu"
+          class="block mb-2 w-full p-2 border border-gray-300 rounded bg-white"
+        />
+        <button
+          type="submit"
+          class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+        >
+          Đăng nhập
+        </button>
+      </form>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

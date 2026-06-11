@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="bg-gray-300 h-screen w-full text-red-400">
+      <h1 class="text-center text-5xl font-bold">Trang profile</h1>
+      <!-- information user-->
+      <div class="flex flex-col gap-5 ml-11">
+        <h2 class="text-3xl font-medium">
+          Xin chào <span id="username"></span>
+        </h2>
+        <p>Email: <span id="email" class="text-red-500"></span></p>
+        <p>FirstName: <span id="firstName"></span></p>
+        <p>LastName: <span id="lastName"></span></p>
+        <p>Gender: <span id="gender"></span></p>
+      </div>
+    </div>
+    <script src="./profile.js"></script>
+  </body>
+</html>

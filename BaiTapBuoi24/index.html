@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="mx-10">
+      <header class="flex w-full h-[100px] justify-around items-center gap-10">
+        <div class="icon">
+          <i class="fa-solid fa-bag-shopping"></i> FAKESTORE
+        </div>
+        <search
+          class="flex items-center border px-2 w-[350px] h-10 py-2 rounded-full"
+        >
+          <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+          <input
+            type="text"
+            class="outline-none py-1"
+            placeholder="Tìm kiếm..."
+          />
+        </search>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </header>
+      <main class="grid grid-cols-4 bg-gray-400 w-full gap-12">
+        <!--  Product Categories -->
+        <div class="col-span-1 bg-white rounded-sm mt-10 text-center">
+          <!-- Title Category -->
+          <div><i class="fa-solid fa-filter"></i> Danh mục</div>
+          <div class="categorieList"></div>
+        </div>
+        <!-- Product list -->
+        <div class="col-span-3 mt-10">
+          <div class="titleProductList">
+            <h2>Tất cả sản phẩm</h2>
+            <p class="totalProduct"></p>
+          </div>
+          <div class="productList" class="grid grid-cols-3 gap-5"></div>
+        </div>
+      </main>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
