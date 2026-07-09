@@ -8,7 +8,9 @@ export class ProductService  implements IProductServices {
     }
     // addProduct
     public addProduct(product:Product){
-        this.products.push(product);
+        if(!this.findById(product.$id)){
+            this.products.push(product);
+        }
     }
     //updateProduct
     public updateProduct(id:string,data:IUpdateProduct){

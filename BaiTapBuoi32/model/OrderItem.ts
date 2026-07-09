@@ -57,7 +57,7 @@ export class OrderItem{
         this.quanity=quanity;
     }
     public getTotal():number{
-        return this.$quanity;
+        return this.quanity*this.price;
     }
 
 }
