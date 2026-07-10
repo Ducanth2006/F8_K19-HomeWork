@@ -1,5 +1,5 @@
 import type { IUpdateCustomer } from "./IUpdateCustomer.js";
-import { Customer } from "../model/customer.js";
+import { Customer } from "../model/Customer.js";
 export interface ICustomerServices {
   addCustomer(customer: Customer): void;
   updateCustomer(id: string, data: IUpdateCustomer): void;

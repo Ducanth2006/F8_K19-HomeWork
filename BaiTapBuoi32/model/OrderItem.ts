@@ -1,7 +1,7 @@
 import { Product } from "./Product.js";
 export class OrderItem{
     private product:Product;
-    private quanity:number;
+    private quantity:number;
     private price:number;
     /**
      * Getter $product
@@ -15,8 +15,8 @@ export class OrderItem{
      * Getter $quanity
      * @return {number}
      */
-	public get $quanity(): number {
-		return this.quanity;
+	public get $quantity(): number {
+		return this.quantity;
 	}
 
     /**
@@ -39,8 +39,8 @@ export class OrderItem{
      * Setter $quanity
      * @param {number} value
      */
-	public set $quanity(value: number) {
-		this.quanity = value;
+	public set $quantity(value: number) {
+		this.quantity = value;
 	}
 
     /**
@@ -51,13 +51,13 @@ export class OrderItem{
 		this.price = value;
 	}
     
-    constructor(product:Product,quanity:number,price:number){
+    constructor(product:Product,quantity:number,price:number){
         this.product=product;
         this.price=price;
-        this.quanity=quanity;
+        this.quantity=quantity;
     }
     public getTotal():number{
-        return this.quanity*this.price;
+        return this.quantity*this.price;
     }
 
 }
