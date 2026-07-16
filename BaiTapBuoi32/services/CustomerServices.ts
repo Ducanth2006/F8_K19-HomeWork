@@ -1,4 +1,4 @@
-import{Customer} from "../model/customer.js"
+import{Customer} from "../model/Customer.js"
 import type {IUpdateCustomer} from "../interfaces/IUpdateCustomer.js"
 import type{ ICustomerServices } from "../interfaces/ICustomerServices.js";
 

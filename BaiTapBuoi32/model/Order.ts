@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import { Product } from "./Product.js";
-import { Customer } from "./customer.js";
+import { Customer } from "./Customer.js";
 import { OrderStatus } from "./EnumStatus.js";
 import { OrderItem } from "./OrderItem.js";
 
@@ -111,7 +111,7 @@ export class Order  {
          }else{
             const curItem=this.items[index]
             if(curItem){
-                curItem.$quanity+=item.$quanity
+                curItem.$quantity+=item.$quantity
             }
          }
     }
@@ -119,9 +119,9 @@ export class Order  {
         console.log(`Can't add item because order status :${this.$status}`)
     }
   }
-  public removeItem(id:string){
+  public removeItem(productId:string){
     if(this.status===OrderStatus.NEW){
-        const index=this.items.findIndex(i=>i.$product.$id===id);
+        const index=this.items.findIndex(i=>i.$product.$id===productId);
         this.items.splice(index,1);
         console.log("Order: Remove successfully")
     }
@@ -142,7 +142,7 @@ export class Order  {
       console.log("Danh sách sản phẩm mua:");
       this.items.forEach((item, index) => {
           const product = item.$product;
-          console.log(`  ${index + 1}. ${product.$name} | Số lượng: ${item.$quanity} | Giá đặt: ${item.$price}đ | Thành tiền: ${item.getTotal()}đ`);
+          console.log(`  ${index + 1}. ${product.$name} | Số lượng: ${item.$quantity} | Giá đặt: ${item.$price}đ | Thành tiền: ${item.getTotal()}đ`);
       });
       // Tổng thành tiền của toàn bộ hóa đơn
       console.log(`TỔNG CỘNG : ${this.calculateTotal()}đ`);
