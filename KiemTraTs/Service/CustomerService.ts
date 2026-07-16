@@ -11,16 +11,16 @@ export class CustomerService {
         this.customers.push(newCustomer)
         return newCustomer;
     }
-    public updateById(id: string, data: Partial<Customer>): Customer | null{
-        // Partial là dấu ?. có thể có or không giúp  đỡ phải ghi đầy đủ dù chỉ sửa 1 thuộc tính 
-        const index=this.customers.findIndex(c=>c.id===id);
-        if(index===-1){
-            return null
-        }
-        const curCustomer=this.customers[index];
-        Object.assign(curCustomer, data);
-        curCustomer.id = id;
-        return curCustomer;
-    }
+    public updateById(id: string, data: Partial<Customer>): Customer | null {
+    const index = this.customers.findIndex(c => c.id === id);
+    if (index === -1) {
+        return null;
+    }   
+    const curCustomer = this.customers[index] as Customer;
+    const { id: _, ...updateData } = data;
+    Object.assign(curCustomer, updateData);
+
+    return curCustomer;
+}
 
 }
