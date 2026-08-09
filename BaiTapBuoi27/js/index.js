@@ -1,6 +1,6 @@
-import { customerApi } from "./api";
-import { appState } from "./state";
-import { ui } from "./ui";
+import { customerApi } from "./api/index.js";
+import { appState } from "./state/index.js";
+import { ui } from "./ui/index.js";
 
 const formEl = document.getElementById("customer-form");
 const cancelBtn = document.getElementById("cancel-btn");

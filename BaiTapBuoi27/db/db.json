@@ -2,12 +2,12 @@
   "customers": [
     {
       "id": "CUST-001",
-      "companyName": "Cty TNHH F8 ",
+      "companyName": "Cty TNHH F8",
       "email": "contact@f8.edu.vn",
       "phone": "0987654321",
       "address": "Hà Đông, Hà Nội",
       "taxId": "018381123412",
-      "status": "Active"
+      "status": "Pending"
     },
     {
       "id": "CUST-002",
