@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý khách hàng - Buổi 27</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Quản lý khách hàng</h1>
+
+      <form id="customer-form" class="customer-form">
+        <div class="form-group">
+          <input
+            type="text"
+            id="companyName"
+            placeholder="Tên công ty (*)"
+            required
+          />
+          <input type="email" id="email" placeholder="Email (*)" required />
+        </div>
+        <div class="form-group">
+          <input type="text" id="phone" placeholder="Số điện thoại" required />
+          <input type="text" id="taxId" placeholder="Mã số thuế" required />
+        </div>
+        <div class="form-group">
+          <input type="text" id="address" placeholder="Địa chỉ" required />
+          <select id="status">
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+            <option value="Pending">Pending</option>
+          </select>
+        </div>
+        <button type="submit" id="submit-btn">Thêm mới</button>
+        <button type="button" id="cancel-btn" style="display: none">Hủy</button>
+      </form>
+
+      <table class="customer-table">
+        <thead>
+          <tr>
+            <th>Mã KH</th>
+            <th>Tên công ty</th>
+            <th>Email / SĐT</th>
+            <th>Địa chỉ</th>
+            <th>MST</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="customer-list"></tbody>
+      </table>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
