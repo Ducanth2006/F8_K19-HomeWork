@@ -96,7 +96,8 @@
       "email": "contact@topcv.vn",
       "phone_number": "02466805588",
       "website": "https://www.topcv.vn",
-      "logo_url": "https://cdn-new.topcv.vn/posts/test-logo-topcv.png",
+      "card_media":"https://www.topcv.vn/images/default_cover/topcv_cover_2.jpg",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
       "company_size": "500-1000 nhân viên",
       "category": "Công nghệ Thông tin",
       "address_list": [
@@ -111,6 +112,7 @@
           "address_detail": "Tầng 8, Tòa nhà Hà Đô Airport Building, 2 Hồng Hà, Phường 2, Tân Bình"
         }
       ],
+      "short_description":" VINHOMES - Nơi hạnh phúc ngập trànVinhomes - Hệ thống căn hộ và biệt thự với dịch vụ đẳng cấp của Tập đoàn Vingroup  Vinhomes cung cấp đến khách hàng một tiêu chuẩn sống đẳng cấp vượt trội mới, đây là sự kết hợp hoàn chỉnh giữa bất động sản nhà ở và hệ thống dịch vụ tiêu chuẩn cao tại những khu đô thị quy mô hàng đầu Việt...",
       "description_html": "<div><h3>Về TopCV Việt Nam</h3><p>TopCV là công ty công nghệ hàng đầu trong lĩnh vực HR Tech tại Việt Nam, cung cấp giải pháp tuyển dụng và kết nối cơ hội việc làm cho hàng triệu ứng viên.</p><h4>Môi trường làm việc</h4><ul><li>Môi trường trẻ trung, năng động, khuyến khích sáng tạo.</li><li>Chế độ đãi ngộ hấp dẫn, thưởng performance theo quý.</li><li>Chương trình đào tạo và phát triển lộ trình thăng tiến rõ ràng.</li></ul></div>"
     },
     {
@@ -127,7 +129,8 @@
       "email": "hr@globallogistics.io",
       "phone_number": "0909123456",
       "website": "https://globallogistics.io",
-      "logo_url": "https://cdn-new.topcv.vn/posts/default-logo.png",
+      "card_media":"https://www.topcv.vn/images/default_cover/topcv_cover_2.jpg",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
       "company_size": "100-499 nhân viên",
       "category": "Sales Xuất nhập khẩu/Logistics",
       "address_list": [
@@ -137,8 +140,109 @@
           "address_detail": "Số 120 Đường Cộng Hòa, Phường 4, Quận Tân Bình"
         }
       ],
+      "short_description":" VINHOMES - Nơi hạnh phúc ngập trànVinhomes - Hệ thống căn hộ và biệt thự với dịch vụ đẳng cấp của Tập đoàn Vingroup  Vinhomes cung cấp đến khách hàng một tiêu chuẩn sống đẳng cấp vượt trội mới, đây là sự kết hợp hoàn chỉnh giữa bất động sản nhà ở và hệ thống dịch vụ tiêu chuẩn cao tại những khu đô thị quy mô hàng đầu Việt...",
       "description_html": "<div><h3>Giới thiệu về Global Logistics Solutions</h3><p>Chúng tôi chuyên cung cấp các giải pháp công nghệ chuyển đổi số cho chuỗi cung ứng và vận tải đa phương thức quốc tế.</p><p>Sứ mệnh của chúng tôi là tối ưu hóa chi phí vận chuyển cho các doanh nghiệp vừa và nhỏ tại Đông Nam Á.</p></div>"
+    },
+    {
+      "id": "comp-001",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0108888888",
+      "company_name": "CÔNG TY CỔ PHẦN CÔNG NGHỆ TOPCV VIỆT NAM",
+      "international_name": "TOPCV VIETNAM TECHNOLOGY JOINT STOCK COMPANY",
+      "short_name": "TOPCV VIETNAM",
+      "director": "Thái Trí Hùng",
+      "headquarters_address": "Tầng 3, Tòa nhà FS - GoldSeason, 47 Nguyễn Tuân, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành phố Hà Nội, Việt Nam",
+      "issued_date": "2019-03-15",
+      "email": "contact@topcv.vn",
+      "phone_number": "02466805588",
+      "website": "https://www.topcv.vn",
+      "card_media":"https://www.topcv.vn/images/default_cover/topcv_cover_2.jpg",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "500-1000 nhân viên",
+      "category": "Công nghệ Thông tin",
+      "address_list": [
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "Tầng 3, Tòa FS GoldSeason, 47 Nguyễn Tuân, Thanh Xuân"
+        },
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Tầng 8, Tòa nhà Hà Đô Airport Building, 2 Hồng Hà, Phường 2, Tân Bình"
+        }
+      ],
+      "short_description":" VINHOMES - Nơi hạnh phúc ngập trànVinhomes - Hệ thống căn hộ và biệt thự với dịch vụ đẳng cấp của Tập đoàn Vingroup  Vinhomes cung cấp đến khách hàng một tiêu chuẩn sống đẳng cấp vượt trội mới, đây là sự kết hợp hoàn chỉnh giữa bất động sản nhà ở và hệ thống dịch vụ tiêu chuẩn cao tại những khu đô thị quy mô hàng đầu Việt...",
+      "description_html": "<div><h3>Về TopCV Việt Nam</h3><p>TopCV là công ty công nghệ hàng đầu trong lĩnh vực HR Tech tại Việt Nam, cung cấp giải pháp tuyển dụng và kết nối cơ hội việc làm cho hàng triệu ứng viên.</p><h4>Môi trường làm việc</h4><ul><li>Môi trường trẻ trung, năng động, khuyến khích sáng tạo.</li><li>Chế độ đãi ngộ hấp dẫn, thưởng performance theo quý.</li><li>Chương trình đào tạo và phát triển lộ trình thăng tiến rõ ràng.</li></ul></div>"
+    },
+    {
+      "id": "comp-003",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0101601092",
+      "company_name": "CÔNG TY TNHH PHẦN MỀM FPT",
+      "international_name": "FPT SOFTWARE COMPANY LIMITED",
+      "short_name": "FPT SOFTWARE",
+      "director": "Phạm Minh Tuấn",
+      "headquarters_address": "Tòa nhà FPT Cầu Giấy, phố Duy Tân, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Thành phố Hà Nội, Việt Nam",
+      "issued_date": "2004-12-23",
+      "email": "fsoft.contact@fsoft.com.vn",
+      "phone_number": "02437689048",
+      "website": "https://www.fpt-software.com",
+      "card_media": "https://www.topcv.vn/images/default_cover/topcv_cover_2.jpg",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "Over 10000 nhân viên",
+      "category": "Công nghệ Thông tin",
+      "address_list": [
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "Tòa nhà FPT Cầu Giấy, phố Duy Tân, Phường Dịch Vọng Hậu, Quận Cầu Giấy"
+        },
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Lô T2, đường D1, Khu Công nghệ cao, Phường Tân Phú, Quận 9"
+        }
+      ],
+      "short_description": "FPT Software là công ty thành viên của Tập đoàn FPT, nhà cung cấp dịch vụ công nghệ thông tin và giải pháp phần mềm hàng đầu Việt Nam, phục vụ hơn 1000 khách hàng toàn cầu bao gồm nhiều tập đoàn Fortune 500.",
+      "description_html": "<div><h3>Về FPT Software</h3><p>FPT Software là một trong những công ty phần mềm lớn nhất Việt Nam, chuyên cung cấp dịch vụ outsourcing, chuyển đổi số, AI, Cloud và IoT cho khách hàng quốc tế.</p><h4>Môi trường làm việc</h4><ul><li>Môi trường quốc tế, làm việc với khách hàng Fortune 500.</li><li>Cơ hội onsite nước ngoài và lộ trình thăng tiến rõ ràng.</li><li>Chế độ đãi ngộ cạnh tranh, bảo hiểm và phúc lợi tốt.</li></ul></div>"
+    },
+    {
+      "id": "comp-004",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0303490096",
+      "company_name": "CÔNG TY CỔ PHẦN VNG",
+      "international_name": "VNG CORPORATION",
+      "short_name": "VNG",
+      "director": "Lê Hồng Minh",
+      "headquarters_address": "Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Thành phố Hồ Chí Minh, Việt Nam",
+      "issued_date": "2004-09-09",
+      "email": "truyenthong@vng.com.vn",
+      "phone_number": "02839623888",
+      "website": "https://www.vng.com.vn",
+      "card_media": "https://www.topcv.vn/images/default_cover/topcv_cover_2.jpg",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "1000-5000 nhân viên",
+      "category": "Công nghệ Thông tin",
+      "address_list": [
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7"
+        },
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "Tòa nhà TNR, 54A Nguyễn Chí Thanh, Phường Láng Thượng, Quận Đống Đa"
+        }
+      ],
+      "short_description": "VNG Corporation là tập đoàn công nghệ hàng đầu Việt Nam, phát triển các sản phẩm game, Zalo, Zing, cloud và AI, hướng tới trở thành Technology Champion của khu vực.",
+      "description_html": "<div><h3>Về VNG Corporation</h3><p>VNG là công ty công nghệ tiên phong tại Việt Nam, nổi tiếng với Zalo, game online và hệ sinh thái giải trí số. Công ty đang mở rộng mạnh mẽ sang Cloud, AI và Fintech.</p><h4>Môi trường làm việc</h4><ul><li>Văn hóa năng động, sáng tạo và đổi mới.</li><li>Cơ hội làm việc trên các sản phẩm triệu người dùng.</li><li>Phúc lợi tốt, không gian làm việc hiện đại tại VNG Campus.</li></ul></div>"
     }
+    
   ],
   "jobs": [
     {

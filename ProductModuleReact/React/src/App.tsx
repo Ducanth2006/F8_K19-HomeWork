@@ -1,11 +1,8 @@
-import GlobalHeader from "./components/GlobalHeader";
-import { ToastContainer } from "react-toastify";
+import AppRouter from "./components/AppRouter/AppRouter";
+
 function App() {
   return (
-    <>
-      <ToastContainer />
-      <GlobalHeader />
-    </>
+    <AppRouter/>
   );
 }
 
