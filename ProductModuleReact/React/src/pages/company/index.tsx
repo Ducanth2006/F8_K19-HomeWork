@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 
 import { getCompanies } from "./model";
-import type{ ICompanyCard} from "../../shared/interface"
+import type { ICompanyCard } from "../../shared/interface";
 import CompanyCard from "./ui/CompanyCard";
 function Company() {
   const [isLoading, setLoading] = useState(true);
   const [companies, setCompanies] = useState<ICompanyCard[]>([]);
+  const Navigate = useNavigate();
   useEffect(() => {
     setLoading(true);
     const fetchData = async () => {
@@ -17,6 +19,10 @@ function Company() {
     };
     fetchData();
   }, []);
+  const handleClick = (id: string) => {
+    Navigate(`/cong-ty/${id}`);
+  };
+
   return (
     <>
       <div>
@@ -69,19 +75,29 @@ function Company() {
         {/* Content */}
         <div className="w-full mb-5">
           <div className=" container mx-auto px-3 sm:px-25  lg:px-50">
-          <h1 className="w-full text-center font-bold text-xl py-5">
-            DANH SÁCH CÁC CÔNG TY NỔI BẬT
-          </h1>
-          <div className="w-full grid  grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-3">
-            {companies.map((c,index) => {
-              return (
-                
-                  <div key={index} className="col-span-1"><CompanyCard short_name={c.short_name}  card_media={c.card_media} logo_url={c.logo_url} short_description={c.short_description}/></div>
-             
-              );
-            })}
+            <h1 className="w-full text-center font-bold text-xl py-5">
+              DANH SÁCH CÁC CÔNG TY NỔI BẬT
+            </h1>
+            <div className="w-full grid  grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-3">
+              {companies.map((c,i) => {
+                return (
+                  <div
+                    key={i}
+                    onClick={() => handleClick(c.id)}
+                    className="col-span-1"
+                  >
+                    <CompanyCard
+                      id={c.id}
+                      short_name={c.short_name}
+                      card_media={c.card_media}
+                      logo_url={c.logo_url}
+                      short_description={c.short_description}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </>

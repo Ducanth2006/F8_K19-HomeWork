@@ -11,7 +11,7 @@ function AppRouter() {
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/cong-ty" element={<Company />} />
-          <Route path="/cong-ty/:name" element={<CompanyDetail/>} />
+          <Route path="/cong-ty/:id" element={<CompanyDetail/>} />
         </Route>
       </Routes>
     </BrowserRouter>
