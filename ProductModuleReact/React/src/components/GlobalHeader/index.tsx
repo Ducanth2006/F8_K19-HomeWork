@@ -1,6 +1,10 @@
-import HeaderNav from "./components/Navigation/Navigation";
+import { useNavigate } from "react-router";
 
 function GlobalHeader() {
+  const navigate = useNavigate();
+  const handleNavigateToCompany =()=>{
+    navigate("/cong-ty")
+  }
   return (
     <>
       <header className=" bg-white flex justify-between p-2 text-sm">
@@ -11,7 +15,17 @@ function GlobalHeader() {
             className="h-13 w-auto object-contain"
             alt="TopCV Logo"
           />
-          <HeaderNav />
+          <ul className="flex gap-10">
+            <li onClick={handleNavigateToCompany} className=" relative font-semibold  text-[14px] pb-1 items-center text-black hover:text-green-600 transition-all duration-300 ease-out transform -translate-y-1 hover:translate-y-0 hover:border-b hover:rounded-b-xs cursor-pointer">
+              Công ty
+            </li>
+            <li className=" relative font-semibold  text-[14px] pb-1 items-center text-black hover:text-green-600 transition-all duration-300 ease-out transform -translate-y-1 hover:translate-y-0 hover:border-b hover:rounded-b-xs cursor-pointer">
+              Tạo Cv
+            </li>
+            <li className=" relative font-semibold  text-[14px] pb-1 items-center text-black hover:text-green-600 transition-all duration-300 ease-out transform -translate-y-1 hover:translate-y-0 hover:border-b hover:rounded-b-xs cursor-pointer">
+              Công cụ
+            </li>
+          </ul>
         </div>
         {/* Right header */}
         <div></div>

@@ -79,7 +79,51 @@
       "id": "group-6",
       "group_name": "Lao động phổ thông",
       "group_slug": "lao-dong-pho-thong"
-    }
+    },
+    {
+    "id": "group-7",
+    "group_name": "Tài chính / Ngân hàng / Bảo hiểm",
+    "group_slug": "tai-chinh-ngan-hang-bao-hiem",
+    "categories": [
+      {
+        "id": "cat-7-1",
+        "name": "Ngân hàng",
+        "slug": "ngan-hang"
+      },
+      {
+        "id": "cat-7-2",
+        "name": "Bảo hiểm",
+        "slug": "bao-hiem"
+      },
+      {
+        "id": "cat-7-3",
+        "name": "Tài chính / Đầu tư",
+        "slug": "tai-chinh-dau-tu"
+      }
+    ]
+  },
+  {
+    "id": "group-8",
+    "group_name": "Kế toán / Kiểm toán / Thuế",
+    "group_slug": "ke-toan-kiem-toan-thue",
+    "categories": [
+      {
+        "id": "cat-8-1",
+        "name": "Kế toán",
+        "slug": "ke-toan"
+      },
+      {
+        "id": "cat-8-2",
+        "name": "Kiểm toán",
+        "slug": "kiem-toan"
+      },
+      {
+        "id": "cat-8-3",
+        "name": "Thuế",
+        "slug": "thue"
+      }
+    ]
+  }
   ],
   "companies": [
     {
@@ -663,7 +707,7 @@
     "slug": "digital-marketing-specialist-performance-007",
     "category": "Digital Marketing",
     "specialty": "Performance Marketing",
-    "job_type": "FULL_TIME",
+    "job_type": "PART_TIME",
     "experience_level": "1-3 năm",
     "gender": "NOT_REQUIRED",
     "quantity": 2,

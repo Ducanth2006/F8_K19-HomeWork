@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
-import { getCompanies } from "./model";
+import { getCompanies } from "../../services/company";
 import type { ICompanyCard } from "../../shared/interface";
 import CompanyCard from "./ui/CompanyCard";
 function Company() {

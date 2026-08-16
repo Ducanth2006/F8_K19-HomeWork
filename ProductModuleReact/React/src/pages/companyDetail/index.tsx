@@ -2,30 +2,12 @@ import { useState, useEffect } from "react";
 import { NavLink, useParams } from "react-router";
 import DOMPurify from "dompurify";
 
-import { getCompanies } from "./api";
+import { getCompanies } from "../../services/companyDetail";
 import type { IJobCard } from "../../shared/interface";
-import { getJobByCompanyId } from "./api";
+import { getJobByCompanyId } from "../../services/companyDetail";
 import Card from "../../components/JobCard";
 
-interface ICompanyDetail {
-  id: number;
-  company_name: string;
-  website: string;
-  tax_code: string;
-  director: string;
-  email: string;
-  phone_number: string;
-  company_size: string;
-  category: string;
-  address_list: IAddress[];
-  description_html: string;
-  logo_url: string;
-}
-interface IAddress {
-  city_id: number;
-  city_name: string;
-  address_detail: string;
-}
+
 interface CommonInfoItem {
   name: string;
   icon: string;
@@ -38,7 +20,7 @@ const commonInfo: CommonInfoItem[] = [
   { name: "Số điện thoại", icon: "fa-solid fa-phone", props: "phone_number" },
 ];
 function CompanyDetail() {
-  const [jobs,setJobs] =useState<IJobCard[]>([])
+  const [jobs, setJobs] = useState<IJobCard[]>([])
   const [companyDetail, setCompanyDetail] = useState<ICompanyDetail>();
   const [isExpanded, setExpanded] = useState<boolean>(false);
   const { id } = useParams<{ id: string }>();
@@ -48,8 +30,8 @@ function CompanyDetail() {
       const data = await getCompanies(id);
       setCompanyDetail(data);
     };
-    const getJobs= async ()=>{
-      const data=await getJobByCompanyId(id);
+    const getJobs = async () => {
+      const data = await getJobByCompanyId(id);
       setJobs(data);
     }
     fetchData();
@@ -111,7 +93,7 @@ function CompanyDetail() {
           <div className="grid grid-cols-3 gap-2">
             {/* Introduction section */}
             <div className="col-span-2 bg-white rounded-2xl px-2 ">
-              <div className={`relative transition-all duration-300 ease-out ${isExpanded?"":"max-h-100 overflow-hidden"}`}>
+              <div className={`relative transition-all duration-300 ease-out ${isExpanded ? "" : "max-h-100 overflow-hidden"}`}>
                 <div
                   className="prose "
                   dangerouslySetInnerHTML={{ __html: cleanHtml }}
@@ -120,7 +102,7 @@ function CompanyDetail() {
                   <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-white to-transparent pointer-events-none" />
                 )}
               </div>
-              <div className="text-center hover:bg-linear-to-b from-green-100 to-white "><button onClick={handleClick} className="text-green-500 hover:underline font-semibold">{isExpanded?"Thu gọn":"Xem thêm"}</button></div>
+              <div className="text-center hover:bg-linear-to-b from-green-100 to-white "><button onClick={handleClick} className="text-green-500 hover:underline font-semibold">{isExpanded ? "Thu gọn" : "Xem thêm"}</button></div>
             </div>
             {/* Common information */}
             <div className="col-span-1 bg-white rounded-2xl p-2 h-fit  ">
@@ -141,7 +123,7 @@ function CompanyDetail() {
               </ul>
             </div>
             {/* Job list by company id */}
-            <div className="col-span-2 bg-white rounded-2xl px-2 "><h3 className="p-4 text-xl font-medium">Tin tuyển dụng</h3><ul className="flex flex-col gap-2">{jobs.map((j)=><li key={j.id}><Card {...j}/></li>)}</ul></div>
+            <div className="col-span-2 bg-white rounded-2xl px-2 "><h3 className="p-4 text-xl font-medium">Tin tuyển dụng</h3><ul className="flex flex-col gap-2">{jobs.map((j) => <li key={j.id}><Card {...j} /></li>)}</ul></div>
           </div>
         </div>
       </div>
