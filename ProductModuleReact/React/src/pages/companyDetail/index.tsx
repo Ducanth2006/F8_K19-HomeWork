@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import { NavLink, useParams } from "react-router";
 import DOMPurify from "dompurify";
 
-import { getCompanies } from "../../services/companyDetail";
-import type { IJobCard } from "../../shared/interface";
-import { getJobByCompanyId } from "../../services/companyDetail";
-import Card from "../../components/JobCard";
+import {getCompanies,getCompaniesById} from "@/entities/company"
+import {getJobByCompanyId } from "@/entities/job";
+import type { IJobCard } from "@/entities/job";
+import type{ICompanyDetail} from "@/entities/company"
+import {CompanyJobCard} from "@/entities/job";
 
 
 interface CommonInfoItem {
@@ -27,7 +28,7 @@ function CompanyDetail() {
   useEffect(() => {
     if (!id) return;
     const fetchData = async () => {
-      const data = await getCompanies(id);
+      const data = await getCompaniesById(id);
       setCompanyDetail(data);
     };
     const getJobs = async () => {
@@ -123,7 +124,7 @@ function CompanyDetail() {
               </ul>
             </div>
             {/* Job list by company id */}
-            <div className="col-span-2 bg-white rounded-2xl px-2 "><h3 className="p-4 text-xl font-medium">Tin tuyển dụng</h3><ul className="flex flex-col gap-2">{jobs.map((j) => <li key={j.id}><Card {...j} /></li>)}</ul></div>
+            <div className="col-span-2 bg-white rounded-2xl px-2 "><h3 className="p-4 text-xl font-medium">Tin tuyển dụng</h3><ul className="flex flex-col gap-2">{jobs.map((j) => <li key={j.id}><CompanyJobCard {...j} /></li>)}</ul></div>
           </div>
         </div>
       </div>

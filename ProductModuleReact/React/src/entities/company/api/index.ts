@@ -1,6 +1,5 @@
 import api from "@/shared/api";
-import type { ICompanyCard, ICompanyDetail } from "../model/types"
-export const getCompaniesById = async (id: string): Promise<ICompanyDetail | null> => {
+export const getCompaniesById = async (id: string)=> {
     try {
         const res = await api.get(`/companies/${id}`)
         return res.data
@@ -8,7 +7,7 @@ export const getCompaniesById = async (id: string): Promise<ICompanyDetail | nul
         console.log("Lỗi khi get companies")
     }
 }
-export const getCompanies = async (): Promise<ICompanyCard | null> => {
+export const getCompanies = async () => {
     try {
         const res = await api.get("/companies")
         return res.data;

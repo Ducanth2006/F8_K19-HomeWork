@@ -1,8 +1,8 @@
 import { Outlet } from "react-router";
 import { ToastContainer } from "react-toastify";
 
-import GlobalHeader from "../../components/GlobalHeader";
-import DefaultFooter from "./footer";
+import GlobalHeader from "../../header/ui/GlobalHeader";
+import DefaultFooter from "../../footer/ui/DefaultFooter";
 function DefaultLayout() {
   return (
     <>

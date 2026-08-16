@@ -5,6 +5,9 @@ function GlobalHeader() {
   const handleNavigateToCompany =()=>{
     navigate("/cong-ty")
   }
+  const handleNavigateToHomePage=()=>{
+    navigate("/")
+  }
   return (
     <>
       <header className=" bg-white flex justify-between p-2 text-sm">
@@ -12,8 +15,9 @@ function GlobalHeader() {
         <div className="flex items-center gap-2 lg-gap-4">
           <img
             src="https://static.topcv.vn/v4/image/logo/topcv-logo-7.png"
-            className="h-13 w-auto object-contain"
+            className="h-13 w-auto object-contain cursor-pointer"
             alt="TopCV Logo"
+            onClick={handleNavigateToHomePage}
           />
           <ul className="flex gap-10">
             <li onClick={handleNavigateToCompany} className=" relative font-semibold  text-[14px] pb-1 items-center text-black hover:text-green-600 transition-all duration-300 ease-out transform -translate-y-1 hover:translate-y-0 hover:border-b hover:rounded-b-xs cursor-pointer">

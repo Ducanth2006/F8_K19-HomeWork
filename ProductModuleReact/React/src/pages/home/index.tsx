@@ -1,4 +1,4 @@
-import Menu from "./ui/Menu";
+import {Menu} from "@/widgets/category-menu";
 function Home() {
   return (
     <>

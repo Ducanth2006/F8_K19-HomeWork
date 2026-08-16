@@ -1,5 +1,9 @@
-import type { SubMenuProps ,ICategories} from "@/shared/interface";
-   
+import type {ICatiegoryGroup,ICategories} from "@/entities/category";
+
+interface SubMenuProps{
+    cateGroups:ICatiegoryGroup[],
+    id:string|number
+}
 function SubMenu({ cateGroups, id }: SubMenuProps) {
     const isExist=cateGroups.find((c)=>c.id===id)
     if(!isExist) return <div className="grid grid-cols-2 justify-between p-3 bg-white "><p>Not found</p></div>;

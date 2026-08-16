@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 
-import DefaultLayout from "../../layout/defaultLayout";
-import Company from "../../pages/company";
-import Home from "../../pages/home";
-import CompanyDetail from "../../pages/companyDetail";
+import DefaultLayout from "@/widgets/layout/ui/DefaultLayout";
+import Company from "@/pages/company";
+import Home from "@/pages/home";
+import CompanyDetail from "@/pages/companyDetail";
 function AppRouter() {
   return (
     <BrowserRouter>

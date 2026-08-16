@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
-import { getCompanies } from "../../services/company";
-import type { ICompanyCard } from "../../shared/interface";
-import CompanyCard from "./ui/CompanyCard";
+import { getCompanies,CompanyCard  } from "@/entities/company";
+import type { ICompanyCard } from "@/entities/company";
 function Company() {
   const [isLoading, setLoading] = useState(true);
   const [companies, setCompanies] = useState<ICompanyCard[]>([]);

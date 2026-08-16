@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import MainMenu from "./MainMenu";
-import type { ICatiegoryGroup } from "@/shared/interface";
-import { getCategoryGroup } from "@/services/categoryGroup";
-import SubMenu from "./SubMenu";
+import MainMenu from "../ui/MainMenu";
+import type { ICatiegoryGroup } from "@/entities/category";
+import { getCategoryGroup } from "@/entities/category";
+import SubMenu from "../ui/SubMenu";
 const pageLimit = 6;
 function Menu() {
   const [cateGroups, setCateGroups] = useState<ICatiegoryGroup[]>([]);

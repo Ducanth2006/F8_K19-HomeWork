@@ -1,9 +1,19 @@
 import { useState, useEffect } from "react";
 
-import type { ICatiegoryGroup } from "@/shared/interface";
-import type{HomeMenuProps} from "@/shared/interface"
-import Pagination from "@/components/Pagination";
+import type { ICatiegoryGroup } from "@/entities/category";
 
+import Pagination from "@/shared/ui/Pagination";
+
+export interface HomeMenuProps {
+  cateGroups: ICatiegoryGroup[],
+  currentPage: number,
+  totalPages: number,
+  isLoading: boolean,
+  activeGroup?: ICatiegoryGroup | null,
+  onPageChange: (page: number) => void
+  onHoverGroup: (id: string | number) => void
+  activeGroupId: string | number | null
+}
 function MainMenu({cateGroups,isLoading,currentPage,totalPages,onPageChange,onHoverGroup}:HomeMenuProps) {
 
   return (
