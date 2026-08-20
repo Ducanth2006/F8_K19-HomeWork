@@ -188,39 +188,6 @@
       "description_html": "<div><h3>Giới thiệu về Global Logistics Solutions</h3><p>Chúng tôi chuyên cung cấp các giải pháp công nghệ chuyển đổi số cho chuỗi cung ứng và vận tải đa phương thức quốc tế.</p><p>Sứ mệnh của chúng tôi là tối ưu hóa chi phí vận chuyển cho các doanh nghiệp vừa và nhỏ tại Đông Nam Á.</p></div>"
     },
     {
-      "id": "comp-001",
-      "status": "APPROVED",
-      "verification_tier": "VERIFIED",
-      "tax_code": "0108888888",
-      "company_name": "CÔNG TY CỔ PHẦN CÔNG NGHỆ TOPCV VIỆT NAM",
-      "international_name": "TOPCV VIETNAM TECHNOLOGY JOINT STOCK COMPANY",
-      "short_name": "TOPCV VIETNAM",
-      "director": "Thái Trí Hùng",
-      "headquarters_address": "Tầng 3, Tòa nhà FS - GoldSeason, 47 Nguyễn Tuân, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành phố Hà Nội, Việt Nam",
-      "issued_date": "2019-03-15",
-      "email": "contact@topcv.vn",
-      "phone_number": "02466805588",
-      "website": "https://www.topcv.vn",
-      "card_media": "https://www.topcv.vn/images/default_cover/topcv_cover_2.jpg",
-      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
-      "company_size": "500-1000 nhân viên",
-      "category": "Công nghệ Thông tin",
-      "address_list": [
-        {
-          "city_id": 1,
-          "city_name": "Hà Nội",
-          "address_detail": "Tầng 3, Tòa FS GoldSeason, 47 Nguyễn Tuân, Thanh Xuân"
-        },
-        {
-          "city_id": 2,
-          "city_name": "Thành phố Hồ Chí Minh",
-          "address_detail": "Tầng 8, Tòa nhà Hà Đô Airport Building, 2 Hồng Hà, Phường 2, Tân Bình"
-        }
-      ],
-      "short_description": " VINHOMES - Nơi hạnh phúc ngập trànVinhomes - Hệ thống căn hộ và biệt thự với dịch vụ đẳng cấp của Tập đoàn Vingroup  Vinhomes cung cấp đến khách hàng một tiêu chuẩn sống đẳng cấp vượt trội mới, đây là sự kết hợp hoàn chỉnh giữa bất động sản nhà ở và hệ thống dịch vụ tiêu chuẩn cao tại những khu đô thị quy mô hàng đầu Việt...",
-      "description_html": "<div><h3>Về TopCV Việt Nam</h3><p>TopCV là công ty công nghệ hàng đầu trong lĩnh vực HR Tech tại Việt Nam, cung cấp giải pháp tuyển dụng và kết nối cơ hội việc làm cho hàng triệu ứng viên.</p><h4>Môi trường làm việc</h4><ul><li>Môi trường trẻ trung, năng động, khuyến khích sáng tạo.</li><li>Chế độ đãi ngộ hấp dẫn, thưởng performance theo quý.</li><li>Chương trình đào tạo và phát triển lộ trình thăng tiến rõ ràng.</li></ul></div>"
-    },
-    {
       "id": "comp-003",
       "status": "APPROVED",
       "verification_tier": "VERIFIED",
@@ -285,7 +252,59 @@
       ],
       "short_description": "VNG Corporation là tập đoàn công nghệ hàng đầu Việt Nam, phát triển các sản phẩm game, Zalo, Zing, cloud và AI, hướng tới trở thành Technology Champion của khu vực.",
       "description_html": "<div><h3>Về VNG Corporation</h3><p>VNG là công ty công nghệ tiên phong tại Việt Nam, nổi tiếng với Zalo, game online và hệ sinh thái giải trí số. Công ty đang mở rộng mạnh mẽ sang Cloud, AI và Fintech.</p><h4>Môi trường làm việc</h4><ul><li>Văn hóa năng động, sáng tạo và đổi mới.</li><li>Cơ hội làm việc trên các sản phẩm triệu người dùng.</li><li>Phúc lợi tốt, không gian làm việc hiện đại tại VNG Campus.</li></ul></div>"
-    }
+    },
+     {
+    "id": "comp-005",
+    "status": "APPROVED",
+    "verification_tier": "VERIFIED",
+    "tax_code": "0312456789",
+    "company_name": "CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN ĐẤT XANH",
+    "international_name": "DAT XANH REAL ESTATE JOINT STOCK COMPANY",
+    "short_name": "DAT XANH GROUP",
+    "director": "Lương Trí Thìn",
+    "headquarters_address": "Số 2 Nguyễn Thị Hưởng, Phường Bình An, Quận 2, Thành phố Hồ Chí Minh, Việt Nam",
+    "issued_date": "2010-05-11",
+    "email": "info@datxanh.vn",
+    "phone_number": "02871096868",
+    "website": "https://datxanh.vn",
+    "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+    "company_size": "1000-5000 nhân viên",
+    "category": "Sales Bất động sản",
+    "address_list": [
+      {
+        "city_id": 2,
+        "city_name": "Thành phố Hồ Chí Minh",
+        "address_detail": "Số 2 Nguyễn Thị Hưởng, Phường Bình An, Quận 2"
+      }
+    ],
+    "description_html": "<div><h3>Về Đất Xanh Group</h3><p>Đất Xanh là tập đoàn bất động sản hàng đầu Việt Nam với hệ sinh thái đầu tư, phát triển và phân phối dự án trải dài cả nước.</p></div>"
+  },
+  {
+    "id": "comp-006",
+    "status": "APPROVED",
+    "verification_tier": "VERIFIED",
+    "tax_code": "0100112233",
+    "company_name": "NGÂN HÀNG TMCP KỸ THƯƠNG VIỆT NAM",
+    "international_name": "VIETNAM TECHNOLOGICAL AND COMMERCIAL JOINT STOCK BANK",
+    "short_name": "TECHCOMBANK",
+    "director": "Jens Lottner",
+    "headquarters_address": "191 Bà Triệu, Phường Lê Đại Hành, Quận Hai Bà Trưng, Thành phố Hà Nội, Việt Nam",
+    "issued_date": "1993-09-27",
+    "email": "info@techcombank.com.vn",
+    "phone_number": "1800588822",
+    "website": "https://www.techcombank.com.vn",
+    "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+    "company_size": "Over 10000 nhân viên",
+    "category": "Ngân hàng",
+    "address_list": [
+      {
+        "city_id": 1,
+        "city_name": "Hà Nội",
+        "address_detail": "191 Bà Triệu, Phường Lê Đại Hành, Quận Hai Bà Trưng"
+      }
+    ],
+    "description_html": "<div><h3>Về Techcombank</h3><p>Techcombank là một trong những ngân hàng thương mại cổ phần hàng đầu Việt Nam, tiên phong chuyển đổi số trong lĩnh vực tài chính - ngân hàng.</p></div>"
+  }
   ],
   "jobs": [
     {
@@ -304,7 +323,7 @@
         "email": "contact@topcv.vn",
         "phone_number": "02466805588",
         "website": "https://www.topcv.vn",
-        "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+        "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/gWTKaL6rnqlO37GlEVAZJcUHsz1hz4bx_1721703377____4170540946c9bc527454da000f8502f2.jfif",
         "company_size": "500-1000 nhân viên",
         "category": "Công nghệ Thông tin",
         "address_list": [
@@ -326,7 +345,7 @@
       "category": "Lập trình phần mềm",
       "specialty": "Frontend Developer",
       "job_type": "FULL_TIME",
-      "experience_level": "3-5 năm",
+      "experience_level": "Chưa có kinh nghiệm",
       "gender": "NOT_REQUIRED",
       "quantity": 3,
       "salary": {
@@ -366,7 +385,7 @@
         "email": "hr@globallogistics.io",
         "phone_number": "0909123456",
         "website": "https://globallogistics.io",
-        "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+        "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/gWTKaL6rnqlO37GlEVAZJcUHsz1hz4bx_1721703377____4170540946c9bc527454da000f8502f2.jfif",
         "company_size": "100-499 nhân viên",
         "category": "Sales Xuất nhập khẩu/Logistics",
         "address_list": [
@@ -383,7 +402,7 @@
       "category": "Sales Xuất nhập khẩu/Logistics",
       "specialty": "Sales Logistics",
       "job_type": "FULL_TIME",
-      "experience_level": "2-3 năm",
+      "experience_level": "1 năm",
       "gender": "NOT_REQUIRED",
       "quantity": 2,
       "salary": {
@@ -445,7 +464,7 @@
     "category": "Lập trình phần mềm",
     "specialty": "Backend Developer",
     "job_type": "FULL_TIME",
-    "experience_level": "3-5 năm",
+    "experience_level": "2 năm",
     "gender": "NOT_REQUIRED",
     "quantity": 5,
     "salary": {
@@ -512,7 +531,7 @@
     "category": "Lập trình phần mềm",
     "specialty": "Mobile Developer",
     "job_type": "FULL_TIME",
-    "experience_level": "2-4 năm",
+    "experience_level": "3 năm",
     "gender": "NOT_REQUIRED",
     "quantity": 4,
     "salary": {
@@ -574,7 +593,7 @@
     "category": "Nhân sự & Tuyển dụng",
     "specialty": "Talent Acquisition",
     "job_type": "FULL_TIME",
-    "experience_level": "1-3 năm",
+    "experience_level": "1 năm trở xuống",
     "gender": "NOT_REQUIRED",
     "quantity": 3,
     "salary": {
@@ -641,7 +660,7 @@
     "category": "Lập trình phần mềm",
     "specialty": "AI/ML Engineer",
     "job_type": "FULL_TIME",
-    "experience_level": "2-5 năm",
+    "experience_level": "Từ 4-5 năm",
     "gender": "NOT_REQUIRED",
     "quantity": 3,
     "salary": {
@@ -708,7 +727,7 @@
     "category": "Digital Marketing",
     "specialty": "Performance Marketing",
     "job_type": "PART_TIME",
-    "experience_level": "1-3 năm",
+    "experience_level": "Trên 5 năm",
     "gender": "NOT_REQUIRED",
     "quantity": 2,
     "salary": {
@@ -770,7 +789,7 @@
     "category": "Lập trình phần mềm",
     "specialty": "Product Manager",
     "job_type": "FULL_TIME",
-    "experience_level": "3-5 năm",
+    "experience_level": "3 năm",
     "gender": "NOT_REQUIRED",
     "quantity": 1,
     "salary": {
@@ -793,6 +812,844 @@
     "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Chịu trách nhiệm quản lý vòng đời sản phẩm của các tính năng trên nền tảng TopCV (Job Seeker & Employer side).</li><li>Nghiên cứu insight người dùng, phân tích dữ liệu, đề xuất và ưu tiên roadmap sản phẩm.</li><li>Viết PRD, phối hợp chặt chẽ với Design, Engineering và Business để triển khai tính năng.</li><li>Theo dõi metrics (activation, retention, conversion…) và liên tục tối ưu trải nghiệm người dùng.</li></ul></div>",
     "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Tối thiểu 3 năm kinh nghiệm Product Manager, ưu tiên sản phẩm B2C hoặc HR Tech/SaaS.</li><li>Có tư duy data-driven, thành thạo phân tích metrics và user research.</li><li>Kỹ năng giao tiếp, thuyết phục và quản lý stakeholder tốt.</li><li>Hiểu biết cơ bản về tech stack web/mobile là lợi thế.</li></ul></div>",
     "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Lương 30-45 triệu + thưởng performance theo quý.</li><li>Làm việc trực tiếp với sản phẩm triệu người dùng trong lĩnh vực HR Tech.</li><li>Lộ trình thăng tiến lên Senior PM / Group Product Manager.</li><li>BHXH đầy đủ, khám sức khỏe, du lịch, môi trường năng động sáng tạo.</li></ul></div>"
+  },
+  {
+    "id": "job-009",
+    "company": {
+      "id": "comp-005",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0312456789",
+      "company_name": "CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN ĐẤT XANH",
+      "international_name": "DAT XANH REAL ESTATE JOINT STOCK COMPANY",
+      "short_name": "DAT XANH GROUP",
+      "director": "Lương Trí Thìn",
+      "headquarters_address": "Số 2 Nguyễn Thị Hưởng, Phường Bình An, Quận 2, Thành phố Hồ Chí Minh, Việt Nam",
+      "issued_date": "2010-05-11",
+      "email": "info@datxanh.vn",
+      "phone_number": "02871096868",
+      "website": "https://datxanh.vn",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "1000-5000 nhân viên",
+      "category": "Sales Bất động sản",
+      "address_list": [
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Số 2 Nguyễn Thị Hưởng, Phường Bình An, Quận 2"
+        }
+      ],
+      "description_html": "<div><h3>Về Đất Xanh Group</h3><p>Đất Xanh là tập đoàn bất động sản hàng đầu Việt Nam với hệ sinh thái đầu tư, phát triển và phân phối dự án trải dài cả nước.</p></div>"
+    },
+    "title": "Chuyên viên Kinh doanh Bất động sản (Dự án Vinhomes)",
+    "slug": "chuyen-vien-kinh-doanh-bat-dong-san-du-an-vinhomes-009",
+    "category": "Sales Bất động sản",
+    "specialty": "Sales dự án",
+    "job_type": "FULL_TIME",
+    "experience_level": "1 năm trở xuống",
+    "gender": "NOT_REQUIRED",
+    "quantity": 10,
+    "salary": {
+      "type": "NEGOTIABLE",
+      "min": null,
+      "max": null,
+      "currency": "VND",
+      "is_negotiable": true
+    },
+    "work_location": [
+      {
+        "city_id": 2,
+        "city_name": "Thành phố Hồ Chí Minh",
+        "address_detail": "Số 2 Nguyễn Thị Hưởng, Phường Bình An, Quận 2"
+      }
+    ],
+    "deadline": "2026-10-15T23:59:59Z",
+    "status": "PUBLISHED",
+    "is_hot": true,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Tư vấn, giới thiệu và chốt giao dịch các sản phẩm căn hộ, biệt thự thuộc dự án Vinhomes.</li><li>Chăm sóc data khách hàng tiềm năng do công ty cung cấp.</li><li>Tham gia sự kiện mở bán, roadshow cùng đội ngũ kinh doanh.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Không yêu cầu kinh nghiệm, được đào tạo bài bản từ đầu.</li><li>Ngoại hình ưa nhìn, giao tiếp tốt, chịu được áp lực doanh số.</li><li>Có phương tiện đi lại và laptop cá nhân.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Thu nhập không giới hạn: lương cứng + hoa hồng hấp dẫn.</li><li>Thưởng nóng theo giao dịch, thưởng quý/năm.</li><li>Du lịch nước ngoài hàng năm cho nhân viên xuất sắc.</li></ul></div>"
+  },
+  {
+    "id": "job-010",
+    "company": {
+      "id": "comp-002",
+      "status": "PENDING",
+      "verification_tier": "UNVERIFIED",
+      "tax_code": "0316789012",
+      "company_name": "CÔNG TY TNHH GIẢI PHÁP PHẦN MỀM GLOBAL LOGISTICS",
+      "international_name": "GLOBAL LOGISTICS SOFTWARE SOLUTIONS COMPANY LIMITED",
+      "short_name": "GL SOLUTIONS",
+      "director": "Nguyễn Văn An",
+      "headquarters_address": "Số 120 Đường Cộng Hòa, Phường 4, Quận Tân Bình, Thành phố Hồ Chí Minh, Việt Nam",
+      "issued_date": "2021-06-20",
+      "email": "hr@globallogistics.io",
+      "phone_number": "0909123456",
+      "website": "https://globallogistics.io",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "100-499 nhân viên",
+      "category": "Sales Xuất nhập khẩu/Logistics",
+      "address_list": [
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Số 120 Đường Cộng Hòa, Phường 4, Quận Tân Bình"
+        }
+      ],
+      "description_html": "<div><h3>Giới thiệu về Global Logistics Solutions</h3><p>Chúng tôi chuyên cung cấp các giải pháp công nghệ chuyển đổi số cho chuỗi cung ứng và vận tải đa phương thức quốc tế.</p></div>"
+    },
+    "title": "Kỹ sư Công trình (Giám sát thi công)",
+    "slug": "ky-su-cong-trinh-giam-sat-thi-cong-010",
+    "category": "Sales Xây dựng",
+    "specialty": "Giám sát công trình",
+    "job_type": "FULL_TIME",
+    "experience_level": "2 năm",
+    "gender": "MALE",
+    "quantity": 2,
+    "salary": {
+      "type": "RANGE",
+      "min": 15000000,
+      "max": 20000000,
+      "currency": "VND",
+      "is_negotiable": false
+    },
+    "work_location": [
+      {
+        "city_id": 2,
+        "city_name": "Thành phố Hồ Chí Minh",
+        "address_detail": "Số 120 Đường Cộng Hòa, Phường 4, Quận Tân Bình"
+      }
+    ],
+    "deadline": "2026-09-25T23:59:59Z",
+    "status": "PUBLISHED",
+    "is_hot": false,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Giám sát tiến độ, chất lượng thi công tại công trường.</li><li>Phối hợp với nhà thầu phụ và tư vấn giám sát để xử lý phát sinh.</li><li>Lập báo cáo tiến độ định kỳ cho Ban điều hành dự án.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Tốt nghiệp Đại học chuyên ngành Xây dựng, Kỹ thuật công trình.</li><li>Ưu tiên nam giới do tính chất công việc thường xuyên đi công trường.</li><li>Có tối thiểu 2 năm kinh nghiệm giám sát thi công.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Phụ cấp công trường, ăn ở, đi lại.</li><li>Đóng BHXH đầy đủ, thưởng lễ Tết.</li><li>Cơ hội thăng tiến lên Chỉ huy trưởng công trình.</li></ul></div>"
+  },
+  {
+    "id": "job-011",
+    "company": {
+      "id": "comp-004",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0303490096",
+      "company_name": "CÔNG TY CỔ PHẦN VNG",
+      "international_name": "VNG CORPORATION",
+      "short_name": "VNG",
+      "director": "Lê Hồng Minh",
+      "headquarters_address": "Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Thành phố Hồ Chí Minh, Việt Nam",
+      "issued_date": "2004-09-09",
+      "email": "truyenthong@vng.com.vn",
+      "phone_number": "02839623888",
+      "website": "https://www.vng.com.vn",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "1000-5000 nhân viên",
+      "category": "Công nghệ Thông tin",
+      "address_list": [
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7"
+        },
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "Tòa nhà TNR, 54A Nguyễn Chí Thanh, Phường Láng Thượng, Quận Đống Đa"
+        }
+      ],
+      "description_html": "<div><h3>Về VNG Corporation</h3><p>VNG là công ty công nghệ tiên phong tại Việt Nam, nổi tiếng với Zalo, game online và hệ sinh thái giải trí số.</p></div>"
+    },
+    "title": "Branding & Communications Executive",
+    "slug": "branding-communications-executive-011",
+    "category": "Branding & Communications",
+    "specialty": "Truyền thông thương hiệu",
+    "job_type": "FULL_TIME",
+    "experience_level": "1 năm",
+    "gender": "FEMALE",
+    "quantity": 1,
+    "salary": {
+      "type": "RANGE",
+      "min": 12000000,
+      "max": 18000000,
+      "currency": "VND",
+      "is_negotiable": false
+    },
+    "work_location": [
+      {
+        "city_id": 2,
+        "city_name": "Thành phố Hồ Chí Minh",
+        "address_detail": "Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7"
+      }
+    ],
+    "deadline": "2026-09-30T23:59:59Z",
+    "status": "PUBLISHED",
+    "is_hot": false,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Lên kế hoạch và triển khai các chiến dịch truyền thông thương hiệu cho sản phẩm công ty.</li><li>Phối hợp với báo chí, KOL/KOC để xây dựng hình ảnh thương hiệu.</li><li>Theo dõi, đo lường hiệu quả các chiến dịch truyền thông.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Tốt nghiệp chuyên ngành Truyền thông, Marketing, Báo chí.</li><li>Có ít nhất 1 năm kinh nghiệm ở vị trí tương đương.</li><li>Kỹ năng viết content, storytelling tốt.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Môi trường sáng tạo, năng động tại VNG Campus.</li><li>Review lương 2 lần/năm.</li><li>Chế độ nghỉ phép, chăm sóc sức khỏe toàn diện.</li></ul></div>"
+  },
+  {
+    "id": "job-012",
+    "company": {
+      "id": "comp-001",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0108888888",
+      "company_name": "CÔNG TY CỔ PHẦN CÔNG NGHỆ TOPCV VIỆT NAM",
+      "international_name": "TOPCV VIETNAM TECHNOLOGY JOINT STOCK COMPANY",
+      "short_name": "TOPCV VIETNAM",
+      "director": "Thái Trí Hùng",
+      "headquarters_address": "Tầng 3, Tòa nhà FS - GoldSeason, 47 Nguyễn Tuân, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành phố Hà Nội, Việt Nam",
+      "issued_date": "2019-03-15",
+      "email": "contact@topcv.vn",
+      "phone_number": "02466805588",
+      "website": "https://www.topcv.vn",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/gWTKaL6rnqlO37GlEVAZJcUHsz1hz4bx_1721703377____4170540946c9bc527454da000f8502f2.jfif",
+      "company_size": "500-1000 nhân viên",
+      "category": "Công nghệ Thông tin",
+      "address_list": [
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "Tầng 3, Tòa FS GoldSeason, 47 Nguyễn Tuân, Thanh Xuân"
+        },
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Tầng 8, Tòa nhà Hà Đô Airport Building, 2 Hồng Hà, Phường 2, Tân Bình"
+        }
+      ],
+      "description_html": "<div><h3>Về TopCV Việt Nam</h3><p>TopCV là công ty công nghệ hàng đầu trong lĩnh vực HR Tech tại Việt Nam, cung cấp giải pháp tuyển dụng và kết nối cơ hội việc làm cho hàng triệu ứng viên.</p><h4>Môi trường làm việc</h4><ul><li>Môi trường trẻ trung, năng động, khuyến khích sáng tạo.</li><li>Chế độ đãi ngộ hấp dẫn, thưởng performance theo quý.</li><li>Chương trình đào tạo và phát triển lộ trình thăng tiến rõ ràng.</li></ul></div>"
+    },
+    "title": "Nhân viên Tư vấn & Chăm sóc khách hàng (Part-time)",
+    "slug": "nhan-vien-tu-van-cham-soc-khach-hang-part-time-012",
+    "category": "Tư vấn & Chăm sóc khách hàng",
+    "specialty": "Customer Service",
+    "job_type": "PART_TIME",
+    "experience_level": "Chưa có kinh nghiệm",
+    "gender": "NOT_REQUIRED",
+    "quantity": 5,
+    "salary": {
+      "type": "EXACT",
+      "min": 4500000,
+      "max": 4500000,
+      "currency": "VND",
+      "is_negotiable": false
+    },
+    "work_location": [
+      {
+        "city_id": 1,
+        "city_name": "Hà Nội",
+        "address_detail": "Tầng 3, Tòa FS GoldSeason, 47 Nguyễn Tuân, Thanh Xuân"
+      }
+    ],
+    "deadline": "2026-09-10T23:59:59Z",
+    "status": "PUBLISHED",
+    "is_hot": false,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Tiếp nhận và giải đáp thắc mắc của khách hàng qua tổng đài, chat.</li><li>Ghi nhận phản hồi, khiếu nại và chuyển bộ phận liên quan xử lý.</li><li>Làm việc theo ca linh hoạt 4 tiếng/ngày.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Không yêu cầu kinh nghiệm, sinh viên năm cuối có thể ứng tuyển.</li><li>Giọng nói dễ nghe, kỹ năng lắng nghe và xử lý tình huống tốt.</li><li>Có thể sắp xếp làm việc tối thiểu 4 buổi/tuần.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Lương cố định 4.5 triệu/tháng + thưởng KPI.</li><li>Được đào tạo kỹ năng nghề nghiệp bài bản.</li><li>Môi trường trẻ, năng động, dễ xin nghỉ khi có lịch học.</li></ul></div>"
+  },
+  {
+    "id": "job-013",
+    "company": {
+      "id": "comp-006",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0100112233",
+      "company_name": "NGÂN HÀNG TMCP KỸ THƯƠNG VIỆT NAM",
+      "international_name": "VIETNAM TECHNOLOGICAL AND COMMERCIAL JOINT STOCK BANK",
+      "short_name": "TECHCOMBANK",
+      "director": "Jens Lottner",
+      "headquarters_address": "191 Bà Triệu, Phường Lê Đại Hành, Quận Hai Bà Trưng, Thành phố Hà Nội, Việt Nam",
+      "issued_date": "1993-09-27",
+      "email": "info@techcombank.com.vn",
+      "phone_number": "1800588822",
+      "website": "https://www.techcombank.com.vn",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "Over 10000 nhân viên",
+      "category": "Ngân hàng",
+      "address_list": [
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "191 Bà Triệu, Phường Lê Đại Hành, Quận Hai Bà Trưng"
+        }
+      ],
+      "description_html": "<div><h3>Về Techcombank</h3><p>Techcombank là một trong những ngân hàng thương mại cổ phần hàng đầu Việt Nam, tiên phong chuyển đổi số trong lĩnh vực tài chính - ngân hàng.</p></div>"
+    },
+    "title": "Chuyên viên Tín dụng Cá nhân",
+    "slug": "chuyen-vien-tin-dung-ca-nhan-013",
+    "category": "Ngân hàng",
+    "specialty": "Tín dụng",
+    "job_type": "FULL_TIME",
+    "experience_level": "1 năm",
+    "gender": "NOT_REQUIRED",
+    "quantity": 6,
+    "salary": {
+      "type": "RANGE",
+      "min": 10000000,
+      "max": 15000000,
+      "currency": "VND",
+      "is_negotiable": false
+    },
+    "work_location": [
+      {
+        "city_id": 1,
+        "city_name": "Hà Nội",
+        "address_detail": "191 Bà Triệu, Phường Lê Đại Hành, Quận Hai Bà Trưng"
+      }
+    ],
+    "deadline": "2026-10-05T23:59:59Z",
+    "status": "PUBLISHED",
+    "is_hot": true,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Tư vấn và bán các sản phẩm tín dụng cá nhân: vay tiêu dùng, vay mua nhà, thẻ tín dụng.</li><li>Thẩm định hồ sơ khách hàng và phối hợp bộ phận thẩm định rủi ro.</li><li>Chăm sóc và phát triển danh sách khách hàng hiện hữu.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Tốt nghiệp Đại học chuyên ngành Tài chính - Ngân hàng, Kinh tế.</li><li>Có ít nhất 1 năm kinh nghiệm tại vị trí tương đương.</li><li>Kỹ năng đàm phán, thuyết phục khách hàng tốt.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Thu nhập cạnh tranh: lương cứng + hoa hồng không giới hạn.</li><li>Lộ trình thăng tiến rõ ràng lên Chuyên viên cao cấp, Trưởng nhóm.</li><li>Đào tạo nghiệp vụ ngân hàng bài bản.</li></ul></div>"
+  },
+  {
+    "id": "job-014",
+    "company": {
+      "id": "comp-006",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0100112233",
+      "company_name": "NGÂN HÀNG TMCP KỸ THƯƠNG VIỆT NAM",
+      "international_name": "VIETNAM TECHNOLOGICAL AND COMMERCIAL JOINT STOCK BANK",
+      "short_name": "TECHCOMBANK",
+      "director": "Jens Lottner",
+      "headquarters_address": "191 Bà Triệu, Phường Lê Đại Hành, Quận Hai Bà Trưng, Thành phố Hà Nội, Việt Nam",
+      "issued_date": "1993-09-27",
+      "email": "info@techcombank.com.vn",
+      "phone_number": "1800588822",
+      "website": "https://www.techcombank.com.vn",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "Over 10000 nhân viên",
+      "category": "Ngân hàng",
+      "address_list": [
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "191 Bà Triệu, Phường Lê Đại Hành, Quận Hai Bà Trưng"
+        }
+      ],
+      "description_html": "<div><h3>Về Techcombank</h3><p>Techcombank là một trong những ngân hàng thương mại cổ phần hàng đầu Việt Nam, tiên phong chuyển đổi số trong lĩnh vực tài chính - ngân hàng.</p></div>"
+    },
+    "title": "Chuyên viên Tư vấn Bảo hiểm Nhân thọ",
+    "slug": "chuyen-vien-tu-van-bao-hiem-nhan-tho-014",
+    "category": "Bảo hiểm",
+    "specialty": "Bảo hiểm nhân thọ",
+    "job_type": "FREELANCE",
+    "experience_level": "Chưa có kinh nghiệm",
+    "gender": "NOT_REQUIRED",
+    "quantity": 15,
+    "salary": {
+      "type": "NEGOTIABLE",
+      "min": null,
+      "max": null,
+      "currency": "VND",
+      "is_negotiable": true
+    },
+    "work_location": [
+      {
+        "city_id": 1,
+        "city_name": "Hà Nội",
+        "address_detail": "191 Bà Triệu, Phường Lê Đại Hành, Quận Hai Bà Trưng"
+      }
+    ],
+    "deadline": "2026-11-30T23:59:59Z",
+    "status": "PUBLISHED",
+    "is_hot": false,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Tư vấn giải pháp bảo hiểm nhân thọ phù hợp cho khách hàng cá nhân.</li><li>Xây dựng và phát triển mạng lưới khách hàng riêng.</li><li>Chủ động sắp xếp thời gian làm việc linh hoạt.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Không yêu cầu kinh nghiệm, phù hợp người muốn làm thêm hoặc tay ngang.</li><li>Có mối quan hệ xã hội rộng là một lợi thế.</li><li>Sẵn sàng tham gia khóa đào tạo và thi chứng chỉ đại lý bảo hiểm.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Hoa hồng hấp dẫn theo doanh số, không giới hạn thu nhập.</li><li>Được cấp chứng chỉ hành nghề đại lý bảo hiểm.</li><li>Thời gian làm việc hoàn toàn chủ động.</li></ul></div>"
+  },
+  {
+    "id": "job-015",
+    "company": {
+      "id": "comp-006",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0100112233",
+      "company_name": "NGÂN HÀNG TMCP KỸ THƯƠNG VIỆT NAM",
+      "international_name": "VIETNAM TECHNOLOGICAL AND COMMERCIAL JOINT STOCK BANK",
+      "short_name": "TECHCOMBANK",
+      "director": "Jens Lottner",
+      "headquarters_address": "191 Bà Triệu, Phường Lê Đại Hành, Quận Hai Bà Trưng, Thành phố Hà Nội, Việt Nam",
+      "issued_date": "1993-09-27",
+      "email": "info@techcombank.com.vn",
+      "phone_number": "1800588822",
+      "website": "https://www.techcombank.com.vn",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "Over 10000 nhân viên",
+      "category": "Ngân hàng",
+      "address_list": [
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "191 Bà Triệu, Phường Lê Đại Hành, Quận Hai Bà Trưng"
+        }
+      ],
+      "description_html": "<div><h3>Về Techcombank</h3><p>Techcombank là một trong những ngân hàng thương mại cổ phần hàng đầu Việt Nam, tiên phong chuyển đổi số trong lĩnh vực tài chính - ngân hàng.</p></div>"
+    },
+    "title": "Thực tập sinh Phân tích Tài chính - Đầu tư",
+    "slug": "thuc-tap-sinh-phan-tich-tai-chinh-dau-tu-015",
+    "category": "Tài chính / Đầu tư",
+    "specialty": "Phân tích tài chính",
+    "job_type": "INTERNSHIP",
+    "experience_level": "Chưa có kinh nghiệm",
+    "gender": "NOT_REQUIRED",
+    "quantity": 3,
+    "salary": {
+      "type": "EXACT",
+      "min": 5000000,
+      "max": 5000000,
+      "currency": "VND",
+      "is_negotiable": false
+    },
+    "work_location": [
+      {
+        "city_id": 1,
+        "city_name": "Hà Nội",
+        "address_detail": "191 Bà Triệu, Phường Lê Đại Hành, Quận Hai Bà Trưng"
+      }
+    ],
+    "deadline": "2026-09-20T23:59:59Z",
+    "status": "PUBLISHED",
+    "is_hot": false,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Hỗ trợ thu thập, tổng hợp số liệu tài chính và thị trường.</li><li>Xây dựng báo cáo phân tích cơ bản dưới sự hướng dẫn của Mentor.</li><li>Tham gia các buổi đào tạo nội bộ về đầu tư và tài chính doanh nghiệp.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Sinh viên năm 3, năm 4 chuyên ngành Tài chính, Kinh tế, Toán ứng dụng.</li><li>Thành thạo Excel, có tư duy phân tích số liệu.</li><li>Có thể thực tập tối thiểu 4 tháng, full-time hoặc part-time.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Trợ cấp thực tập hàng tháng.</li><li>Được đào tạo bài bản, có cơ hội trở thành nhân viên chính thức.</li><li>Xác nhận thực tập và thư giới thiệu khi hoàn thành tốt.</li></ul></div>"
+  },
+  {
+    "id": "job-016",
+    "company": {
+      "id": "comp-003",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0101601092",
+      "company_name": "CÔNG TY TNHH PHẦN MỀM FPT",
+      "international_name": "FPT SOFTWARE COMPANY LIMITED",
+      "short_name": "FPT SOFTWARE",
+      "director": "Phạm Minh Tuấn",
+      "headquarters_address": "Tòa nhà FPT Cầu Giấy, phố Duy Tân, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Thành phố Hà Nội, Việt Nam",
+      "issued_date": "2004-12-23",
+      "email": "fsoft.contact@fsoft.com.vn",
+      "phone_number": "02437689048",
+      "website": "https://www.fpt-software.com",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "Over 10000 nhân viên",
+      "category": "Công nghệ Thông tin",
+      "address_list": [
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "Tòa nhà FPT Cầu Giấy, phố Duy Tân, Phường Dịch Vọng Hậu, Quận Cầu Giấy"
+        },
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Lô T2, đường D1, Khu Công nghệ cao, Phường Tân Phú, Quận 9"
+        }
+      ],
+      "description_html": "<div><h3>Về FPT Software</h3><p>FPT Software là một trong những công ty phần mềm lớn nhất, uy tín và có tầm ảnh hưởng nhất tại Việt Nam.</p></div>"
+    },
+    "title": "Kế toán Tổng hợp",
+    "slug": "ke-toan-tong-hop-016",
+    "category": "Kế toán",
+    "specialty": "Kế toán tổng hợp",
+    "job_type": "FULL_TIME",
+    "experience_level": "3 năm",
+    "gender": "FEMALE",
+    "quantity": 1,
+    "salary": {
+      "type": "RANGE",
+      "min": 13000000,
+      "max": 18000000,
+      "currency": "VND",
+      "is_negotiable": false
+    },
+    "work_location": [
+      {
+        "city_id": 1,
+        "city_name": "Hà Nội",
+        "address_detail": "Tòa nhà FPT Cầu Giấy, phố Duy Tân, Phường Dịch Vọng Hậu, Quận Cầu Giấy"
+      }
+    ],
+    "deadline": "2026-09-28T23:59:59Z",
+    "status": "PUBLISHED",
+    "is_hot": false,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Hạch toán các nghiệp vụ kế toán phát sinh hàng ngày.</li><li>Lập báo cáo tài chính, báo cáo thuế theo tháng/quý/năm.</li><li>Đối chiếu công nợ, phối hợp kiểm toán nội bộ và bên ngoài.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Tốt nghiệp Đại học chuyên ngành Kế toán, Kiểm toán.</li><li>Có tối thiểu 3 năm kinh nghiệm kế toán tổng hợp.</li><li>Thành thạo phần mềm kế toán MISA, phần mềm ERP là lợi thế.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Lương tháng 13, thưởng theo hiệu quả kinh doanh.</li><li>Đóng BHXH trên mức lương thực tế.</li><li>Môi trường làm việc chuyên nghiệp, ổn định lâu dài.</li></ul></div>"
+  },
+  {
+    "id": "job-017",
+    "company": {
+      "id": "comp-003",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0101601092",
+      "company_name": "CÔNG TY TNHH PHẦN MỀM FPT",
+      "international_name": "FPT SOFTWARE COMPANY LIMITED",
+      "short_name": "FPT SOFTWARE",
+      "director": "Phạm Minh Tuấn",
+      "headquarters_address": "Tòa nhà FPT Cầu Giấy, phố Duy Tân, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Thành phố Hà Nội, Việt Nam",
+      "issued_date": "2004-12-23",
+      "email": "fsoft.contact@fsoft.com.vn",
+      "phone_number": "02437689048",
+      "website": "https://www.fpt-software.com",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "Over 10000 nhân viên",
+      "category": "Công nghệ Thông tin",
+      "address_list": [
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "Tòa nhà FPT Cầu Giấy, phố Duy Tân, Phường Dịch Vọng Hậu, Quận Cầu Giấy"
+        },
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Lô T2, đường D1, Khu Công nghệ cao, Phường Tân Phú, Quận 9"
+        }
+      ],
+      "description_html": "<div><h3>Về FPT Software</h3><p>FPT Software là một trong những công ty phần mềm lớn nhất, uy tín và có tầm ảnh hưởng nhất tại Việt Nam.</p></div>"
+    },
+    "title": "Trưởng nhóm Kiểm toán Nội bộ",
+    "slug": "truong-nhom-kiem-toan-noi-bo-017",
+    "category": "Kiểm toán",
+    "specialty": "Kiểm toán nội bộ",
+    "job_type": "FULL_TIME",
+    "experience_level": "Trên 5 năm",
+    "gender": "NOT_REQUIRED",
+    "quantity": 1,
+    "salary": {
+      "type": "RANGE",
+      "min": 30000000,
+      "max": 45000000,
+      "currency": "VND",
+      "is_negotiable": false
+    },
+    "work_location": [
+      {
+        "city_id": 2,
+        "city_name": "Thành phố Hồ Chí Minh",
+        "address_detail": "Lô T2, đường D1, Khu Công nghệ cao, Phường Tân Phú, Quận 9"
+      }
+    ],
+    "deadline": "2026-10-20T23:59:59Z",
+    "status": "PUBLISHED",
+    "is_hot": true,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Xây dựng kế hoạch và thực hiện kiểm toán nội bộ định kỳ toàn công ty.</li><li>Đánh giá hệ thống kiểm soát nội bộ, quản trị rủi ro.</li><li>Báo cáo trực tiếp kết quả kiểm toán cho Ban Tổng Giám đốc.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Trên 5 năm kinh nghiệm kiểm toán, ưu tiên từng làm tại Big4.</li><li>Có chứng chỉ CPA, ACCA là lợi thế lớn.</li><li>Kỹ năng lãnh đạo nhóm và giao tiếp với cấp quản lý cao.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Thu nhập cạnh tranh, thưởng theo hiệu quả công việc.</li><li>Bảo hiểm sức khỏe cao cấp cho bản thân và người thân.</li><li>Cơ hội phát triển lên vị trí Giám đốc Kiểm toán nội bộ.</li></ul></div>"
+  },
+  {
+    "id": "job-018",
+    "company": {
+      "id": "comp-003",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0101601092",
+      "company_name": "CÔNG TY TNHH PHẦN MỀM FPT",
+      "international_name": "FPT SOFTWARE COMPANY LIMITED",
+      "short_name": "FPT SOFTWARE",
+      "director": "Phạm Minh Tuấn",
+      "headquarters_address": "Tòa nhà FPT Cầu Giấy, phố Duy Tân, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Thành phố Hà Nội, Việt Nam",
+      "issued_date": "2004-12-23",
+      "email": "fsoft.contact@fsoft.com.vn",
+      "phone_number": "02437689048",
+      "website": "https://www.fpt-software.com",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "Over 10000 nhân viên",
+      "category": "Công nghệ Thông tin",
+      "address_list": [
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "Tòa nhà FPT Cầu Giấy, phố Duy Tân, Phường Dịch Vọng Hậu, Quận Cầu Giấy"
+        },
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Lô T2, đường D1, Khu Công nghệ cao, Phường Tân Phú, Quận 9"
+        }
+      ],
+      "description_html": "<div><h3>Về FPT Software</h3><p>FPT Software là một trong những công ty phần mềm lớn nhất, uy tín và có tầm ảnh hưởng nhất tại Việt Nam.</p></div>"
+    },
+    "title": "Chuyên viên Tư vấn Thuế Doanh nghiệp",
+    "slug": "chuyen-vien-tu-van-thue-doanh-nghiep-018",
+    "category": "Thuế",
+    "specialty": "Tư vấn thuế",
+    "job_type": "CONTRACT",
+    "experience_level": "2 năm",
+    "gender": "NOT_REQUIRED",
+    "quantity": 2,
+    "salary": {
+      "type": "RANGE",
+      "min": 14000000,
+      "max": 22000000,
+      "currency": "VND",
+      "is_negotiable": false
+    },
+    "work_location": [
+      {
+        "city_id": 1,
+        "city_name": "Hà Nội",
+        "address_detail": "Tòa nhà FPT Cầu Giấy, phố Duy Tân, Phường Dịch Vọng Hậu, Quận Cầu Giấy"
+      }
+    ],
+    "deadline": "2026-09-15T23:59:59Z",
+    "status": "DRAFT",
+    "is_hot": false,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Tư vấn chính sách thuế cho khách hàng doanh nghiệp trong và ngoài nước.</li><li>Rà soát, lập hồ sơ kê khai và quyết toán thuế.</li><li>Cập nhật các thay đổi về luật thuế cho khách hàng.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Tốt nghiệp chuyên ngành Kế toán - Thuế, Tài chính.</li><li>Có ít nhất 2 năm kinh nghiệm tư vấn thuế hoặc kế toán thuế.</li><li>Nắm vững Luật thuế TNDN, TNCN, GTGT hiện hành.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Hợp đồng dịch vụ 12 tháng, có thể gia hạn dài lâu.</li><li>Được đào tạo chuyên sâu về nghiệp vụ thuế mới nhất.</li><li>Thưởng theo dự án hoàn thành.</li></ul></div>"
+  },
+  {
+    "id": "job-019",
+    "company": {
+      "id": "comp-005",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0312456789",
+      "company_name": "CÔNG TY CỔ PHẦN BẤT ĐỘNG SẢN ĐẤT XANH",
+      "international_name": "DAT XANH REAL ESTATE JOINT STOCK COMPANY",
+      "short_name": "DAT XANH GROUP",
+      "director": "Lương Trí Thìn",
+      "headquarters_address": "Số 2 Nguyễn Thị Hưởng, Phường Bình An, Quận 2, Thành phố Hồ Chí Minh, Việt Nam",
+      "issued_date": "2010-05-11",
+      "email": "info@datxanh.vn",
+      "phone_number": "02871096868",
+      "website": "https://datxanh.vn",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "1000-5000 nhân viên",
+      "category": "Sales Bất động sản",
+      "address_list": [
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Số 2 Nguyễn Thị Hưởng, Phường Bình An, Quận 2"
+        }
+      ],
+      "description_html": "<div><h3>Về Đất Xanh Group</h3><p>Đất Xanh là tập đoàn bất động sản hàng đầu Việt Nam với hệ sinh thái đầu tư, phát triển và phân phối dự án trải dài cả nước.</p></div>"
+    },
+    "title": "Công nhân Bốc xếp Kho hàng",
+    "slug": "cong-nhan-boc-xep-kho-hang-019",
+    "category": "Lao động phổ thông",
+    "specialty": "Bốc xếp - Kho vận",
+    "job_type": "FULL_TIME",
+    "experience_level": "Chưa có kinh nghiệm",
+    "gender": "MALE",
+    "quantity": 20,
+    "salary": {
+      "type": "EXACT",
+      "min": 8500000,
+      "max": 8500000,
+      "currency": "VND",
+      "is_negotiable": false
+    },
+    "work_location": [
+      {
+        "city_id": 2,
+        "city_name": "Thành phố Hồ Chí Minh",
+        "address_detail": "Kho vận Khu Công nghiệp Tân Bình, Quận Tân Bình"
+      }
+    ],
+    "deadline": "2026-09-05T23:59:59Z",
+    "status": "PUBLISHED",
+    "is_hot": true,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Bốc xếp, vận chuyển hàng hóa lên xuống xe tải, container.</li><li>Sắp xếp hàng hóa trong kho theo đúng khu vực quy định.</li><li>Làm việc theo ca, tăng ca có tính lương thêm giờ.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Không yêu cầu kinh nghiệm hay bằng cấp.</li><li>Sức khỏe tốt, chịu được công việc nặng nhọc.</li><li>Ưu tiên nam giới trong độ tuổi 18-40.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Lương cố định 8.5 triệu/tháng, tăng ca được trả thêm.</li><li>Bao ăn ca, hỗ trợ chỗ ở cho lao động xa.</li><li>Đóng BHXH đầy đủ sau thời gian thử việc.</li></ul></div>"
+  },
+  {
+    "id": "job-020",
+    "company": {
+      "id": "comp-001",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0108888888",
+      "company_name": "CÔNG TY CỔ PHẦN CÔNG NGHỆ TOPCV VIỆT NAM",
+      "international_name": "TOPCV VIETNAM TECHNOLOGY JOINT STOCK COMPANY",
+      "short_name": "TOPCV VIETNAM",
+      "director": "Thái Trí Hùng",
+      "headquarters_address": "Tầng 3, Tòa nhà FS - GoldSeason, 47 Nguyễn Tuân, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành phố Hà Nội, Việt Nam",
+      "issued_date": "2019-03-15",
+      "email": "contact@topcv.vn",
+      "phone_number": "02466805588",
+      "website": "https://www.topcv.vn",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/gWTKaL6rnqlO37GlEVAZJcUHsz1hz4bx_1721703377____4170540946c9bc527454da000f8502f2.jfif",
+      "company_size": "500-1000 nhân viên",
+      "category": "Công nghệ Thông tin",
+      "address_list": [
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "Tầng 3, Tòa FS GoldSeason, 47 Nguyễn Tuân, Thanh Xuân"
+        },
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Tầng 8, Tòa nhà Hà Đô Airport Building, 2 Hồng Hà, Phường 2, Tân Bình"
+        }
+      ],
+      "description_html": "<div><h3>Về TopCV Việt Nam</h3><p>TopCV là công ty công nghệ hàng đầu trong lĩnh vực HR Tech tại Việt Nam, cung cấp giải pháp tuyển dụng và kết nối cơ hội việc làm cho hàng triệu ứng viên.</p><h4>Môi trường làm việc</h4><ul><li>Môi trường trẻ trung, năng động, khuyến khích sáng tạo.</li><li>Chế độ đãi ngộ hấp dẫn, thưởng performance theo quý.</li><li>Chương trình đào tạo và phát triển lộ trình thăng tiến rõ ràng.</li></ul></div>"
+    },
+    "title": "Giúp việc Nhà theo giờ (Nội thành Hà Nội)",
+    "slug": "giup-viec-nha-theo-gio-noi-thanh-ha-noi-020",
+    "category": "Lao động phổ thông",
+    "specialty": "Giúp việc gia đình",
+    "job_type": "PART_TIME",
+    "experience_level": "1 năm trở xuống",
+    "gender": "FEMALE",
+    "quantity": 8,
+    "salary": {
+      "type": "RANGE",
+      "min": 6000000,
+      "max": 9000000,
+      "currency": "VND",
+      "is_negotiable": false
+    },
+    "work_location": [
+      {
+        "city_id": 1,
+        "city_name": "Hà Nội",
+        "address_detail": "Các quận nội thành Hà Nội"
+      }
+    ],
+    "deadline": "2026-09-12T23:59:59Z",
+    "status": "PUBLISHED",
+    "is_hot": false,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Dọn dẹp nhà cửa, nấu ăn theo yêu cầu gia chủ.</li><li>Làm việc theo giờ đã đăng ký, có thể chọn ca sáng/chiều.</li><li>Được sắp xếp công việc gần khu vực sinh sống.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Ưu tiên nữ giới, trung thực, cẩn thận, chăm chỉ.</li><li>Có kinh nghiệm việc nhà là một lợi thế, không bắt buộc.</li><li>Sức khỏe tốt, có thể làm việc theo ca cố định.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Thu nhập theo giờ làm, thanh toán đúng hạn hàng tuần.</li><li>Được lựa chọn địa điểm làm việc gần nhà.</li><li>Hỗ trợ đào tạo kỹ năng giúp việc chuyên nghiệp.</li></ul></div>"
+  },
+  {
+    "id": "job-021",
+    "company": {
+      "id": "comp-004",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0303490096",
+      "company_name": "CÔNG TY CỔ PHẦN VNG",
+      "international_name": "VNG CORPORATION",
+      "short_name": "VNG",
+      "director": "Lê Hồng Minh",
+      "headquarters_address": "Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Thành phố Hồ Chí Minh, Việt Nam",
+      "issued_date": "2004-09-09",
+      "email": "truyenthong@vng.com.vn",
+      "phone_number": "02839623888",
+      "website": "https://www.vng.com.vn",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/cong-ty-cp-vinhomes-5fb1faabc4de6.jpg",
+      "company_size": "1000-5000 nhân viên",
+      "category": "Công nghệ Thông tin",
+      "address_list": [
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7"
+        },
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "Tòa nhà TNR, 54A Nguyễn Chí Thanh, Phường Láng Thượng, Quận Đống Đa"
+        }
+      ],
+      "description_html": "<div><h3>Về VNG Corporation</h3><p>VNG là công ty công nghệ tiên phong tại Việt Nam, nổi tiếng với Zalo, game online và hệ sinh thái giải trí số.</p></div>"
+    },
+    "title": "Data Analyst (Remote)",
+    "slug": "data-analyst-remote-021",
+    "category": "Lập trình phần mềm",
+    "specialty": "Data Analyst",
+    "job_type": "REMOTE",
+    "experience_level": "1 năm",
+    "gender": "NOT_REQUIRED",
+    "quantity": 2,
+    "salary": {
+      "type": "RANGE",
+      "min": 18000000,
+      "max": 28000000,
+      "currency": "VND",
+      "is_negotiable": false
+    },
+    "work_location": [
+      {
+        "city_id": 2,
+        "city_name": "Thành phố Hồ Chí Minh",
+        "address_detail": "Làm việc từ xa (Remote)"
+      }
+    ],
+    "deadline": "2026-10-01T23:59:59Z",
+    "status": "PUBLISHED",
+    "is_hot": false,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Thu thập, làm sạch và phân tích dữ liệu sản phẩm.</li><li>Xây dựng dashboard báo cáo bằng SQL, Power BI/Tableau.</li><li>Phối hợp với đội Product để đưa ra insight cải thiện sản phẩm.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Có ít nhất 1 năm kinh nghiệm phân tích dữ liệu.</li><li>Thành thạo SQL, Python/R, công cụ trực quan hóa dữ liệu.</li><li>Có thể làm việc remote, chủ động về thời gian.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Làm việc 100% từ xa, tự do địa điểm.</li><li>Trang bị đầy đủ thiết bị làm việc.</li><li>Thưởng dự án theo quý.</li></ul></div>"
+  },
+  {
+    "id": "job-022",
+    "company": {
+      "id": "comp-001",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0108888888",
+      "company_name": "CÔNG TY CỔ PHẦN CÔNG NGHỆ TOPCV VIỆT NAM",
+      "international_name": "TOPCV VIETNAM TECHNOLOGY JOINT STOCK COMPANY",
+      "short_name": "TOPCV VIETNAM",
+      "director": "Thái Trí Hùng",
+      "headquarters_address": "Tầng 3, Tòa nhà FS - GoldSeason, 47 Nguyễn Tuân, Phường Thanh Xuân Trung, Quận Thanh Xuân, Thành phố Hà Nội, Việt Nam",
+      "issued_date": "2019-03-15",
+      "email": "contact@topcv.vn",
+      "phone_number": "02466805588",
+      "website": "https://www.topcv.vn",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/https://static.topcv.vn/company_logos/gWTKaL6rnqlO37GlEVAZJcUHsz1hz4bx_1721703377____4170540946c9bc527454da000f8502f2.jfif",
+      "company_size": "500-1000 nhân viên",
+      "category": "Công nghệ Thông tin",
+      "address_list": [
+        {
+          "city_id": 1,
+          "city_name": "Hà Nội",
+          "address_detail": "Tầng 3, Tòa FS GoldSeason, 47 Nguyễn Tuân, Thanh Xuân"
+        },
+        {
+          "city_id": 2,
+          "city_name": "Thành phố Hồ Chí Minh",
+          "address_detail": "Tầng 8, Tòa nhà Hà Đô Airport Building, 2 Hồng Hà, Phường 2, Tân Bình"
+        }
+      ],
+      "description_html": "<div><h3>Về TopCV Việt Nam</h3><p>TopCV là công ty công nghệ hàng đầu trong lĩnh vực HR Tech tại Việt Nam, cung cấp giải pháp tuyển dụng và kết nối cơ hội việc làm cho hàng triệu ứng viên.</p><h4>Môi trường làm việc</h4><ul><li>Môi trường trẻ trung, năng động, khuyến khích sáng tạo.</li><li>Chế độ đãi ngộ hấp dẫn, thưởng performance theo quý.</li><li>Chương trình đào tạo và phát triển lộ trình thăng tiến rõ ràng.</li></ul></div>"
+    },
+    "title": "Chuyên viên Nhân sự Tổng hợp (C&B)",
+    "slug": "chuyen-vien-nhan-su-tong-hop-cb-022",
+    "category": "Nhân sự & Tuyển dụng",
+    "specialty": "C&B",
+    "job_type": "FULL_TIME",
+    "experience_level": "Từ 4-5 năm",
+    "gender": "FEMALE",
+    "quantity": 1,
+    "salary": {
+      "type": "RANGE",
+      "min": 16000000,
+      "max": 22000000,
+      "currency": "VND",
+      "is_negotiable": false
+    },
+    "work_location": [
+      {
+        "city_id": 1,
+        "city_name": "Hà Nội",
+        "address_detail": "Tầng 3, Tòa FS GoldSeason, 47 Nguyễn Tuân, Thanh Xuân"
+      }
+    ],
+    "deadline": "2026-11-01T23:59:59Z",
+    "status": "CLOSED",
+    "is_hot": false,
+    "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Quản lý tiền lương, thưởng, phúc lợi (C&B) toàn công ty.</li><li>Xây dựng và cập nhật thang bảng lương, chính sách nhân sự.</li><li>Thực hiện các thủ tục BHXH, thuế TNCN cho nhân viên.</li></ul></div>",
+    "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Từ 4-5 năm kinh nghiệm ở vị trí C&B hoặc HR tổng hợp.</li><li>Nắm vững Luật Lao động, Luật BHXH, Luật Thuế TNCN.</li><li>Thành thạo Excel nâng cao, phần mềm quản lý nhân sự.</li></ul></div>",
+    "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Lương thỏa thuận theo năng lực, review 1 lần/năm.</li><li>Chế độ phúc lợi đầy đủ theo quy định công ty.</li><li>Môi trường làm việc chuyên nghiệp, ổn định.</li></ul></div>"
   }
   ]
 }

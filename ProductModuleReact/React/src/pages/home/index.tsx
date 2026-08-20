@@ -1,4 +1,5 @@
-import {Menu} from "@/widgets/category-menu";
+import { Menu } from "@/widgets/category-menu";
+import FilteredJobGroup from "@/widgets/filter-job-group"
 function Home() {
   return (
     <>
@@ -27,9 +28,7 @@ function Home() {
           <Menu />
         </div>
       </div>
-      <div className="w-ful py-6 min-h-165 bg-gray-100">
-        <div className="container mx-auto px-3 sm:px-25 lg:px-60 "><header className="text-2xl font-bold text-green-600 pb-4">Việc làm tốt nhất</header></div>
-      </div>
+      <FilteredJobGroup />
     </>
   );
 }

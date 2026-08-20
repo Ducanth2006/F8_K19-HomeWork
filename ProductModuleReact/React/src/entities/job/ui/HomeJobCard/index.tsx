@@ -1,5 +1,7 @@
 import { useState } from "react";
-import type { JobCardHomePageProps } from "@/shared/interface";
+import {useNavigate} from "react-router"
+
+import type { JobCardHomePageProps } from "../../index";
 import MoneyFormat from "@/shared/ui/MoneyFormat"
 
 function JobCardHome({ job }: JobCardHomePageProps) {
@@ -7,31 +9,54 @@ function JobCardHome({ job }: JobCardHomePageProps) {
     const { id: JobId, company, slug, job_type, title, salary } = job;
     const { logo_url, id: CompanyId, short_name } = company;
     const { min, max, currency } = salary;
+    const navigate= useNavigate();
+    const handleNav=()=>{
+        navigate(`/cong-viec/${slug}`)
+    }
     return (
-        <div className="flex flex-col gap-2 col-span-1 rounded-2xl p-3 bg-white">
-            <div className="flex gap-2  ">
-                <img src={logo_url} className="w-16 h-16" alt={short_name} />
-                <div>
-                    <p className="line-clamp-2  text-sm">{title}</p>
-                    <p className="truncate text-xs">{short_name}</p>
+        <div onClick={handleNav} className="group  relative flex flex-col justify-between gap-4 col-span-1 rounded-2xl p-4 sm:p-5 bg-white border border-slate-100 shadow-xs hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+            {/* Header: Logo & Job Info */}
+            <div className="flex gap-3.5 items-start">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl border border-slate-100 bg-slate-50/60 p-1.5 shrink-0 flex items-center justify-center overflow-hidden">
+                    <img
+                        src={logo_url}
+                        className="w-full h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
+                        alt={short_name}
+                    />
+                </div>
+                <div className="flex-1 min-w-0">
+                    <h3 className="line-clamp-2 text-sm font-semibold text-slate-800 group-hover:text-emerald-600 transition-colors leading-snug">
+                        {title}
+                    </h3>
+                    <p className="truncate text-xs font-medium text-slate-500 mt-1">
+                        {short_name}
+                    </p>
                 </div>
             </div>
-            <div className="flex justify-between mt-auto">
-                <div className="flex gap-2.5">
-                    <span className="px-1 py-2.5 bg-gray-100 rounded-full text-slate-400">
+
+            {/* Footer: Tags & Heart Button */}
+            <div className="flex items-center justify-between mt-auto pt-2 border-t border-slate-50">
+                <div className="flex flex-wrap gap-2 items-center min-w-0">
+                    <span className="inline-flex items-center px-2.5 py-1 bg-slate-100/90 text-slate-600 rounded-lg text-xs font-medium truncate">
                         {job_type}
                     </span>
-                    <span className="px-1 py-2.5 bg-gray-100 rounded-full text-slate-400"><MoneyFormat className="p-1" amount={min} />-<MoneyFormat className="p-1" amount={max} />{currency}</span>
+                    <span className="inline-flex items-center px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-lg text-xs font-semibold border border-emerald-100/80">
+                        <MoneyFormat className="pr-0.5" amount={min} /> - <MoneyFormat className="pl-0.5 pr-0.5" amount={max} /> {currency}
+                    </span>
                 </div>
                 <button
-                    className="w-7 h-7 flex items-center justify-center rounded-xl border border-gray-200 text-gray-400 hover:emerald-600 hover:border-emerald-600 hover:bg-red-50 cursor-pointer transition-all"
+                    className={`w-8 h-8 flex items-center justify-center rounded-xl border transition-all duration-200 shrink-0 cursor-pointer ${!heart
+                            ? "border-slate-200 text-slate-400 hover:text-emerald-600 hover:border-emerald-500 hover:bg-emerald-50/50"
+                            : "border-emerald-500 bg-emerald-50 text-emerald-600"
+                        }`}
                     onClick={() => setHeart(!heart)}
+                    title={heart ? "Bỏ lưu công việc" : "Lưu công việc"}
                 >
                     <i
                         className={
                             !heart
-                                ? "fa-regular fa-heart text-base"
-                                : "fa-solid fa-heart text-base text-emerald-600"
+                                ? "fa-regular fa-heart text-sm"
+                                : "fa-solid fa-heart text-sm text-emerald-600"
                         }
                     ></i>
                 </button>

@@ -46,89 +46,159 @@ function CompanyDetail() {
   };
 
   return (
-    <>
-      <div className="w-full bg-[#f3f5f7]">
-        <div className="container mx-auto px-3 sm:px-25  lg:px-50 flex flex-col gap-5">
-          <div className="flex gap-4  py-4 items-center">
-            <NavLink
-              to={"/"}
-              className="text-sm hover:text-green-500 hover:underline transition-all ease-in duration-150 hover:translate-y-0.5 cursor-pointer"
-            >
-              Trang chủ &gt;
-            </NavLink>
-            <NavLink
-              to={"/cong-ty"}
-              className="text-sm hover:text-green-500 hover:underline transition-all ease-in duration-150 hover:translate-y-0.5 cursor-pointer"
-            >
-              Công ty &gt;
-            </NavLink>
-            <p className="text-sm "> {companyDetail?.company_name}</p>
-          </div>
-          {/* Header */}
-          <div className="w-full flex justify-between bg-white rounded-2xl p-2 items-center">
-            <div>
-              <div className="flex gap-2 lg:gap-5 items-center">
-                <img
-                  className="w-20 h-20 lg:w-35 lg:h-35 object-cover overflow-hidden rounded-2xl"
-                  src={companyDetail?.logo_url}
-                  alt=""
-                />
-                <div>
-                  <h1 className="text-xl font-bold mb-5">
-                    {companyDetail?.company_name}
-                  </h1>
-                  <div className=" gap-5 hidden text-gray-300 font-medium text-sm lg:flex">
-                    <a href={companyDetail?.website}>
-                      Website {(companyDetail?.website)?.slice(12)}
-                    </a>
-                    <p>Email: {companyDetail?.email}</p>
+    <div className="w-full bg-slate-50 min-h-screen pb-16">
+      <div className="container mx-auto px-4 sm:px-8 lg:px-20 flex flex-col gap-6">
+        {/* Breadcrumb Navigation */}
+        <div className="flex items-center gap-2 py-4 text-xs sm:text-sm text-slate-500 font-medium overflow-x-auto">
+          <NavLink
+            to="/"
+            className="hover:text-emerald-600 transition-colors whitespace-nowrap"
+          >
+            Trang chủ
+          </NavLink>
+          <span className="text-slate-300">/</span>
+          <NavLink
+            to="/cong-ty"
+            className="hover:text-emerald-600 transition-colors whitespace-nowrap"
+          >
+            Công ty
+          </NavLink>
+          <span className="text-slate-300">/</span>
+          <span className="text-slate-800 font-semibold truncate">
+            {companyDetail?.company_name || "Chi tiết công ty"}
+          </span>
+        </div>
+
+        {/* Company Header Banner Card */}
+        <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center bg-white rounded-2xl p-6 sm:p-8 shadow-xs border border-slate-100 gap-6">
+          <div className="flex gap-4 sm:gap-6 items-center flex-1 min-w-0">
+            <div className="w-20 h-20 sm:w-28 sm:h-28 rounded-2xl border border-slate-100 bg-slate-50 p-2 shrink-0 flex items-center justify-center shadow-xs overflow-hidden">
+              <img
+                className="w-full h-full object-contain rounded-xl"
+                src={companyDetail?.logo_url}
+                alt={companyDetail?.company_name}
+              />
+            </div>
+            <div className="min-w-0 flex-1">
+              <h1 className="text-lg sm:text-2xl font-bold text-slate-800 tracking-tight leading-snug">
+                {companyDetail?.company_name}
+              </h1>
+              <div className="flex flex-wrap gap-4 text-xs sm:text-sm text-slate-500 font-medium mt-3">
+                {companyDetail?.website && (
+                  <a
+                    href={companyDetail?.website}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-1.5 hover:text-emerald-600 transition-colors"
+                  >
+                    <i className="fa-solid fa-globe text-emerald-600"></i>
+                    <span>{companyDetail.website}</span>
+                  </a>
+                )}
+                {companyDetail?.email && (
+                  <div className="flex items-center gap-1.5">
+                    <i className="fa-solid fa-envelope text-emerald-600"></i>
+                    <span>{companyDetail.email}</span>
                   </div>
-                </div>
+                )}
               </div>
             </div>
-            <button className="bg-green-600 hover:bg-green-700 text-center h-12 w-40 mr-30  rounded-2xl text-white ">
-              + Theo dõi
-            </button>
           </div>
-          {/* Body */}
-          <div className="grid grid-cols-3 gap-2">
-            {/* Introduction section */}
-            <div className="col-span-2 bg-white rounded-2xl px-2 ">
-              <div className={`relative transition-all duration-300 ease-out ${isExpanded ? "" : "max-h-100 overflow-hidden"}`}>
+          <button className="bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-semibold px-6 py-3 rounded-xl transition-all shadow-md shadow-emerald-600/20 flex items-center justify-center gap-2 shrink-0 cursor-pointer w-full md:w-auto">
+            <i className="fa-solid fa-plus text-sm"></i>
+            <span>Theo dõi</span>
+          </button>
+        </div>
+
+        {/* Main Grid Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+          {/* Left Column: Introduction & Jobs */}
+          <div className="lg:col-span-2 flex flex-col gap-6">
+            {/* Introduction Section */}
+            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-100 shadow-xs">
+              <h2 className="text-lg font-bold text-slate-800 mb-4 pb-3 border-b border-slate-100 flex items-center gap-2">
+                <i className="fa-solid fa-building text-emerald-600"></i>
+                Giới thiệu công ty
+              </h2>
+              <div
+                className={`relative transition-all duration-300 ease-out ${
+                  isExpanded ? "" : "max-h-96 overflow-hidden"
+                }`}
+              >
                 <div
-                  className="prose "
+                  className="prose max-w-none text-slate-600 text-sm leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: cleanHtml }}
                 ></div>
                 {!isExpanded && (
-                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-white to-transparent pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none" />
                 )}
               </div>
-              <div className="text-center hover:bg-linear-to-b from-green-100 to-white "><button onClick={handleClick} className="text-green-500 hover:underline font-semibold">{isExpanded ? "Thu gọn" : "Xem thêm"}</button></div>
+              <div className="text-center pt-4 mt-2">
+                <button
+                  onClick={handleClick}
+                  className="inline-flex items-center gap-1.5 text-emerald-600 hover:text-emerald-700 font-semibold text-sm cursor-pointer py-1 px-4 rounded-full bg-emerald-50 hover:bg-emerald-100/70 transition-all"
+                >
+                  <span>{isExpanded ? "Thu gọn" : "Xem thêm"}</span>
+                  <i className={`fa-solid ${isExpanded ? "fa-chevron-up" : "fa-chevron-down"} text-xs`}></i>
+                </button>
+              </div>
             </div>
-            {/* Common information */}
-            <div className="col-span-1 bg-white rounded-2xl p-2 h-fit  ">
-              <h2 className="text-2xl mt-5 mb-4">Thông tin chung</h2>
-              <ul className="flex gap-5 flex-col">
-                {commonInfo.map((i) => {
-                  const value = companyDetail?.[i.props];
-                  return (
-                    <li key={i.name} className="flex gap-4 items-center">
-                      <i className={i.icon}></i>
-                      <div className="text-gray-500">
-                        <p>{i.name}</p>
-                        <p>{value as React.ReactNode}</p>
-                      </div>
+
+            {/* Job list by company */}
+            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-100 shadow-xs">
+              <h3 className="text-lg font-bold text-slate-800 mb-4 pb-3 border-b border-slate-100 flex items-center justify-between">
+                <span className="flex items-center gap-2">
+                  <i className="fa-solid fa-briefcase text-emerald-600"></i>
+                  Tin tuyển dụng
+                </span>
+                <span className="text-xs font-medium px-2.5 py-1 bg-emerald-50 text-emerald-700 rounded-full">
+                  {jobs.length} công việc
+                </span>
+              </h3>
+              {jobs.length === 0 ? (
+                <div className="text-center py-8 text-slate-500 text-sm">
+                  Công ty hiện chưa có tin tuyển dụng nào khác.
+                </div>
+              ) : (
+                <ul className="flex flex-col gap-4">
+                  {jobs.map((j) => (
+                    <li key={j.id}>
+                      <CompanyJobCard {...j} />
                     </li>
-                  );
-                })}
-              </ul>
+                  ))}
+                </ul>
+              )}
             </div>
-            {/* Job list by company id */}
-            <div className="col-span-2 bg-white rounded-2xl px-2 "><h3 className="p-4 text-xl font-medium">Tin tuyển dụng</h3><ul className="flex flex-col gap-2">{jobs.map((j) => <li key={j.id}><CompanyJobCard {...j} /></li>)}</ul></div>
+          </div>
+
+          {/* Right Column: Common Information Sidebar */}
+          <div className="lg:col-span-1 bg-white rounded-2xl p-6 border border-slate-100 shadow-xs sticky top-4">
+            <h2 className="text-lg font-bold text-slate-800 mb-6 pb-3 border-b border-slate-100 flex items-center gap-2">
+              <i className="fa-solid fa-circle-info text-emerald-600"></i>
+              Thông tin chung
+            </h2>
+            <ul className="flex flex-col gap-5">
+              {commonInfo.map((i) => {
+                const value = companyDetail?.[i.props];
+                return (
+                  <li key={i.name} className="flex gap-3.5 items-start">
+                    <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                      <i className={`${i.icon} text-base`}></i>
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-xs font-medium text-slate-400">{i.name}</p>
+                      <p className="text-sm font-semibold text-slate-800 mt-0.5 break-words">
+                        {(value as React.ReactNode) || "Đang cập nhật"}
+                      </p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 export default CompanyDetail;

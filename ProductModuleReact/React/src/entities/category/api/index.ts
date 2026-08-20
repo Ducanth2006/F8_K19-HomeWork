@@ -11,11 +11,7 @@ export const getCategoryGroup = async (
             _per_page: limit,
         },
     });
-
-
     const result = res.data;
-    console.log(result)
-
     return {
         data: result?.data || [],
         pagination: {

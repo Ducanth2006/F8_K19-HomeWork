@@ -1,0 +1,7 @@
+export {default as Footer} from "./Footer/ui"
+export { Header} from "./Header/ui"
+export {AudienceModal} from "./Modals/ui/AudienceModal"
+export {ConfirmModal} from "./Modals/ui/ConfirmModal"
+export {GameOverModal} from "./Modals/ui/GameOverModal"
+export {PhoneModal} from "./Modals/ui/PhoneModal"
+export {WalkAwayModal} from "./Modals/ui/WalkAwayModal"
