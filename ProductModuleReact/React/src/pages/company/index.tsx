@@ -26,10 +26,11 @@ function Company() {
   const handleClick = (id: string) => {
     Navigate(`/cong-ty/${id}`);
   };
+  console.log(companies)
 
   const filteredCompanies = companies.filter((c) =>
-    c.short_name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    c.short_description?.toLowerCase().includes(searchQuery.toLowerCase())
+    c.company_name?.toLowerCase().includes(searchQuery.toLowerCase()) 
+
   );
 
   return (
@@ -150,6 +151,7 @@ function Company() {
                   card_media={c.card_media}
                   logo_url={c.logo_url}
                   short_description={c.short_description}
+                  company_name={c.company_name}
                 />
               </div>
             ))}

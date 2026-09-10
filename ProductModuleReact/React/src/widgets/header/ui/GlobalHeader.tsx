@@ -1,16 +1,30 @@
 import { useNavigate } from "react-router";
 
+import { useSession } from "@/entities/session";
+
 function GlobalHeader() {
   const navigate = useNavigate();
-  const handleNavigateToCompany =()=>{
-    navigate("/cong-ty")
+  const { isAuthenticated, role } = useSession();
+  const hanldeNavigateToRegister = () => {
+    navigate("/dang-ky");
+  };
+  const hanldeNavigateToLogin = () => {
+    navigate("/dang-nhap");
+  };
+  const handleNavigateToCompany = () => {
+    navigate("/cong-ty");
+  };
+  const handleNavigateToCreateJob=()=>{
+    navigate("/tao-job")
   }
-  const handleNavigateToHomePage=()=>{
-    navigate("/")
-  }
+
+  const handleNavigateToHomePage = () => {
+    navigate("/");
+  };
+  console.log(role)
   return (
     <>
-      <header className=" bg-white flex justify-between p-2 text-sm">
+      <header className=" bg-white flex justify-between items-center p-2 text-sm">
         {/* Left header */}
         <div className="flex items-center gap-2 lg-gap-4">
           <img
@@ -20,7 +34,10 @@ function GlobalHeader() {
             onClick={handleNavigateToHomePage}
           />
           <ul className="flex gap-10">
-            <li onClick={handleNavigateToCompany} className=" relative font-semibold  text-[14px] pb-1 items-center text-black hover:text-green-600 transition-all duration-300 ease-out transform -translate-y-1 hover:translate-y-0 hover:border-b hover:rounded-b-xs cursor-pointer">
+            <li
+              onClick={handleNavigateToCompany}
+              className=" relative font-semibold  text-[14px] pb-1 items-center text-black hover:text-green-600 transition-all duration-300 ease-out transform -translate-y-1 hover:translate-y-0 hover:border-b hover:rounded-b-xs cursor-pointer"
+            >
               Công ty
             </li>
             <li className=" relative font-semibold  text-[14px] pb-1 items-center text-black hover:text-green-600 transition-all duration-300 ease-out transform -translate-y-1 hover:translate-y-0 hover:border-b hover:rounded-b-xs cursor-pointer">
@@ -32,9 +49,27 @@ function GlobalHeader() {
           </ul>
         </div>
         {/* Right header */}
-        <div></div>
+        <div className="flex gap-4 lg:gap-10 mr-20">
+          {!isAuthenticated && (
+            <>
+              {" "}
+              <button onClick={hanldeNavigateToRegister} className="px-4 py-2 text-emerald-400 font-bold border border-emerald-400  rounded-full hover:bg-gray-50  transition-all duration-300 ease-out transform -translate-y-1 hover:translate-y-0 pointer">
+                Đăng ký
+              </button>
+              <button onClick={hanldeNavigateToLogin} className="px-4 py-2 text-white font-bold bg-emerald-600 rounded-full hover:bg-emerald-700 transition-all duration-300 ease-out transform -translate-y-1 hover:translate-y-0 pointer">
+                Đăng nhập
+              </button>
+            </>
+          )}
+
+          {(role?.toLowerCase() === "admin" ||
+            role?.toLowerCase() === "employer") && (
+            <button onClick={handleNavigateToCreateJob} className="px-4 py-2 text-emerald-400 font-bold border border-emerald-400  rounded-full hover:bg-gray-50 transition-all duration-300 ease-out transform -translate-y-1 hover:translate-y-0 pointer">
+              Đăng tin tuyển dụng
+            </button>
+          )}
+        </div>
       </header>
-      {/*  <div className="w-full h-100 bg-[linear-gradient(180deg,#002b33,rgba(0,43,51,.25)),linear-gradient(90deg,#008060_21.86%,#2bab60_78.13%)] bg-no-repeat bg-size-[100%_100%]"></div> */}
     </>
   );
 }

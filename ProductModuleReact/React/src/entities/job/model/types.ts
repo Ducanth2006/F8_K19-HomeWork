@@ -51,6 +51,11 @@ export interface JobDetailPage extends Pick<
   | "description_html"
   | "requirements_html"
   | "benefits_html"
+  | "slug"
+  | "category"
+  | "is_hot"
+  | "specialty"
+  | "status"
 > {}
 export type JobType =
   | "FULL_TIME"

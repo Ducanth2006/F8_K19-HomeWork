@@ -42,7 +42,7 @@ function HeaderJobDetail({
           <div className="flex flex-col gap-1">
             <p>Địa điểm:</p>
             <p className="font-semibold">
-              {work_location?.[0].city_name ?? "Chưa cập nhật!!"}
+              {work_location?.[0]?.city_name ?? "Chưa cập nhật!!"}
             </p>
           </div>
         </div>

@@ -2,19 +2,15 @@ import { useState, useEffect } from "react";
 
 import type { ICatiegoryGroup } from "@/entities/category";
 
-import Pagination from "@/shared/ui/Pagination";
 
 export interface HomeMenuProps {
   cateGroups: ICatiegoryGroup[],
-  currentPage: number,
-  totalPages: number,
   isLoading: boolean,
   activeGroup?: ICatiegoryGroup | null,
-  onPageChange: (page: number) => void
   onHoverGroup: (id: string | number) => void
   activeGroupId: string | number | null
 }
-function MainMenu({cateGroups,isLoading,currentPage,totalPages,onPageChange,onHoverGroup}:HomeMenuProps) {
+function MainMenu({cateGroups,isLoading,onHoverGroup}:HomeMenuProps) {
 
   return (
    
@@ -35,15 +31,6 @@ function MainMenu({cateGroups,isLoading,currentPage,totalPages,onPageChange,onHo
             })}
           </div>
         )}
-        {/* Pagination */}
-        
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={onPageChange}
-          className="text-lg"
-        />
-      
       </div>
     
   );

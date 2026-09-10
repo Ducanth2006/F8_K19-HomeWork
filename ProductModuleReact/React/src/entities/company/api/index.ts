@@ -10,7 +10,7 @@ export const getCompaniesById = async (id: string)=> {
 export const getCompanies = async () => {
     try {
         const res = await api.get("/companies")
-        return res.data;
+        return res.data.data;
     } catch (e) {
         console.log("get companies api has error: ", e)
     }

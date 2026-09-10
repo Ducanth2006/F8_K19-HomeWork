@@ -70,6 +70,6 @@ export const getJobByGenderTag = async (
   }
 }
 export const getJobBySlug= async(slug:string):Promise<JobDetailPage|null>=>{
-  const res=await  api.get<JobDetailPage[]>(`/jobs?slug=${slug}`);
-  return res.data.length>0?res.data[0]:null;
+  const res=await  api.get<JobDetailPage>(`/jobs/${slug}`);
+  return res.data||null;
 }

@@ -17,10 +17,9 @@ function Menu() {
     const getCateGroups = async () => {
       setLoading(true);
       try {
-        const result = await getCategoryGroup(currentPage, pageLimit);
-        setCateGroups(result.data);
-        setCurPage(result.pagination.page);
-        setTotalPages(result.pagination.totalPages);
+        const result = await getCategoryGroup();
+        setCateGroups(result);
+        console.log(result)
       } catch (e) {
         console.log("get cate groups pagination có lỗi ");
       } finally {
@@ -29,9 +28,7 @@ function Menu() {
     };
     getCateGroups();
   }, [currentPage]);
-  const handlePageChange = (page: number) => {
-    setCurPage(page);
-  };
+  
   // ta sẽ có truyền hàm xử lý hover xuống MainMenu và ta sẽ định nghĩa ở cha ,áp dũng kỹ thuật debouncing hover giúp tránh gửi nhiều api
   const handleMouseEnterGroup = (id: string | number) => {
     // kiểm tra xem có đang đợi gọi api nào ko có thì xóa bỏ để set Time out lại
@@ -54,10 +51,7 @@ function Menu() {
     >
       <MainMenu
         cateGroups={cateGroups}
-        currentPage={currentPage}
-        totalPages={totalPages}
         isLoading={isLoading}
-        onPageChange={handlePageChange}
         onHoverGroup={handleMouseEnterGroup}
         activeGroupId={hoveredGroupId}
       />

@@ -42,15 +42,15 @@ function SumCompany({
       <div className="grid grid-cols-[auto_auto_1fr] gap-x-4 gap-y-4 items-center font-medium">
         <i className="fa-solid text-gray-300 fa-user-group"></i>
         <p className="text-gray-300">Quy mô :</p>
-        <p>{companySize}</p>
+        <p>{companySize??<span className="text-emerald-600">Đang cập nhật</span>}</p>
 
         <i className="fa-solid text-gray-300 fa-user-group"></i>
         <p className="text-gray-300">Lĩnh vực :</p>
-        <p>{cate}</p>
+        <p>{cate??<span className="text-emerald-600">Đang cập nhật</span>}</p>
 
         <i className="fa-solid text-gray-300 fa-user-group"></i>
         <p className="text-gray-300">Email :</p>
-        <p>{email}</p>
+        <p>{email??<span className="text-emerald-600">Đang cập nhật</span>}</p>
       </div>
       <button className="mt-4 flex gap-3 border border-green-400 rounded-full justify-center items-center px-4 py-2 text-emerald-600 font-medium hover:bg-green-100 cursor-pointer" onClick={handleClick}><p>Xem trang công ty</p> <i className="fa-solid text-2xl fa-square-arrow-up-right"></i> </button>
     </div>

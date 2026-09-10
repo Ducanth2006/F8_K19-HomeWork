@@ -15,6 +15,7 @@ export const useJobDetail=(slug:string)=>{
             setLoading(true)
             setError(null)
             const res=await getJobBySlug(slug);
+            console.log(res)
             setJob(res);
         }catch(e){
             console.log("Having error when get job by slug : ",e)

@@ -6,6 +6,8 @@ export interface ICompanyCard {
     card_media: string
     short_description: string
     logo_url: string
+    company_name:string
+
 }
 export interface ICompanyDetail {
     id: number;

@@ -12,7 +12,7 @@ import {CompanyJobCard} from "@/entities/job";
 interface CommonInfoItem {
   name: string;
   icon: string;
-  props: keyof ICompanyDetail; // ✨ Giúp TypeScript hiểu props là key hợp lệ
+  props: keyof ICompanyDetail; 
 }
 const commonInfo: CommonInfoItem[] = [
   { name: "Mã số thuế", icon: "fa-solid fa-key", props: "tax_code" },
