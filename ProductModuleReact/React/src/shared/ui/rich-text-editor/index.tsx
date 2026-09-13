@@ -20,17 +20,24 @@ export interface RichTextEditorProps {
   minHeight?: number;
   disable?: boolean;
 }
-export const RichTextEditor=({
+
+export const RichTextEditor = ({
   value = "",
   onChange,
   placeholder,
-  minHeight = 50,
+  minHeight = 150,
   disable = false,
-}: RichTextEditorProps)=> {
+}: RichTextEditorProps) => {
   return (
-    <div
-      className={`min-h-${minHeight} max-h-80 overflow-y-auto bg-emerald-500`}
-    >
+    <div className="w-full">
+      {/* Tùy chỉnh trực tiếp chiều cao vùng nhập liệu, tránh làm cuộn mất thanh Toolbar */}
+      <style>{`
+        .ck-editor__editable_inline {
+          min-height: ${minHeight}px;
+          max-height: 320px;
+        }
+      `}</style>
+
       <CKEditor
         editor={ClassicEditor}
         disabled={disable}
@@ -48,31 +55,47 @@ export const RichTextEditor=({
             BlockQuote,
             Undo,
           ],
-          placeholder:placeholder,
+          placeholder: placeholder || "Nhập nội dung...",
           toolbar: [
-            'heading',
-            '|',
-            'bold',
-            'italic',
-            'link',
-            'bulletedList',
-            'numberedList',
-            'blockQuote',
-            '|',
-            'undo',
-            'redo',
-          ],heading:{
-            options:[{ model: 'paragraph', title: 'Đoạn văn', class: 'ck-heading_paragraph' },
-              { model: 'heading2', view: 'h2', title: 'Tiêu đề lớn (H2)', class: 'ck-heading_heading2' },
-              { model: 'heading3', view: 'h3', title: 'Tiêu đề nhỏ (H3)', class: 'ck-heading_heading3' },]
+            "heading",
+            "|",
+            "bold",
+            "italic",
+            "link",
+            "bulletedList",
+            "numberedList",
+            "blockQuote",
+            "|",
+            "undo",
+            "redo",
+          ],
+          heading: {
+            options: [
+              {
+                model: "paragraph",
+                title: "Đoạn văn",
+                class: "ck-heading_paragraph",
+              },
+              {
+                model: "heading2",
+                view: "h2",
+                title: "Tiêu đề lớn (H2)",
+                class: "ck-heading_heading2",
+              },
+              {
+                model: "heading3",
+                view: "h3",
+                title: "Tiêu đề nhỏ (H3)",
+                class: "ck-heading_heading3",
+              },
+            ],
           },
         }}
-        onChange={(_,editor)=>{
-            const htmlDataString=editor.getData();
-            onChange?.(htmlDataString);
+        onChange={(_, editor) => {
+          const htmlDataString = editor.getData();
+          onChange?.(htmlDataString);
         }}
       />
     </div>
   );
-}
-
+};

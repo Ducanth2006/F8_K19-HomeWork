@@ -1,9 +1,11 @@
-import { useNavigate } from "react-router";
+import { useNavigate ,useLocation} from "react-router";
 
 import { useSession } from "@/entities/session";
 
 function GlobalHeader() {
   const navigate = useNavigate();
+  const location =useLocation();
+
   const { isAuthenticated, role } = useSession();
   const hanldeNavigateToRegister = () => {
     navigate("/dang-ky");
@@ -21,7 +23,7 @@ function GlobalHeader() {
   const handleNavigateToHomePage = () => {
     navigate("/");
   };
-  console.log(role)
+  
   return (
     <>
       <header className=" bg-white flex justify-between items-center p-2 text-sm">
@@ -63,7 +65,7 @@ function GlobalHeader() {
           )}
 
           {(role?.toLowerCase() === "admin" ||
-            role?.toLowerCase() === "employer") && (
+            role?.toLowerCase() === "employer") && ( location.pathname!=="/tao-job"&&
             <button onClick={handleNavigateToCreateJob} className="px-4 py-2 text-emerald-400 font-bold border border-emerald-400  rounded-full hover:bg-gray-50 transition-all duration-300 ease-out transform -translate-y-1 hover:translate-y-0 pointer">
               Đăng tin tuyển dụng
             </button>

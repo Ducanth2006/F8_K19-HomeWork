@@ -9,7 +9,7 @@ type creatJobError = ApiResponseError;
 export const createJob=async (data:JobCreateFormOutput):Promise<Job> => {
     const token=getAccessToken()
     try{
-        const res=await api.post("/employer/jobs",data,{headers:{Authorization:`Bearers ${token}`,Accept:"application/json"}})
+        const res=await api.post("/employer/jobs",data,{headers:{Authorization:`Bearer ${token}`,Accept:"application/json"}})
         return res.data;
     }catch(e){
         if(axios.isAxiosError<creatJobError>(e)){

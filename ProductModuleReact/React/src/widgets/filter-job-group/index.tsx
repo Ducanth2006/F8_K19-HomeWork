@@ -50,7 +50,10 @@ function FilteredJobGroup() {
         }
         if (res?.data) setJobs(res.data);
 
-        setTotalPages(res.pagination.totalPages)
+        if (res?.pagination) {
+          setTotalPages(res.pagination.totalPages);
+        }
+
 
       } catch (error) {
         console.error("Lỗi khi fetch danh sách công việc:", error);

@@ -12,6 +12,7 @@ import {
   LoginPage,
   EmployerRegisterPage,
   CandidateRegisterPage,
+  ListJobPage
 } from "@/pages";
 import ScrollTop from "../ui/ScollTop";
 import { ProtectedRouter } from "../ui/ProtectedRouter";
@@ -25,6 +26,8 @@ function AppRouter() {
           <Route path="/cong-ty" element={<Company />} />
           <Route path="/cong-ty/:id" element={<CompanyDetail />} />
           <Route path="/cong-viec/:slug" element={<JobDetail />} />
+          <Route path="/danh-sach-cong-viec" element={<ListJobPage/>}/>
+
           <Route element={<ProtectedRouter allowRole="CANDIDATE" />}>
             <Route path="/tao-cv" element={<MakeCVPage />}></Route>
           </Route>
