@@ -1,0 +1,15 @@
+version : '3.8' # phải là '' không được ""
+services:
+  react-app:
+      build : .
+      container_name : react-dev-container
+      ports:
+        - "5173:5173"  #"<Cổng (Host) máy thật>:<Cổng bên container trong>"  
+      volumes:
+        - /app/web  # mount code từ máy thật vào container docker , mount src public, tất cả  các file .react-project/
+  # Khi bạn sửa một dòng code trong VS Code trên máy thật, file bên trong container /app lập tức thay đổi theo thời gian thực.
+  # Vite dev server phát hiện thay đổi và tự động tải lại trình duyệt (Hot Module Replacement) mà không cần phải build lại image Docker.
+        - /app/web/node_modules # giúp ko ghi đè khi npm run dev lại làm mất thư viện lãng phí , với tiêu chí càng chi tiết càng ưu tiên cd
+      environment:
+        - WATCHPACK_POLLING=true # giúp hot reload hoạt động ổn định nhất 
+       
