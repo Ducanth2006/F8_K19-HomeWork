@@ -8,7 +8,7 @@ interface AnswerOptionsProps {
 
 export const AnswerOptions = ({ options, selectedOption, correctOption, hiddenOptions, onSelect }: AnswerOptionsProps) => {
     const getOptionClass = (index: number) => {
-        let baseClass = "option-btn p-4 rounded-xl text-left flex items-center gap-3 ";
+        let baseClass = "bg-violet-300 hover:bg-violet-600 option-btn p-4 rounded-xl text-left flex items-center gap-3 ";
         if (selectedOption === index && correctOption === null) baseClass += "selected ";
         if (correctOption !== null) {
             if (index === correctOption) baseClass += "correct ";
