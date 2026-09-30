@@ -1,6 +1,8 @@
+import { type Prize } from "../../model/prizes";
+
 interface MoneyLadderProps {
     currentLevel: number;
-    prizeLadder: string[];
+    prizeLadder: Prize[];
 }
 
 export const MoneyLadder = ({ currentLevel, prizeLadder }: MoneyLadderProps) => {
@@ -25,7 +27,7 @@ export const MoneyLadder = ({ currentLevel, prizeLadder }: MoneyLadderProps) => 
                     return (
                         <div key={idx} className={itemClass}>
                             <span className={`text-xs ${isCurrent ? 'text-slate-950' : 'text-slate-500'}`}>Câu {idx + 1}</span>
-                            <span className={isMilestone && !isCurrent ? 'text-amber-300 font-black' : ''}>{prize} đ</span>
+                            <span className={isMilestone && !isCurrent ? 'text-amber-300 font-black' : ''}>{prize.amount} đ</span>
                         </div>
                     );
                 })}
