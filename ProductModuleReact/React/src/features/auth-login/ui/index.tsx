@@ -83,7 +83,7 @@ function LoginForm({ onSuccess,onNavToCandidateRegisterPage,onNavToEmployerRegis
           className="w-full mt-6 py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded text-sm transition-colors disabled:bg-gray-400"
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Đang gửi" : "Đăng ký"}
+          {isSubmitting ? "Đang gửi" : "Gửi" }
         </button>
         <div className="flex justify-between mx-1 my-2 text-emerald-600">
           <button onClick={onNavToCandidateRegisterPage} className="hover:text-emerald-400">Đăng ký</button>

@@ -19,6 +19,7 @@ import {
   type ICategories,
 } from "@/entities/category";
 import { boolean } from "zod";
+import{RichTextTab} from "../rich-text-tab"
 interface JobCreateFormProps {
   onSuccess: (data: Job) => void;
 }
@@ -352,6 +353,9 @@ function JobCreateForm({ onSuccess }: JobCreateFormProps) {
             </p>
           )}
         </div>
+        {/* Tabs */}
+        <RichTextTab control={control} errors={errors}/>
+
         
 
 
