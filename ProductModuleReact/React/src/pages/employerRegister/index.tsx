@@ -1,12 +1,13 @@
-import {useNavigate} from "react-router"
+import { useNavigate } from "react-router";
 
-import {EmployerRegisterForm} from "@/features/employer-register"
+import { EmployerRegisterForm } from "@/features/employer-register";
 
-function EmployerRegisterPage(){
-    const nav=useNavigate();
-    const onSuccess=()=>{
-        nav("/dang-nhap")
-    }
-    return (<EmployerRegisterForm onSuccess={onSuccess}/>)
+function EmployerRegisterPage() {
+  const navigate = useNavigate();
+  const handleSuccess = () => navigate("/dang-nhap");
+  const handleNavToLoginPage = () => navigate("/dang-nhap");
+
+  return <EmployerRegisterForm onSuccess={handleSuccess} onNavToLoginPage={handleNavToLoginPage} />;
 }
+
 export default EmployerRegisterPage;

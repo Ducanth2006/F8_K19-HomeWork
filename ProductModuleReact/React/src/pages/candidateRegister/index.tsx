@@ -10,6 +10,9 @@ function CandidateRegisterPage(){
     const handleNavToEmployerRegisterPage =()=>{
         nav("/cong-ty-dang-ky")
     }
-    return (<CandidateRegisterForm onNavToEmployerRegisterPage={handleNavToEmployerRegisterPage} onSuccess={onSuccess}/>)
+    const handleNavToLoginPage =()=>{
+        nav("/dang-nhap")
+    }
+    return (<CandidateRegisterForm onNavToEmployerRegisterPage={handleNavToEmployerRegisterPage} onNavToLoginPage={handleNavToLoginPage} onSuccess={onSuccess}/> )
 }
 export default CandidateRegisterPage;

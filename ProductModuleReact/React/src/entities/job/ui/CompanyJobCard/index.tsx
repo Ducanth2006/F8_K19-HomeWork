@@ -21,7 +21,7 @@ function Card({
     }
 
     return (
-        <div onClick={handleNav} className="group flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 sm:p-5 w-full bg-white hover:bg-emerald-50/20 border border-slate-100 hover:border-emerald-500/60 shadow-xs hover:shadow-md transition-all duration-300 rounded-2xl gap-4">
+        <div onClick={handleNav} className="col-span-1 group flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 sm:p-5 w-full bg-white hover:bg-emerald-50/20 border border-slate-100 hover:border-emerald-500/60 shadow-xs hover:shadow-md transition-all duration-300 rounded-2xl gap-4">
             <div className="flex gap-4 items-center flex-1 min-w-0">
                 <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl border border-slate-100 bg-slate-50 p-1.5 shrink-0 flex items-center justify-center overflow-hidden">
                     <img

@@ -4,6 +4,8 @@ import type { ICatiegoryGroup } from "@/entities/category";
 import { getCategoryGroup } from "@/entities/category";
 import SubMenu from "../ui/SubMenu";
 const pageLimit = 6;
+// sẽ có hàm nav xử lý chuyển hướng tới trang list job filterd by categories
+
 function Menu() {
   const [cateGroups, setCateGroups] = useState<ICatiegoryGroup[]>([]);
   const [currentPage, setCurPage] = useState(1);
@@ -19,7 +21,6 @@ function Menu() {
       try {
         const result = await getCategoryGroup();
         setCateGroups(result);
-        console.log(result)
       } catch (e) {
         console.log("get cate groups pagination có lỗi ");
       } finally {

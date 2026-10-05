@@ -1,19 +1,44 @@
+import {useNavigate} from "react-router"
+import { type FormEvent } from "react";
+
 import { Menu } from "@/widgets/category-menu";
+import {HomeContext} from "@/shared/lib/Context/home-context"
 import FilteredJobGroup from "@/widgets/filter-job-group"
+
 function Home() {
+  const nav=useNavigate();
+  const hanldeNavToJobListPage=(slugCate:string)=>{
+    nav(`/danh-sach-cong-viec?category_slug=${slugCate}`)
+  }
+  const handleSearch=(e:FormEvent<HTMLFormElement>)=>{
+    e.preventDefault()
+    const formData = new FormData(e.currentTarget);
+    const keyword = ((formData.get("keyword")) as string).trim();
+    if(!keyword){
+      nav("/danh-sach-cong-viec")
+    }else{
+      nav(`/danh-sach-cong-viec?keyword=${keyword}`)
+    }
+
+    
+  }
+  
+  
+  
   return (
-    <>
-      <div className="w-full flex flex-col h-120 bg-[linear-gradient(180deg,#002b33,rgba(0,43,51,.25)),linear-gradient(90deg,#008060_21.86%,#2bab60_78.13%)] bg-no-repeat bg-size-[100%_100%]">
+   <HomeContext.Provider value={{hanldeNavToJobListPage}}>
+     <div className="w-full flex flex-col h-120 bg-[linear-gradient(180deg,#002b33,rgba(0,43,51,.25)),linear-gradient(90deg,#008060_21.86%,#2bab60_78.13%)] bg-no-repeat bg-size-[100%_100%]">
         <div className="container mx-auto px-3 sm:px-25 pt-5 lg:px-60 ">
           <h1 className="text-2xl text-center text-green-400 font-semibold">
             TopCV - Tạo CV, Tìm việc làm, Tuyển dụng hiệu quả
           </h1>
           {/* Search bar */}
-          <form className="flex items-center bg-white rounded-full p-1.5 shadow-xl   h-15 mt-2 text-sm">
+          <form onSubmit={handleSearch} className="flex items-center bg-white rounded-full p-1.5 shadow-xl   h-15 mt-2 text-sm">
             <input
               type="text"
               placeholder="Vị trí tuyển dụng, tên công ty"
               className="flex-1 bg-transparent border-none outline-none text-gray-700 placeholder-gray-400 text-sm ml-3"
+              name="keyword"
             />
 
             <button
@@ -25,11 +50,11 @@ function Home() {
             </button>
           </form>
           {/* Menu nhỏ */}
-          <Menu />
+          <Menu  />
         </div>
       </div>
       <FilteredJobGroup />
-    </>
+   </HomeContext.Provider>
   );
 }
 export default Home;

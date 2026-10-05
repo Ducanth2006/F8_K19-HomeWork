@@ -1,6 +1,7 @@
 import api from "@/shared/api";
 import type { PaginatedResponse } from "@/shared/types/pagination";
 import type { JobCardHomePageDatas,JobDetailPage } from "@/entities/job";
+import {type IJobCard} from "../model/types"
 export const getJobByCompanyId = async (id: string) => {
   try {
     const res = await api.get(`/jobs?company.id=${id}`);
@@ -72,4 +73,25 @@ export const getJobByGenderTag = async (
 export const getJobBySlug= async(slug:string):Promise<JobDetailPage|null>=>{
   const res=await  api.get<JobDetailPage>(`/jobs/${slug}`);
   return res.data||null;
+}
+interface resGetJobByCateSlug{
+  data:IJobCard[]|null,
+  total:number
+}
+interface JobQueryParams{
+  page?:number,
+  keyword?:string,
+  category_slug?:string,
+  city_id?:number
+}
+export const getJobs =async(params?:JobQueryParams):Promise<resGetJobByCateSlug>=>{
+  const res =await api.get("/jobs?",{params:{
+    page:1,
+    ...params
+  }})
+  return res.data;
+}
+export const getJobsBySlug=async(slug:string):Promise<resGetJobByCateSlug>=>{
+  const res=await api.get<resGetJobByCateSlug>(`/jobs?page=1&category_slug=${slug}`);
+  return res.data||null
 }

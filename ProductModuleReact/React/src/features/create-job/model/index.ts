@@ -30,7 +30,7 @@ export const jobCreateSchema = z.object({
 
   category: z.string().min(1, "Vui lòng chọn ngành nghề"),
 
-  specialty: z.string().nullable().optional(),
+  specialty: z.string().optional().transform((value)=>value?value:null),
   // .enum để dùng cho enum
   job_type:z.enum(JOB_TYPES,"Vui lòng chọn hình thức làm việc"),
 
@@ -80,10 +80,10 @@ export const jobCreateSchema = z.object({
   work_location: z.array(
     z.object({
       city_name: z.string().nullable().optional(),
-      city_id: z.string().nullable().optional(),
+      city_id: z.coerce.number().nullable().optional(),
       address_detail: z.string().nullable().optional(),
     }),
-  ),
+  ).optional(),
 });
 //Nguyên nhân chính gây ra lỗi là  dùng .transform(...) và z.preprocess(...) nó sẽ bị tách ra thành 2 trường hợp 
 export type JobCreateFormInput = z.input<typeof jobCreateSchema>;

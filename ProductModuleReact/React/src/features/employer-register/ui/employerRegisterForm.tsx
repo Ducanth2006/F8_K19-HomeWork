@@ -6,12 +6,13 @@ import {
   type employerRegisterRequest,
 } from "../model";
 import { employerRegister } from "../api";
-import { formToJSON } from "axios";
 
-interface employerRegisterFormProps {
-  onSuccess: () => void
+interface EmployerRegisterFormProps {
+  onSuccess: () => void;
+  onNavToLoginPage: () => void;
 }
-function EmployerRegisterForm({onSuccess}: employerRegisterFormProps) {
+
+function EmployerRegisterForm({ onSuccess, onNavToLoginPage }: EmployerRegisterFormProps) {
   const {
     register,
     handleSubmit,
@@ -21,219 +22,80 @@ function EmployerRegisterForm({onSuccess}: employerRegisterFormProps) {
     defaultValues: {
       tax_code: "",
       company_name: "",
-      international_name:"",
+      international_name: "",
       email: "",
       phone_number: "",
       director: "",
       headquarters_address: "",
       password: "",
-      short_name:"",
-      website:""
+      short_name: "",
+      website: "",
     },
   });
-  const handle=()=>{console.log("click")}
+
   const onSubmit = async (data: employerRegisterRequest) => {
     try {
       const res = await employerRegister(data);
-      // đá sang trang login
-      if(res.message==="Đăng ký thành công"){
-         onSuccess();
-      }
-     
-    } catch (e) {
-      console.log(e, "có lỗi khi đăng ký ");
+      if (res.message === "Đăng ký thành công") onSuccess();
+    } catch (error) {
+      console.error("Đăng ký công ty thất bại", error);
     }
   };
+
+  const fields = [
+    { name: "company_name", label: "Tên công ty", placeholder: "Công ty của bạn", required: true },
+    { name: "short_name", label: "Tên viết tắt", placeholder: "Tên công ty thường dùng" },
+    { name: "international_name", label: "Tên quốc tế", placeholder: "Company name" },
+    { name: "tax_code", label: "Mã số thuế", placeholder: "Nhập mã số thuế", required: true },
+    { name: "director", label: "Người đại diện", placeholder: "Họ và tên người đại diện" },
+    { name: "headquarters_address", label: "Địa chỉ trụ sở", placeholder: "Số nhà, đường, quận, thành phố" },
+    { name: "email", label: "Email công việc", placeholder: "hr@congty.vn", required: true, type: "email" },
+    { name: "phone_number", label: "Số điện thoại", placeholder: "Nhập số điện thoại", required: true, type: "tel" },
+    { name: "website", label: "Website", placeholder: "https://congty.vn" },
+    { name: "password", label: "Mật khẩu", placeholder: "Tối thiểu 8 ký tự", required: true, type: "password" },
+  ] as const;
+
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gray-50">
-      <form
-        className="lg:grid-cols-2 gap-4 lg:w-200 lg:h-200"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <h2 className="text-xl font-bold text-center text-gray-800 mb-6">
-          Đăng ký thông tin công ty
-        </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <div>
-            <label>Mã số thuế</label>
-            <input
-              className={`w-full px-3 py-2 border rounded text-sm outline-none ${
-                errors.tax_code
-                  ? "border-red-500"
-                  : "border-gray-300 focus:border-emerald-500"
-              }`}
-              placeholder="Nhập mã số thuế"
-              {...register("tax_code")}
-            />
-            {errors.tax_code && (
-              <p className="text-xs text-red-500 mt-1">
-                {errors.tax_code.message}
-              </p>
-            )}
-          </div>
-          <div>
-            <label>Tên công ty</label>
-            <input
-              className={`w-full px-3 py-2 border rounded text-sm outline-none ${
-                errors.company_name
-                  ? "border-red-500"
-                  : "border-gray-300 focus:border-emerald-500"
-              }`}
-              placeholder="Nhập tên công ty "
-              {...register("company_name")}
-            />
-            {errors.company_name && (
-              <p className="text-xs text-red-500 mt-1">
-                {errors.company_name.message}
-              </p>
-            )}
-          </div>
-           <div>
-            <label>Tên quốc tế công ty</label>
-            <input
-              className={`w-full px-3 py-2 border rounded text-sm outline-none ${
-                errors.international_name
-                  ? "border-red-500"
-                  : "border-gray-300 focus:border-emerald-500"
-              }`}
-              placeholder="Nhập tên công ty "
-              {...register("international_name")}
-            />
-            {errors.international_name && (
-              <p className="text-xs text-red-500 mt-1">
-                {errors.international_name.message}
-              </p>
-            )}
-          </div>
-          <div>
-            <label>Tên rút gọn của công ty</label>
-            <input
-              className={`w-full px-3 py-2 border rounded text-sm outline-none ${
-                errors.short_name
-                  ? "border-red-500"
-                  : "border-gray-300 focus:border-emerald-500"
-              }`}
-              placeholder="Nhập tên công ty "
-              {...register("short_name")}
-            />
-            {errors.short_name && (
-              <p className="text-xs text-red-500 mt-1">
-                {errors.short_name.message}
-              </p>
-            )}
-          </div>
-           <div>
-            <label>Website công ty</label>
-            <input
-              className={`w-full px-3 py-2 border rounded text-sm outline-none ${
-                errors.website
-                  ? "border-red-500"
-                  : "border-gray-300 focus:border-emerald-500"
-              }`}
-              placeholder="Nhập tên công ty "
-              {...register("website")}
-            />
-            {errors.website && (
-              <p className="text-xs text-red-500 mt-1">
-                {errors.website.message}
-              </p>
-            )}
-          </div>
-          <div>
-            <label>Email</label>
-            <input
-              className={`w-full px-3 py-2 border rounded text-sm outline-none ${
-                errors.email
-                  ? "border-red-500"
-                  : "border-gray-300 focus:border-emerald-500"
-              }`}
-              placeholder="Nhập email"
-              {...register("email")}
-            />
-            {errors.email && (
-              <p className="text-xs text-red-500 mt-1">
-                {errors.email.message}
-              </p>
-            )}
-          </div>
-           <div>
-            <label>Password</label>
-            <input
-              className={`w-full px-3 py-2 border rounded text-sm outline-none ${
-                errors.password
-                  ? "border-red-500"
-                  : "border-gray-300 focus:border-emerald-500"
-              }`}
-              placeholder="Nhập tên công ty "
-              {...register("password")}
-            />
-            {errors.password && (
-              <p className="text-xs text-red-500 mt-1">
-                {errors.password.message}
-              </p>
-            )}
-          </div>
-          <div>
-            <label>Số điện thoại </label>
-            <input
-              className={`w-full px-3 py-2 border rounded text-sm outline-none ${
-                errors.phone_number
-                  ? "border-red-500"
-                  : "border-gray-300 focus:border-emerald-500"
-              }`}
-              placeholder="Nhập số điện thoại "
-              {...register("phone_number")}
-            />
-            {errors.phone_number && (
-              <p className="text-xs text-red-500 mt-1">
-                {errors.phone_number.message}
-              </p>
-            )}
-          </div>
-          <div>
-            <label>Giám đốc</label>
-            <input
-              className={`w-full px-3 py-2 border rounded text-sm outline-none ${
-                errors.director
-                  ? "border-red-500"
-                  : "border-gray-300 focus:border-emerald-500"
-              }`}
-              placeholder="Nhập tên giám đốc"
-              {...register("director")}
-            />
-            {errors.director && (
-              <p className="text-xs text-red-500 mt-1">
-                {errors.director.message}
-              </p>
-            )}
-          </div>
-          <div>
-            <label>Trụ sở chính</label>
-            <input
-              className={`w-full px-3 py-2 border rounded text-sm outline-none ${
-                errors.headquarters_address
-                  ? "border-red-500"
-                  : "border-gray-300 focus:border-emerald-500"
-              }`}
-              placeholder="Nhập trụ sở chính"
-              {...register("headquarters_address")}
-            />
-            {errors.headquarters_address && (
-              <p className="text-xs text-red-500 mt-1">
-                {errors.headquarters_address.message}
-              </p>
-            )}
-          </div>
+    <main className="relative flex min-h-[calc(100vh-64px)] items-center justify-center overflow-hidden bg-[#f4f8f6] px-4 py-12 sm:px-6">
+      <div className="pointer-events-none absolute -left-24 -top-28 h-80 w-80 rounded-full bg-emerald-200/50 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-36 -right-20 h-96 w-96 rounded-full bg-teal-100/80 blur-3xl" />
+      <section className="relative w-full max-w-4xl rounded-[2rem] bg-white px-6 py-9 shadow-[0_24px_80px_-28px_rgba(15,70,54,0.28)] sm:px-10 sm:py-11">
+        <a href="/" className="text-xl font-black tracking-tight text-emerald-800">TopCV<span className="text-emerald-500">.</span></a>
+        <div className="mt-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-600">Dành cho nhà tuyển dụng</p>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">Tạo tài khoản công ty</h1>
+          <p className="mt-2 text-sm leading-6 text-slate-500">Hoàn thành thông tin để bắt đầu tìm kiếm ứng viên phù hợp.</p>
         </div>
-        <button
-          type="submit"
-          className="w-full mt-6 py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded text-sm transition-colors disabled:bg-gray-400"
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? "Đang gửi" : "Đăng ký"}
-        </button>
-      </form>
-    </div>
+
+        <form className="mt-8 grid gap-x-5 gap-y-4 sm:grid-cols-2" onSubmit={handleSubmit(onSubmit)}>
+          {fields.map((field) => {
+            const error = errors[field.name as keyof typeof errors];
+            return (
+              <div key={field.name}>
+                <label htmlFor={`employer-${field.name}`} className="mb-2 block text-sm font-semibold text-slate-700">{field.label}{"required" in field && field.required && <span className="ml-1 text-rose-500">*</span>}</label>
+                <input
+                  id={`employer-${field.name}`}
+                  type={"type" in field ? field.type : "text"}
+                  autoComplete={field.name === "email" ? "email" : field.name === "password" ? "new-password" : "off"}
+                  placeholder={field.placeholder}
+                  {...register(field.name)}
+                  className={`w-full rounded-xl border bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:bg-white focus:ring-4 ${error ? "border-rose-300 focus:border-rose-400 focus:ring-rose-100" : "border-slate-200 focus:border-emerald-500 focus:ring-emerald-100"}`}
+                />
+                {error && <p className="mt-1.5 text-xs font-medium text-rose-600">{error.message?.toString()}</p>}
+              </div>
+            );
+          })}
+          <button type="submit" disabled={isSubmitting} className="mt-2 flex w-full items-center justify-center rounded-xl bg-emerald-600 px-4 py-3.5 text-sm font-bold text-white shadow-lg shadow-emerald-600/20 transition hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-200 disabled:cursor-not-allowed disabled:opacity-60 sm:col-span-2">
+            {isSubmitting ? "Đang gửi thông tin..." : "Đăng ký công ty"}
+          </button>
+        </form>
+
+        <div className="mt-7 border-t border-slate-100 pt-6 text-center">
+          <p className="text-sm text-slate-500">Đã có tài khoản? <button type="button" onClick={onNavToLoginPage} className="font-semibold text-emerald-700 hover:text-emerald-900">Đăng nhập</button></p>
+        </div>
+      </section>
+    </main>
   );
 }
+
 export default EmployerRegisterForm;
