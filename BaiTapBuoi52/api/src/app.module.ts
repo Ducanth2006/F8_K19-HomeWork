@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
+import { Category } from './category/entities/category.entity';
 
 import { CategoryModule } from './category/module';
 import { TodoModule } from './todos/module';
@@ -21,9 +23,10 @@ import { WardModule } from './ward/ward.module';
     port: 5432,
     username: 'postgres',
     password: 'postgres',
-    database: 'default',
-    entities: [],
+    database: 'portalDb',
+    entities: [Category],
     synchronize: false,
+    namingStrategy: new SnakeNamingStrategy(),
   }), CategoryModule, TodoModule, JobModule, CompanyModule, CvModule, CandidateModule, JobApllicationModule, CompanyAddressModule, ProvinceModule, WardModule],
   controllers: [AppController],
   providers: [AppService],

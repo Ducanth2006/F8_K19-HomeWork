@@ -7,19 +7,19 @@ services:
       - ./api:/app/api
     ports:
       - 3000:3000
-    command: ['npm', 'run', 'start:dev']
+    command: sh -c "npm install && npm run start:dev"
     depends_on:
       db:
         condition: service_started
   db:
     container_name: portalWeb_db 
-    image: postgres:17
+    image: postgres:15
     ports:
       - 4000:5432
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: default
+      POSTGRES_DB: portalDb
     volumes:
       - ./db:/var/lib/postgresql/data
     

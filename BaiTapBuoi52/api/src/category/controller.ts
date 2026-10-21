@@ -1,5 +1,5 @@
 import { Controller, Delete, Get, Patch, Post, Body, Param, NotFoundException } from "@nestjs/common";
-import { CategoryService, type Category } from "./service";
+import { CategoryService } from "./service";
 import { ApiBadRequestResponse, ApiOkResponse, ApiCreatedResponse, ApiNotFoundResponse, ApiConflictResponse } from "@nestjs/swagger";
 import { CreateCategoryDto, CategoryDto,UpdateCategoryDto } from "./dto/categoryDto";
 @Controller("categories")
@@ -14,7 +14,7 @@ export class CategoryController {
     })
 
     getCategory() {
-        return this.categoryService.getList();
+        return this.categoryService.getAll();
     }
     // Get by id
 
@@ -54,7 +54,7 @@ export class CategoryController {
     @ApiConflictResponse({ description: "Category name đã tồn tại" })
     @ApiNotFoundResponse({ description: "Not found resource" })
     patchCategory(@Param("id") id: string, @Body() updateData: UpdateCategoryDto) {
-        return this.categoryService.patch(id, updateData);
+        return this.categoryService.update(id, updateData);
     }
     @Delete(":id")
     @ApiOkResponse({
