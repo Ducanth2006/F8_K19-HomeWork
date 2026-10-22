@@ -12,22 +12,23 @@ export class Category {
     })
     createdAt: Date;
     @Column({
-        type: "bigint", nullable: true
+        type: "uuid", nullable: true
     })
     createdBy?: string
     @UpdateDateColumn({ type: "timestamptz", nullable: true })
     modifiedAt?: Date;
-    @Column({ type: "bigint", nullable: true })
+    @Column({ type: "uuid", nullable: true })
     modifiedBy?: string
     @DeleteDateColumn({
         type: "timestamptz", nullable: true
 
     }) deletedAt?: Date;
     @Column({
-        type: "bigint", nullable: true
+        type: "uuid", nullable: true
     })
     deletedBy?: string
     @Column({ type: "boolean", default: true })
     active: boolean
 
 }
+

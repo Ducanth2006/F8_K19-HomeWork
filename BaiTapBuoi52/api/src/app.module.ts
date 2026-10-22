@@ -25,7 +25,7 @@ import { WardModule } from './ward/ward.module';
     password: 'postgres',
     database: 'portalDb',
     entities: [Category],
-    synchronize: false,
+    synchronize: true,
     namingStrategy: new SnakeNamingStrategy(),
   }), CategoryModule, TodoModule, JobModule, CompanyModule, CvModule, CandidateModule, JobApllicationModule, CompanyAddressModule, ProvinceModule, WardModule],
   controllers: [AppController],
