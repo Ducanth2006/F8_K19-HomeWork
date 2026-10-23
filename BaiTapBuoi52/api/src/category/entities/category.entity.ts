@@ -10,6 +10,8 @@ export class Category {
         type: "timestamptz",
         default: () => "now()"
     })
+    @Column({type:"bigint",nullable:true})
+    parentId:string;
     createdAt: Date;
     @Column({
         type: "uuid", nullable: true
