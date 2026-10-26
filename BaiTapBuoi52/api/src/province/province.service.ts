@@ -1,26 +1,31 @@
-import { Injectable } from '@nestjs/common';
-import { CreateProvinceDto } from './dto/create-province.dto';
-import { UpdateProvinceDto } from './dto/update-province.dto';
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Province } from './entities/province.entity';
 
 @Injectable()
 export class ProvinceService {
-  create(createProvinceDto: CreateProvinceDto) {
-    return 'This action adds a new province';
+  constructor(
+    @InjectRepository(Province)
+    private readonly provinceRepository: Repository<Province>,
+  ) {}
+
+  async findAll(): Promise<Province[]> {
+    return await this.provinceRepository
+      .createQueryBuilder('province')
+      .getMany();
   }
 
-  findAll() {
-    return `This action returns all province`;
-  }
+  async findOne(id: number): Promise<Province> {
+    const province = await this.provinceRepository
+      .createQueryBuilder('province')
+      .where('province.id = :id', { id })
+      .getOne();
 
-  findOne(id: number) {
-    return `This action returns a #${id} province`;
-  }
+    if (!province) {
+      throw new NotFoundException(`Province with ID ${id} not found`);
+    }
 
-  update(id: number, updateProvinceDto: UpdateProvinceDto) {
-    return `This action updates a #${id} province`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} province`;
+    return province;
   }
 }

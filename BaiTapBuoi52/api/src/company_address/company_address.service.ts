@@ -1,26 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { CreateCompanyAddressDto } from './dto/create-company_address.dto';
 import { UpdateCompanyAddressDto } from './dto/update-company_address.dto';
+import { BaseCrudService } from '@/common/classes/base-crud.class';
+import { CompanyAddress } from './entities/company_address.entity';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
 @Injectable()
-export class CompanyAddressService {
-  create(createCompanyAddressDto: CreateCompanyAddressDto) {
-    return 'This action adds a new companyAddress';
-  }
+export class CompanyAddressService extends BaseCrudService<CompanyAddress,CreateCompanyAddressDto,UpdateCompanyAddressDto>{
+  constructor(@InjectRepository(CompanyAddress) repo:Repository<CompanyAddress>){
+    super(repo,CompanyAddress)
 
-  findAll() {
-    return `This action returns all companyAddress`;
   }
-
-  findOne(id: number) {
-    return `This action returns a #${id} companyAddress`;
-  }
-
-  update(id: number, updateCompanyAddressDto: UpdateCompanyAddressDto) {
-    return `This action updates a #${id} companyAddress`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} companyAddress`;
-  }
+ 
 }

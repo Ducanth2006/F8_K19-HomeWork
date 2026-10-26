@@ -13,13 +13,6 @@ export class CreateCategoryDto {
   @IsOptional()
   active?: boolean;
   @ApiPropertyOptional({
-    example: '1',
-    description: 'ID người tạo (bigint dưới dạng string)',
-  })
-  @IsNumberString()
-  @IsOptional()
-  createdBy?: string;
-  @ApiPropertyOptional({
     example: 'uuid‑parent',
     description: 'ID danh mục cha (null nếu không có)',
   })

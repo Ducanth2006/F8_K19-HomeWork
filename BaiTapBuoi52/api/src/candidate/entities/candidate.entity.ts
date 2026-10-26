@@ -1,21 +1,24 @@
-export class Candidate {
-  id!: number;
-  name!: string;
-  phone!: string;
-  email!: string;
-  gender?: string;
-  province_id!: number;
-  ward_id?: number;
-  address_detail?: string;
-  created_at?: string;
-  created_by!: number;
-  modified_at?: string | null;
-  modified_by?: number | null;
-  deleted_at?: string | null;
-  deleted_by?: number | null;
-  active!: boolean;
+import { AuditMetaDataEntity } from '@/common/entities/auditMetaData.entity';
+import { Column, PrimaryGeneratedColumn,Entity } from 'typeorm';
 
-  constructor(init?: Partial<Candidate>) {
-    Object.assign(this, init);
-  }
+import { Gender } from '../enums/enum.entity';
+
+@Entity({ name: 'candidate' })
+export class Candidate extends AuditMetaDataEntity {
+  @PrimaryGeneratedColumn('uuid')
+  id!: string;
+  @Column({ type: 'text' })
+  name: string;
+  @Column({ type: 'text' })
+  phone: string;
+  @Column({ type: 'text' })
+  email: string;
+  @Column({ type: 'enum',enum:Gender,default:Gender.OTHER})
+  gender?: Gender;
+  @Column({ type: 'int',nullable:true })
+  provinceId?: number;
+  @Column({ type: 'int',nullable:true  })
+  wardId?: number;
+  @Column({ type: 'text' ,nullable:true })
+  addressDetail?: string;
 }

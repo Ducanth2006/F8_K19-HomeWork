@@ -1,14 +1,14 @@
 import {
   Column,
-  CreateDateColumn,
   Entity,
-  PrimaryGeneratedColumn,
-  UpdateDateColumn,
+  PrimaryGeneratedColumn,  
 } from 'typeorm';
-import { DeleteDateColumn } from 'typeorm';
+
+
+import { AuditMetaDataEntity } from '@/common/entities/auditMetaData.entity';
 
 @Entity({ name: 'company' })
-export class Company {
+export class Company extends AuditMetaDataEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
   @Column({ type: 'text' })
@@ -29,21 +29,4 @@ export class Company {
   rate?: number;
   @Column({ type: 'text', nullable: true })
   logoUrl?: string;
-  @CreateDateColumn({ type: 'timestamptz', default: () => 'now()' })
-  createdAt: Date;
-  @Column({ type: 'uuid', nullable: true })
-  createdBy?: string;
-  @UpdateDateColumn({ type: 'timestamptz', nullable: true })
-  modifiedAt?: Date;
-  @Column({ type: 'uuid', nullable: true })
-  modifiedBy?: string;
-  @DeleteDateColumn({
-    type: 'timestamptz',
-    nullable: true,
-  })
-  deletedAt?: Date;
-  @Column({ type: 'uuid', nullable: true })
-  deletedBy?: string;
-  @Column({ type: 'boolean', default: true })
-  active: boolean;
 }

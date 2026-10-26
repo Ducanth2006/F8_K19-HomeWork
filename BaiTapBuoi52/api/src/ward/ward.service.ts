@@ -1,26 +1,31 @@
-import { Injectable } from '@nestjs/common';
-import { CreateWardDto } from './dto/create-ward.dto';
-import { UpdateWardDto } from './dto/update-ward.dto';
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Ward } from './entities/ward.entity';
 
 @Injectable()
 export class WardService {
-  create(createWardDto: CreateWardDto) {
-    return 'This action adds a new ward';
+  constructor(
+    @InjectRepository(Ward)
+    private readonly wardRepository: Repository<Ward>,
+  ) {}
+
+  async findAll(): Promise<Ward[]> {
+    return await this.wardRepository
+      .createQueryBuilder('ward')
+      .getMany();
   }
 
-  findAll() {
-    return `This action returns all ward`;
-  }
+  async findOne(id: number): Promise<Ward> {
+    const ward = await this.wardRepository
+      .createQueryBuilder('ward')
+      .where('ward.id = :id', { id })
+      .getOne();
 
-  findOne(id: number) {
-    return `This action returns a #${id} ward`;
-  }
+    if (!ward) {
+      throw new NotFoundException(`Ward with ID ${id} not found`);
+    }
 
-  update(id: number, updateWardDto: UpdateWardDto) {
-    return `This action updates a #${id} ward`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} ward`;
+    return ward;
   }
 }

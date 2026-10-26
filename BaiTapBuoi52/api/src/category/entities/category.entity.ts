@@ -1,36 +1,14 @@
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedColumn, ManyToOne, OneToMany, UpdateDateColumn } from "typeorm";
+import { Column,  Entity, PrimaryGeneratedColumn } from "typeorm";
+
+import { AuditMetaDataEntity } from "@/common/entities/auditMetaData.entity";
 
 @Entity({ name: "category" })
-export class Category {
+export class Category extends AuditMetaDataEntity {
     @PrimaryGeneratedColumn({ type: "bigint" })
     id: string;
     @Column({ type: "text" })
     name: string;
-    @CreateDateColumn({
-        type: "timestamptz",
-        default: () => "now()"
-    })
     @Column({type:"bigint",nullable:true})
     parentId:string;
-    createdAt: Date;
-    @Column({
-        type: "uuid", nullable: true
-    })
-    createdBy?: string
-    @UpdateDateColumn({ type: "timestamptz", nullable: true })
-    modifiedAt?: Date;
-    @Column({ type: "uuid", nullable: true })
-    modifiedBy?: string
-    @DeleteDateColumn({
-        type: "timestamptz", nullable: true
-
-    }) deletedAt?: Date;
-    @Column({
-        type: "uuid", nullable: true
-    })
-    deletedBy?: string
-    @Column({ type: "boolean", default: true })
-    active: boolean
-
 }
 

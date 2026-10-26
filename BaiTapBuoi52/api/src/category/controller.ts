@@ -1,71 +1,108 @@
-import { Controller, Delete, Get, Patch, Post, Body, Param, NotFoundException } from "@nestjs/common";
-import { CategoryService } from "./service";
-import { ApiBadRequestResponse, ApiOkResponse, ApiCreatedResponse, ApiNotFoundResponse, ApiConflictResponse } from "@nestjs/swagger";
-import { CreateCategoryDto, CategoryDto,UpdateCategoryDto } from "./dto/categoryDto";
-@Controller("categories")
+import {
+  Controller,
+  Delete,
+  Get,
+  Patch,
+  Post,
+  Body,
+  Param,
+  ParseUUIDPipe,
+  NotFoundException,
+  HttpCode,
+  HttpStatus,
+} from '@nestjs/common';
+import {
+  ApiBadRequestResponse,
+  ApiOkResponse,
+  ApiCreatedResponse,
+  ApiNoContentResponse,
+  ApiNotFoundResponse,
+  ApiConflictResponse,
+} from '@nestjs/swagger';
+import { CategoryService } from './service';
+import {
+  CreateCategoryDto,
+  CategoryDto,
+  UpdateCategoryDto,
+} from './dto/categoryDto';
+
+@Controller('categories')
 export class CategoryController {
-    constructor(private readonly categoryService: CategoryService) { }
-    // get
-    @Get()
-    @ApiOkResponse({
-        description: "Get list category successfully",
-        type: [CategoryDto]
+  constructor(private readonly categoryService: CategoryService) {}
 
-    })
+  // GET /categories
+  @Get()
+  @ApiOkResponse({
+    description: 'Get list category successfully',
+    type: [CategoryDto],
+  })
+  async findAll() {
+    return await this.categoryService.getAll();
+  }
 
-    getCategory() {
-        return this.categoryService.getAll();
+  // GET /categories/:id
+  @Get(':id')
+  @ApiOkResponse({
+    description: 'Get category thành công',
+    type: CategoryDto,
+  })
+  @ApiBadRequestResponse({ description: 'Id không hợp lệ' })
+  @ApiNotFoundResponse({ description: 'Not found resource' })
+  async findOne(@Param('id', ParseUUIDPipe) id: string) {
+    const category = await this.categoryService.getById(id);
+    if (!category) {
+      throw new NotFoundException(`Không tìm thấy category với id ${id}`);
     }
-    // Get by id
+    return category;
+  }
 
-    @Get(":id")
-    @ApiOkResponse({
-        description: "Get  category thành công",
-        type: CategoryDto
+  // POST /categories
+  @Post()
+  @ApiCreatedResponse({
+    description: 'Create category success',
+    type: CategoryDto,
+  })
+  @ApiBadRequestResponse({ description: 'Dữ liệu gửi lên không hợp lệ' })
+  @ApiConflictResponse({ description: 'Category name đã tồn tại' })
+  async create(@Body() body: CreateCategoryDto) {
+    return await this.categoryService.create(body);
+  }
 
-    })
-    @ApiNotFoundResponse({ description: "Not found resource" })
-    getCategoryById(@Param("id") id: string) {
-        const cate = this.categoryService.getById(id);
-        if (!cate) {
-            throw new NotFoundException(`Không thể tìm thấy category với ${id}`)
-        }
-        return cate;
+  // PATCH /categories/:id
+  @Patch(':id')
+  @ApiOkResponse({
+    description: 'Patch category success',
+    type: CategoryDto,
+  })
+  @ApiBadRequestResponse({ description: 'Dữ liệu gửi lên không hợp lệ' })
+  @ApiConflictResponse({ description: 'Category name đã tồn tại' })
+  @ApiNotFoundResponse({ description: 'Not found resource' })
+  async update(
+    @Param('id', ParseUUIDPipe) id: string,
+    @Body() updateData: UpdateCategoryDto,
+  ) {
+    const updated = await this.categoryService.update(id, updateData);
+    if (!updated) {
+      throw new NotFoundException(`Không tìm thấy category với id ${id}`);
     }
-    // Post
+    return updated;
+  }
 
-    @Post()
-    @ApiCreatedResponse({
-        description: "Create category success",
-        type: CategoryDto
-    })
-    @ApiBadRequestResponse({ description: "Dữ liệu gửi lên không hợp lệ" })
-    @ApiConflictResponse({ description: "Category name đã tồn tại" })
-    createCategory(@Body() body: CreateCategoryDto) {
-        return this.categoryService.create(body);
+  // DELETE /categories/:id (soft delete)
+  @Delete(':id')
+  @HttpCode(HttpStatus.OK)
+  @ApiOkResponse({
+    description: 'Delete cateogry success',
+    schema: {
+      example: { message: 'Xóa cateogry thành công' },
+    },
+  })
+  @ApiBadRequestResponse({ description: 'Id không hợp lệ' })
+  @ApiNotFoundResponse({ description: 'Not found resource' })
+  async remove(@Param('id', ParseUUIDPipe) id: string) {
+    const deleted = await this.categoryService.delete(id);
+    if (!deleted) {
+      throw new NotFoundException(`Không tìm thấy category với id ${id}`);
     }
-
-    @Patch(":id")
-    @ApiOkResponse({
-        description: "Patch category success",
-        type: CategoryDto
-    })
-    @ApiBadRequestResponse({ description: "Dữ liệu gửi lên không hợp lệ" })
-    @ApiConflictResponse({ description: "Category name đã tồn tại" })
-    @ApiNotFoundResponse({ description: "Not found resource" })
-    patchCategory(@Param("id") id: string, @Body() updateData: UpdateCategoryDto) {
-        return this.categoryService.update(id, updateData);
-    }
-    @Delete(":id")
-    @ApiOkResponse({
-        description:"Delete category success"
-    })
-    @ApiNotFoundResponse({
-        description:"Not found resource"
-    })
-    deleteCategory(@Param("id") id: string) {
-        return this.categoryService.delete(id);
-    }
-
-
+  }
 }

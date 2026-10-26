@@ -1,34 +1,25 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { ProvinceService } from './province.service';
-import { CreateProvinceDto } from './dto/create-province.dto';
-import { UpdateProvinceDto } from './dto/update-province.dto';
+import { Province } from './entities/province.entity';
 
-@Controller('province')
+@ApiTags('provinces')
+@Controller('provinces')
 export class ProvinceController {
   constructor(private readonly provinceService: ProvinceService) {}
 
-  @Post()
-  create(@Body() createProvinceDto: CreateProvinceDto) {
-    return this.provinceService.create(createProvinceDto);
-  }
-
   @Get()
-  findAll() {
-    return this.provinceService.findAll();
+  @ApiOperation({ summary: 'Lấy danh sách tất cả tỉnh/thành phố' })
+  @ApiResponse({ status: 200, type: [Province] })
+  async findAll(): Promise<Province[]> {
+    return await this.provinceService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.provinceService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateProvinceDto: UpdateProvinceDto) {
-    return this.provinceService.update(+id, updateProvinceDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.provinceService.remove(+id);
+  @ApiOperation({ summary: 'Lấy thông tin tỉnh/thành phố theo ID' })
+  @ApiResponse({ status: 200, type: Province })
+  @ApiResponse({ status: 404, description: 'Province not found' })
+  async findOne(@Param('id', ParseIntPipe) id: number): Promise<Province> {
+    return await this.provinceService.findOne(id);
   }
 }

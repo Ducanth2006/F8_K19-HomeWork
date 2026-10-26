@@ -10,9 +10,10 @@ services:
     command: sh -c "npm install && npm run start:dev"
     depends_on:
       db:
-        condition: service_started
+        condition: service_healthy
+
   db:
-    container_name: portalWeb_db 
+    container_name: portalWeb_db
     image: postgres:15
     ports:
       - 4000:5432
@@ -21,6 +22,12 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: portalDb
     volumes:
-      - ./db:/var/lib/postgresql/data
-    
-      
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d portalDb"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  pgdata:

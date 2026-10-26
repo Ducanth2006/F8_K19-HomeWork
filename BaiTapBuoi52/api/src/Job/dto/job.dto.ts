@@ -8,53 +8,56 @@ import {
 
 import {
   IsDateString,
+  IsEnum,
   IsNotEmpty,
   IsNumber,
   IsOptional,
   IsString,
+  IsUUID
 } from 'class-validator';
 
 import { AuditMetadataDto } from '@/shared/dto/AuditMetadata.dto';
+import { WorkType } from '../enums/work-type.enum';
 
 export class CreateJobDto {
-  @ApiProperty({ example: 1 })
-  @IsNotEmpty({ message: 'Category ID is required' })
-  @IsNumber({}, { message: 'Category ID must be a number' })
-  category_id!: number;
-
-  @ApiProperty({ example: 2 })
-  @IsNotEmpty({ message: 'Company ID is required' })
-  @IsNumber({}, { message: 'Company ID must be a number' })
-  company_id!: number;
+  @ApiProperty({ example: 'c56a4180-65aa-42ec-a945-5fd21dec0538' })
+   @IsNotEmpty({ message: 'Category ID is required' })
+   @IsUUID('4', { message: 'category_id phải là định dạng UUID v4' }) 
+  categoryId: string;
+  
+  @ApiProperty({ example: 'c56a4180-65aa-42ec-a945-5fd21dec0538' })
+   @IsNotEmpty({ message: 'Company ID is required' })
+   @IsUUID('4', { message: 'company_id phải là định dạng UUID v4' }) 
+  companyId: string;
 
   @ApiProperty({ example: 'Senior Back-end Developer' })
-  @IsNotEmpty({ message: 'Title is required' })
+  @IsNotEmpty()
   @IsString({ message: 'Title must be a string' })
-  title!: string;
+  title: string;
 
-  @ApiProperty({
+  @ApiPropertyOptional({
     example:
       'Phát triển và bảo trì các giao diện web, tối ưu hóa trải nghiệm người dùng và hiệu năng hệ thống.',
   })
-  @IsNotEmpty({ message: 'Description is required' })
+  @IsOptional()
   @IsString({ message: 'Description must be a string' })
-  description!: string;
+  description?: string;
 
-  @ApiProperty({
+  @ApiPropertyOptional({
     example:
       'Có ít nhất 1 năm kinh nghiệm với React, TypeScript, HTML/CSS và RESTful API.',
   })
-  @IsNotEmpty({ message: 'Requirement is required' })
+  @IsOptional()
   @IsString({ message: 'Requirement must be a string' })
-  requirement!: string;
+  requirement?: string;
 
-  @ApiProperty({
+  @ApiPropertyOptional({
     example:
       'Lương tháng 13, thưởng dự án, bảo hiểm sức khỏe và hỗ trợ thiết bị làm việc.',
   })
-  @IsNotEmpty({ message: 'Benefit is required' })
+  @IsOptional()
   @IsString({ message: 'Benefit must be a string' })
-  benefit!: string;
+  benefit?: string;
 
   @ApiPropertyOptional({
     example: 2,
@@ -66,17 +69,17 @@ export class CreateJobDto {
   experience?: number | null;
 
   @ApiProperty({
-    example: '2026-11-30',
+    example: '2026-10-15', // Khớp với định dạng YYYY-MM-DD của kiểu DATE
     description: 'Hạn nộp hồ sơ theo định dạng YYYY-MM-DD',
   })
   @IsNotEmpty({ message: 'Due date is required' })
-  @IsString()
-  due_date!: string;
+  @IsDateString({}, { message: 'due_date must be a valid ISO 8601 date string' })
+  dueDate: string;
 
   @ApiProperty({ example: 1 })
   @IsNotEmpty({ message: 'Quantity is required' })
   @IsNumber({}, { message: 'Quantity must be a number' })
-  quantity!: number;
+  quantity: number;
 
   @ApiPropertyOptional({
     example: 10000000,
@@ -84,7 +87,7 @@ export class CreateJobDto {
   })
   @IsOptional()
   @IsNumber({}, { message: 'Minimum salary must be a number' })
-  min_salary?: number | null;
+  minSalary?: number | null;
 
   @ApiPropertyOptional({
     example: 20000000,
@@ -92,7 +95,7 @@ export class CreateJobDto {
   })
   @IsOptional()
   @IsNumber({}, { message: 'Maximum salary must be a number' })
-  max_salary?: number | null;
+  maxSalary?: number | null;
 
   @ApiPropertyOptional({
     example: 'Đại học',
@@ -102,21 +105,19 @@ export class CreateJobDto {
   @IsString({ message: 'Qualification must be a string' })
   qualification?: string | null;
 
-  @ApiPropertyOptional({
-    example: 'Part-time',
-    nullable: true,
+  @ApiProperty({
+    example: 'PART_TIME',
+    description:"Be carefull with enum "
   })
-  @IsOptional()
-  @IsString({ message: 'Work type must be a string' })
-  work_type?: string | null;
-
+  @IsEnum(WorkType)
+  workType?: string;
   @ApiPropertyOptional({
     example: '8 tiếng/ngày',
     nullable: true,
   })
   @IsOptional()
   @IsString({ message: 'Working time must be a string' })
-  working_time?: string | null;
+  workingTime?: string | null;
 }
 
 export class JobBase {

@@ -1,34 +1,25 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { WardService } from './ward.service';
-import { CreateWardDto } from './dto/create-ward.dto';
-import { UpdateWardDto } from './dto/update-ward.dto';
+import { Ward } from './entities/ward.entity';
 
-@Controller('ward')
+@ApiTags('wards')
+@Controller('wards')
 export class WardController {
   constructor(private readonly wardService: WardService) {}
 
-  @Post()
-  create(@Body() createWardDto: CreateWardDto) {
-    return this.wardService.create(createWardDto);
-  }
-
   @Get()
-  findAll() {
-    return this.wardService.findAll();
+  @ApiOperation({ summary: 'Lấy danh sách tất cả phường/xã' })
+  @ApiResponse({ status: 200, type: [Ward] })
+  async findAll(): Promise<Ward[]> {
+    return await this.wardService.findAll();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.wardService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateWardDto: UpdateWardDto) {
-    return this.wardService.update(+id, updateWardDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.wardService.remove(+id);
+  @ApiOperation({ summary: 'Lấy thông tin phường/xã theo ID' })
+  @ApiResponse({ status: 200, type: Ward })
+  @ApiResponse({ status: 404, description: 'Ward not found' })
+  async findOne(@Param('id', ParseIntPipe) id: number): Promise<Ward> {
+    return await this.wardService.findOne(id);
   }
 }

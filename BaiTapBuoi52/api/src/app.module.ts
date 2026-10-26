@@ -6,15 +6,22 @@ import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 import { Category } from './category/entities/category.entity';
 
 import { CategoryModule } from './category/module';
-import { TodoModule } from './todos/module';
 import { JobModule } from './Job/module';
 import { CompanyModule } from './company/company.module';
 import { CvModule } from './cv/cv.module';
 import { CandidateModule } from './candidate/candidate.module';
-import { JobApllicationModule } from './job_apllication/job_apllication.module';
+import { JobApplicationModule } from './job_application/job_application.module';
 import { CompanyAddressModule } from './company_address/company_address.module';
 import { ProvinceModule } from './province/province.module';
 import { WardModule } from './ward/ward.module';
+import { Company } from './company/entities/company.entity';
+import { Candidate } from './candidate/entities/candidate.entity';
+import { Job } from './Job/entities/job.entity';
+import { JobApplication } from './job_application/entities/job_application.entity';
+import { Cv } from './cv/entities/cv.entity';
+import { CompanyAddress } from './company_address/entities/company_address.entity';
+import { Province } from './province/entities/province.entity';
+import { Ward } from './ward/entities/ward.entity';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -24,10 +31,10 @@ import { WardModule } from './ward/ward.module';
     username: 'postgres',
     password: 'postgres',
     database: 'portalDb',
-    entities: [Category],
-    synchronize: true,
+    entities: [Province,Ward,Category,Company,Candidate,Job,JobApplication,Cv,CompanyAddress],
+    synchronize: false,
     namingStrategy: new SnakeNamingStrategy(),
-  }), CategoryModule, TodoModule, JobModule, CompanyModule, CvModule, CandidateModule, JobApllicationModule, CompanyAddressModule, ProvinceModule, WardModule],
+  }), CategoryModule,  JobModule, CompanyModule, CvModule, CandidateModule, JobApplicationModule, CompanyAddressModule, ProvinceModule, WardModule],
   controllers: [AppController],
   providers: [AppService],
 })
