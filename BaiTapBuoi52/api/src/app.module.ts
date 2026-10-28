@@ -11,7 +11,6 @@ import { CompanyModule } from './company/company.module';
 import { CvModule } from './cv/cv.module';
 import { CandidateModule } from './candidate/candidate.module';
 import { JobApplicationModule } from './job_application/job_application.module';
-import { CompanyAddressModule } from './company_address/company_address.module';
 import { ProvinceModule } from './province/province.module';
 import { WardModule } from './ward/ward.module';
 import { Company } from './company/entities/company.entity';
@@ -31,10 +30,10 @@ import { Ward } from './ward/entities/ward.entity';
     username: 'postgres',
     password: 'postgres',
     database: 'portalDb',
-    entities: [Province,Ward,Category,Company,Candidate,Job,JobApplication,Cv,CompanyAddress],
+    entities: [Province, Ward, Category, Company, Candidate, Job, JobApplication, Cv, CompanyAddress],
     synchronize: false,
     namingStrategy: new SnakeNamingStrategy(),
-  }), CategoryModule,  JobModule, CompanyModule, CvModule, CandidateModule, JobApplicationModule, CompanyAddressModule, ProvinceModule, WardModule],
+  }), CategoryModule, JobModule, CompanyModule, CvModule, CandidateModule, JobApplicationModule, ProvinceModule, WardModule],
   controllers: [AppController],
   providers: [AppService],
 })
